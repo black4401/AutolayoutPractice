@@ -19,6 +19,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "CustomTableViewCell5", bundle: nil), forCellReuseIdentifier: "Cell5")
         self.tableView.register(UINib(nibName: "CustomTableViewCell6", bundle: nil), forCellReuseIdentifier: "Cell6")
         self.tableView.register(UINib(nibName: "CustomTableViewCell7", bundle: nil), forCellReuseIdentifier: "Cell7")
+        self.tableView.register(UINib(nibName: "CustomTableViewCell8", bundle: nil), forCellReuseIdentifier: "Cell8")
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -31,7 +32,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 7
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +71,11 @@ class AutolayoutPracticeTableViewController: UITableViewController {
             case 5:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell7", for: indexPath) as! CustomTableViewCell7
                 cell.iconView.image = UIImage(named: "Rectangle 127")
+                return cell
+            case 6:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell8", for: indexPath) as! CustomTableViewCell8
+                cell.painLocationLabel.layer.cornerRadius = 6
+                cell.painLocationLabel.clipsToBounds = true
                 return cell
             default:
                 return UITableViewCell()
