@@ -8,13 +8,17 @@
 import UIKit
 
 class CustomTableViewCell5: UITableViewCell {
+    
+    let font1Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 12.0)! ]
+    let font2Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 22.0)! ]
 
-    @IBOutlet weak var iconVIew: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet weak var avgLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        avgLabel.attributedText = createAttrString()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +27,12 @@ class CustomTableViewCell5: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func createAttrString() -> NSMutableAttributedString {
+        let attrString = NSMutableAttributedString(string: "avg. ",
+                                                   attributes: font1Attribute)
+
+        attrString.append(NSMutableAttributedString(string: "7",
+                                                    attributes: font2Attribute))
+        return attrString
+    }
 }

@@ -17,10 +17,11 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "CustomTableViewCell2", bundle: nil), forCellReuseIdentifier: "Cell2")
         self.tableView.register(UINib(nibName: "CustomTableViewCell4", bundle: nil), forCellReuseIdentifier: "Cell4")
         self.tableView.register(UINib(nibName: "CustomTableViewCell5", bundle: nil), forCellReuseIdentifier: "Cell5")
+        self.tableView.register(UINib(nibName: "CustomTableViewCell6", bundle: nil), forCellReuseIdentifier: "Cell6")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,7 +51,11 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 3:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! CustomTableViewCell5
-                cell.iconVIew.image = UIImage(named: "sun_icon")
+                cell.iconView.image = UIImage(named: "sun_icon")
+                return cell
+            case 4:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! CustomTableViewCell6
+                cell.iconView.image = UIImage(named: "movement_icon")
                 return cell
             default:
                 return UITableViewCell()
