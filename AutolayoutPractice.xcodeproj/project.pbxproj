@@ -15,6 +15,8 @@
 		BB55F5CC29D5860900F2F2C1 /* CustomTableViewCell6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */; };
 		BB55F5CD29D5860900F2F2C1 /* CustomTableViewCell6.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */; };
 		BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */; };
+		BB55F5D229D5950C00F2F2C1 /* CustomTableViewCell7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */; };
+		BB55F5D329D5950C00F2F2C1 /* CustomTableViewCell7.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */; };
 		BB91CECD29D46AD200B7032C /* CustomTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */; };
 		BB91CECE29D46AD200B7032C /* CustomTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 		BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell6.swift; sourceTree = "<group>"; };
 		BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell6.xib; sourceTree = "<group>"; };
 		BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomProgressView.swift; path = Cells/CustomProgressView.swift; sourceTree = "<group>"; };
+		BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell7.swift; sourceTree = "<group>"; };
+		BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell7.xib; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell2.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell2.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,8 @@
 				BB55F5C729D5701100F2F2C1 /* CustomTableViewCell5.xib */,
 				BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */,
 				BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */,
+				BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */,
+				BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BBA0419F29D4497700E39A06 /* CustomTableViewCell1.xib in Resources */,
 				BB55F5C929D5701100F2F2C1 /* CustomTableViewCell5.xib in Resources */,
+				BB55F5D329D5950C00F2F2C1 /* CustomTableViewCell7.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
 				BB3E916E29D473970037EB8B /* CustomTableViewCell4.xib in Resources */,
 				BB55F5CD29D5860900F2F2C1 /* CustomTableViewCell6.xib in Resources */,
@@ -192,6 +199,7 @@
 			files = (
 				BBA0419E29D4497700E39A06 /* CustomTableViewCell1.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
+				BB55F5D229D5950C00F2F2C1 /* CustomTableViewCell7.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* CustomTableViewCell6.swift in Sources */,

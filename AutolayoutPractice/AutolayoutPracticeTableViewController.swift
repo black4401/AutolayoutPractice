@@ -18,10 +18,20 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "CustomTableViewCell4", bundle: nil), forCellReuseIdentifier: "Cell4")
         self.tableView.register(UINib(nibName: "CustomTableViewCell5", bundle: nil), forCellReuseIdentifier: "Cell5")
         self.tableView.register(UINib(nibName: "CustomTableViewCell6", bundle: nil), forCellReuseIdentifier: "Cell6")
+        self.tableView.register(UINib(nibName: "CustomTableViewCell7", bundle: nil), forCellReuseIdentifier: "Cell7")
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+            case 5:
+                return 270
+            default:
+                return tableView.rowHeight
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +53,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 cell.icon.image = UIImage(named: "doctor_icon")
                 cell.mainLabel.text = "Associated Doctor"
                 cell.label.text = "123456"
-                
+
                 return cell
             case 2:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! CustomTableViewCell4
@@ -56,6 +66,10 @@ class AutolayoutPracticeTableViewController: UITableViewController {
             case 4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! CustomTableViewCell6
                 cell.iconView.image = UIImage(named: "movement_icon")
+                return cell
+            case 5:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell7", for: indexPath) as! CustomTableViewCell7
+                cell.iconView.image = UIImage(named: "Rectangle 127")
                 return cell
             default:
                 return UITableViewCell()
