@@ -40,7 +40,7 @@
 		BB55F5C729D5701100F2F2C1 /* CustomTableViewCell5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell5.xib; sourceTree = "<group>"; };
 		BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell6.swift; sourceTree = "<group>"; };
 		BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell6.xib; sourceTree = "<group>"; };
-		BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomProgressView.swift; path = Cells/CustomProgressView.swift; sourceTree = "<group>"; };
+		BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell7.swift; sourceTree = "<group>"; };
 		BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell7.xib; sourceTree = "<group>"; };
 		BB55F5D429D5C04500F2F2C1 /* CustomTableViewCell8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell8.swift; sourceTree = "<group>"; };
@@ -71,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB55F5DA29D6FF1700F2F2C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BBA0417929D43A9E00E39A06 = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +98,12 @@
 		BBA0418429D43A9E00E39A06 /* AutolayoutPractice */ = {
 			isa = PBXGroup;
 			children = (
-				BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */,
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
 				BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
+				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
 				BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */,
 				BBA0419629D43AA000E39A06 /* Info.plist */,

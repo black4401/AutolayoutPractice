@@ -16,14 +16,10 @@ class CustomTableViewCell4: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 8
-        //mainSwitch.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        //mainSwitch.centerYAnchor.constraint(equalTo: mainView.centerYAnchor).isActive = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
