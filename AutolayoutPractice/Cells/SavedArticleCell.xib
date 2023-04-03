@@ -17,19 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-Ku-qsA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="196.66666666666666"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="196.66666666666666"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="196.66666666666666" id="3Vu-r7-xfY"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 30, 2020 * 4 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-Ig-obc">
-                        <rect key="frame" x="9" y="248.66666666666666" width="125" height="14.333333333333343"/>
+                        <rect key="frame" x="16" y="248.66666666666666" width="125" height="14.333333333333343"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move more, live better: How moving your body changes your brain" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-q1-8uO">
-                        <rect key="frame" x="9" y="201.66666666666666" width="306" height="42"/>
+                        <rect key="frame" x="16" y="201.66666666666666" width="288" height="42"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="ia6-IY-PCX"/>
                         </constraints>
@@ -39,13 +39,13 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="4Tw-k2-GT0"/>
+                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4Tw-k2-GT0"/>
                     <constraint firstItem="aFo-q1-8uO" firstAttribute="top" secondItem="lg6-Ku-qsA" secondAttribute="bottom" constant="5" id="C0b-oR-ia7"/>
                     <constraint firstItem="mbl-Ig-obc" firstAttribute="top" secondItem="aFo-q1-8uO" secondAttribute="bottom" constant="5" id="Evs-RS-WRF"/>
                     <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="mbl-Ig-obc" secondAttribute="leading" id="YKY-1Z-jeV"/>
-                    <constraint firstAttribute="trailing" secondItem="aFo-q1-8uO" secondAttribute="trailing" constant="5" id="e8t-vr-E6W"/>
-                    <constraint firstItem="lg6-Ku-qsA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jL7-G0-ibS"/>
-                    <constraint firstAttribute="trailing" secondItem="lg6-Ku-qsA" secondAttribute="trailing" id="pR7-iw-bry"/>
+                    <constraint firstAttribute="trailing" secondItem="aFo-q1-8uO" secondAttribute="trailing" constant="16" id="e8t-vr-E6W"/>
+                    <constraint firstItem="lg6-Ku-qsA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jL7-G0-ibS"/>
+                    <constraint firstAttribute="trailing" secondItem="lg6-Ku-qsA" secondAttribute="trailing" constant="16" id="pR7-iw-bry"/>
                     <constraint firstItem="lg6-Ku-qsA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="peI-9t-nD3"/>
                 </constraints>
             </tableViewCellContentView>

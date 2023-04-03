@@ -16,7 +16,7 @@ class SavedArticleCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mainLabel.text = "Move more, live better: How moving your body changes your brain"
-        secondaryLabel.text = "Jan 30, 2020 * 4 mins"
+        secondaryLabel.text = "Jan 30, 2020 • 4 mins"
         iconView.image = UIImage(named: "Rectangle 127")
     }
 

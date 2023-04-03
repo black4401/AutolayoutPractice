@@ -19,12 +19,14 @@ class PainRateCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var editIcon: UIImageView!
+    @IBOutlet weak var innerImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.layer.cornerRadius = 12
         iconView.image = UIImage(named: "sun_icon")
-        emojiView.image = UIImage(named: "emoji_progress_icon")
+        emojiView.image = UIImage(named: "Progress")
+        innerImageView.image = UIImage(named: "anguish")
         circleView.layer.cornerRadius = 25
         editIcon.image = UIImage(named: "edit_icon 1")
         
