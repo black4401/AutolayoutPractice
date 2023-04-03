@@ -39,11 +39,20 @@
                                     <constraint firstItem="9ip-gp-J7S" firstAttribute="centerY" secondItem="uga-Xf-4mN" secondAttribute="centerY" id="jRb-iG-Hyj"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Vh-eLh">
+                                <rect key="frame" x="17" y="45" width="264" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Sef-CD-hhi"/>
+                                    <constraint firstAttribute="width" constant="264" id="ZQc-sd-eup"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kqh-Vh-eLh" firstAttribute="leading" secondItem="Ybo-hm-GIT" secondAttribute="leading" constant="17" id="KVz-gZ-IrE"/>
                             <constraint firstAttribute="trailing" secondItem="uga-Xf-4mN" secondAttribute="trailing" constant="-26" id="Trq-x6-AM2"/>
                             <constraint firstItem="uga-Xf-4mN" firstAttribute="top" secondItem="Ybo-hm-GIT" secondAttribute="top" constant="14" id="Wa8-c9-PbO"/>
+                            <constraint firstItem="kqh-Vh-eLh" firstAttribute="top" secondItem="Ybo-hm-GIT" secondAttribute="top" constant="45" id="w76-CX-gRW"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-IY-DNG">
@@ -133,6 +142,7 @@
                 <outlet property="emojiView" destination="qGb-2K-JX4" id="gQs-WP-6nl"/>
                 <outlet property="iconView" destination="Fcd-IY-DNG" id="F6V-JX-HJa"/>
                 <outlet property="innerImageView" destination="oYb-Db-tY3" id="Pgq-sW-LxY"/>
+                <outlet property="lineView" destination="kqh-Vh-eLh" id="arz-3Y-Rsx"/>
                 <outlet property="morningLabel" destination="JP1-Xh-U1e" id="JYl-Kc-T38"/>
                 <outlet property="painLabel" destination="nhN-3B-4gn" id="CLe-lq-jff"/>
                 <outlet property="painLocationLabel" destination="FCm-Lh-NE2" id="p4n-L3-d9e"/>
