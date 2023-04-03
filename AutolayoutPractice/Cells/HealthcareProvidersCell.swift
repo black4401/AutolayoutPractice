@@ -26,11 +26,10 @@ class HealthcareProvidersCell: UITableViewCell {
     }
     
     func setAccessory() {
-        let image = UIImage(systemName: "chevron.right")
+        let image = UIImage(named: "healthcareProvidersAccessory")
         let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
         accessory.image = image
 
-        accessory.tintColor = UIColor.black
         accessoryView = accessory
     }
     
