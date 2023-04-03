@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell1: UITableViewCell {
+class HealthcareProvidersCell: UITableViewCell {
     
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var label: UILabel!

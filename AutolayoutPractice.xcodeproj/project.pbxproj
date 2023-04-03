@@ -28,7 +28,7 @@
 		BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418E29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld */; };
 		BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419129D43AA000E39A06 /* Assets.xcassets */; };
 		BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */; };
-		BBA0419E29D4497700E39A06 /* CustomTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* CustomTableViewCell1.swift */; };
+		BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */; };
 		BBA0419F29D4497700E39A06 /* CustomTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		BBA0419129D43AA000E39A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBA0419429D43AA000E39A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBA0419629D43AA000E39A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBA0419C29D4497700E39A06 /* CustomTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell1.swift; sourceTree = "<group>"; };
+		BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareProvidersCell.swift; sourceTree = "<group>"; };
 		BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell1.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,7 @@
 		BBA041A029D4497F00E39A06 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BBA0419C29D4497700E39A06 /* CustomTableViewCell1.swift */,
+				BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */,
 				BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */,
 				BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */,
 				BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA0419E29D4497700E39A06 /* CustomTableViewCell1.swift in Sources */,
+				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* CustomTableViewCell7.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,

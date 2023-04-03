@@ -43,7 +43,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         
         switch indexPath.section {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomTableViewCell1
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! HealthcareProvidersCell
                 cell.iconView.image = UIImage(named: "doctor_bag_icon")
                 cell.label.text = "Healthcare Providers"
                 cell.accessoryType = .disclosureIndicator
