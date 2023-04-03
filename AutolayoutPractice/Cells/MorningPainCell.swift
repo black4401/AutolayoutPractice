@@ -15,11 +15,13 @@ class MorningPainCell: UITableViewCell {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
+    @IBOutlet weak var secondaryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         avgLabel.attributedText = createAttrString()
         iconView.image = UIImage(named: "sun_icon")
+        setSecondaryLabelText()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,8 +32,23 @@ class MorningPainCell: UITableViewCell {
         let attrString = NSMutableAttributedString(string: "avg. ",
                                                    attributes: font1Attribute)
 
-        attrString.append(NSMutableAttributedString(string: "7",
+        attrString.append(NSMutableAttributedString(string: "7.4",
                                                     attributes: font2Attribute))
         return attrString
+    }
+    
+    func setSecondaryLabelText() {
+        let text = "8% lower than last period"
+        let attrString = NSMutableAttributedString(string: text)
+
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .byWordWrapping
+        paragraphStyle.alignment = .left
+
+        paragraphStyle.lineBreakMode = .byTruncatingTail
+
+        attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrString.length))
+        
+        secondaryLabel.attributedText = attrString
     }
 }
