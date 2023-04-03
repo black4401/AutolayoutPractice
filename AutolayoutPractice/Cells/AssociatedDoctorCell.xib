@@ -11,30 +11,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AssociatedDoctorCell" customModule="AutolayoutPractice" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHg-ML-MRC">
-                        <rect key="frame" x="5" y="5" width="310" height="73"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-np-eRA">
-                                <rect key="frame" x="22" y="17" width="24" height="24"/>
+                                <rect key="frame" x="26" y="19" width="16" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="K3n-PE-8Xv"/>
-                                    <constraint firstAttribute="width" constant="24" id="oQ8-V3-yln"/>
+                                    <constraint firstAttribute="height" constant="20" id="K3n-PE-8Xv"/>
+                                    <constraint firstAttribute="width" constant="16" id="oQ8-V3-yln"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Associated Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EW-eE-bIU">
-                                <rect key="frame" x="62" y="19" width="141" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="60" y="15.999999999999998" width="134" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aq-Ps-x83">
-                                <rect key="frame" x="62" y="41" width="39" height="16"/>
+                                <rect key="frame" x="62" y="39.333333333333336" width="39" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -42,25 +42,22 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5EW-eE-bIU" secondAttribute="trailing" constant="107" id="4Vx-LI-2ry"/>
-                            <constraint firstItem="HXg-np-eRA" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="22" id="AR4-4h-xay"/>
-                            <constraint firstItem="5EW-eE-bIU" firstAttribute="leading" secondItem="HXg-np-eRA" secondAttribute="trailing" constant="16" id="Kb0-Xe-LVq"/>
-                            <constraint firstAttribute="bottom" secondItem="HXg-np-eRA" secondAttribute="bottom" constant="32" id="MkK-qq-Sfa"/>
-                            <constraint firstItem="5EW-eE-bIU" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="19" id="NTZ-LB-tBJ"/>
-                            <constraint firstItem="2aq-Ps-x83" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="62" id="hgf-rj-RjD"/>
-                            <constraint firstAttribute="bottom" secondItem="2aq-Ps-x83" secondAttribute="bottom" constant="16" id="iJd-1Q-K8h"/>
-                            <constraint firstAttribute="trailing" secondItem="2aq-Ps-x83" secondAttribute="trailing" constant="209" id="ivF-PZ-bVD"/>
-                            <constraint firstItem="HXg-np-eRA" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="17" id="kSh-qm-lcG"/>
-                            <constraint firstItem="2aq-Ps-x83" firstAttribute="top" secondItem="5EW-eE-bIU" secondAttribute="bottom" constant="1" id="n7X-as-axE"/>
+                            <constraint firstItem="HXg-np-eRA" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="19" id="4ZU-Tr-6dF"/>
+                            <constraint firstItem="2aq-Ps-x83" firstAttribute="top" secondItem="5EW-eE-bIU" secondAttribute="bottom" constant="4" id="Hjz-ET-cMU"/>
+                            <constraint firstItem="5EW-eE-bIU" firstAttribute="leading" secondItem="HXg-np-eRA" secondAttribute="trailing" constant="18" id="IO5-DY-ddq"/>
+                            <constraint firstItem="2aq-Ps-x83" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="62" id="JNI-hl-Jww"/>
+                            <constraint firstItem="HXg-np-eRA" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="26" id="UWB-d9-RB9"/>
+                            <constraint firstAttribute="bottom" secondItem="2aq-Ps-x83" secondAttribute="bottom" constant="17.666666666666664" id="Ve0-zu-FwK"/>
+                            <constraint firstAttribute="bottom" secondItem="HXg-np-eRA" secondAttribute="bottom" constant="34" id="aLg-fq-9Ku"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.72076353092783507" green="0.72076353092783507" blue="0.72076353092783507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="gHg-ML-MRC" secondAttribute="bottom" constant="5" id="120-iy-5xJ"/>
-                    <constraint firstItem="gHg-ML-MRC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HJO-gl-n4Y"/>
-                    <constraint firstAttribute="trailing" secondItem="gHg-ML-MRC" secondAttribute="trailing" constant="5" id="hKD-kL-gB7"/>
-                    <constraint firstItem="gHg-ML-MRC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="yCp-kV-qYQ"/>
+                    <constraint firstItem="gHg-ML-MRC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DaU-qJ-aox"/>
+                    <constraint firstItem="gHg-ML-MRC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PqK-el-i3W"/>
+                    <constraint firstAttribute="trailing" secondItem="gHg-ML-MRC" secondAttribute="trailing" id="k9u-WE-58o"/>
+                    <constraint firstAttribute="bottom" secondItem="gHg-ML-MRC" secondAttribute="bottom" id="v9c-h4-iaI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

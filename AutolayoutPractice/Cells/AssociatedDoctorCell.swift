@@ -16,10 +16,9 @@ class AssociatedDoctorCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainView.layer.cornerRadius = 8
         icon.image = UIImage(named: "doctor_icon")
         mainLabel.text = "Associated Doctor"
-        label.text = "123456"
+        label.text = "12345"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
