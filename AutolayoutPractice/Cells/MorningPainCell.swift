@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell5: UITableViewCell {
+class MorningPainCell: UITableViewCell {
     
     let font1Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 12.0)! ]
     let font2Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 22.0)! ]
@@ -19,6 +19,7 @@ class CustomTableViewCell5: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         avgLabel.attributedText = createAttrString()
+        iconView.image = UIImage(named: "sun_icon")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB3E916A29D473780037EB8B /* CustomTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916929D473780037EB8B /* CustomTableViewCell3.swift */; };
-		BB3E916D29D473970037EB8B /* CustomTableViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916B29D473970037EB8B /* CustomTableViewCell4.swift */; };
-		BB3E916E29D473970037EB8B /* CustomTableViewCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3E916C29D473970037EB8B /* CustomTableViewCell4.xib */; };
-		BB55F5C829D5701100F2F2C1 /* CustomTableViewCell5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5C629D5701100F2F2C1 /* CustomTableViewCell5.swift */; };
-		BB55F5C929D5701100F2F2C1 /* CustomTableViewCell5.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5C729D5701100F2F2C1 /* CustomTableViewCell5.xib */; };
-		BB55F5CC29D5860900F2F2C1 /* CustomTableViewCell6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */; };
-		BB55F5CD29D5860900F2F2C1 /* CustomTableViewCell6.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */; };
+		BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916B29D473970037EB8B /* MorningEntryCell.swift */; };
+		BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3E916C29D473970037EB8B /* MorningEntryCell.xib */; };
+		BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */; };
+		BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */; };
+		BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */; };
+		BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */; };
 		BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */; };
-		BB55F5D229D5950C00F2F2C1 /* CustomTableViewCell7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */; };
-		BB55F5D329D5950C00F2F2C1 /* CustomTableViewCell7.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */; };
-		BB55F5D629D5C04500F2F2C1 /* CustomTableViewCell8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D429D5C04500F2F2C1 /* CustomTableViewCell8.swift */; };
-		BB55F5D729D5C04500F2F2C1 /* CustomTableViewCell8.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D529D5C04500F2F2C1 /* CustomTableViewCell8.xib */; };
-		BB91CECD29D46AD200B7032C /* CustomTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */; };
-		BB91CECE29D46AD200B7032C /* CustomTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */; };
+		BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */; };
+		BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */; };
+		BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */; };
+		BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */; };
+		BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */; };
+		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
+		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
 		BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */; };
 		BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */; };
@@ -29,24 +29,24 @@
 		BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419129D43AA000E39A06 /* Assets.xcassets */; };
 		BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */; };
 		BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */; };
-		BBA0419F29D4497700E39A06 /* CustomTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */; };
+		BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB3E916929D473780037EB8B /* CustomTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell3.swift; sourceTree = "<group>"; };
-		BB3E916B29D473970037EB8B /* CustomTableViewCell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell4.swift; sourceTree = "<group>"; };
-		BB3E916C29D473970037EB8B /* CustomTableViewCell4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell4.xib; sourceTree = "<group>"; };
-		BB55F5C629D5701100F2F2C1 /* CustomTableViewCell5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell5.swift; sourceTree = "<group>"; };
-		BB55F5C729D5701100F2F2C1 /* CustomTableViewCell5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell5.xib; sourceTree = "<group>"; };
-		BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell6.swift; sourceTree = "<group>"; };
-		BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell6.xib; sourceTree = "<group>"; };
+		BB3E916B29D473970037EB8B /* MorningEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningEntryCell.swift; sourceTree = "<group>"; };
+		BB3E916C29D473970037EB8B /* MorningEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningEntryCell.xib; sourceTree = "<group>"; };
+		BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPainCell.swift; sourceTree = "<group>"; };
+		BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningPainCell.xib; sourceTree = "<group>"; };
+		BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProgressCell.swift; sourceTree = "<group>"; };
+		BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementProgressCell.xib; sourceTree = "<group>"; };
 		BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
-		BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell7.swift; sourceTree = "<group>"; };
-		BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell7.xib; sourceTree = "<group>"; };
-		BB55F5D429D5C04500F2F2C1 /* CustomTableViewCell8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell8.swift; sourceTree = "<group>"; };
-		BB55F5D529D5C04500F2F2C1 /* CustomTableViewCell8.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell8.xib; sourceTree = "<group>"; };
-		BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell2.swift; sourceTree = "<group>"; };
-		BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell2.xib; sourceTree = "<group>"; };
+		BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticleCell.swift; sourceTree = "<group>"; };
+		BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedArticleCell.xib; sourceTree = "<group>"; };
+		BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainRateCell.swift; sourceTree = "<group>"; };
+		BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainRateCell.xib; sourceTree = "<group>"; };
+		BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
+		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA0418529D43A9E00E39A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		BBA0419429D43AA000E39A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBA0419629D43AA000E39A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareProvidersCell.swift; sourceTree = "<group>"; };
-		BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell1.xib; sourceTree = "<group>"; };
+		BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthcareProvidersCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
 				BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */,
+				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
@@ -116,20 +117,19 @@
 			isa = PBXGroup;
 			children = (
 				BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */,
-				BBA0419D29D4497700E39A06 /* CustomTableViewCell1.xib */,
-				BB91CECB29D46AD200B7032C /* CustomTableViewCell2.swift */,
-				BB91CECC29D46AD200B7032C /* CustomTableViewCell2.xib */,
-				BB3E916929D473780037EB8B /* CustomTableViewCell3.swift */,
-				BB3E916B29D473970037EB8B /* CustomTableViewCell4.swift */,
-				BB3E916C29D473970037EB8B /* CustomTableViewCell4.xib */,
-				BB55F5C629D5701100F2F2C1 /* CustomTableViewCell5.swift */,
-				BB55F5C729D5701100F2F2C1 /* CustomTableViewCell5.xib */,
-				BB55F5CA29D5860900F2F2C1 /* CustomTableViewCell6.swift */,
-				BB55F5CB29D5860900F2F2C1 /* CustomTableViewCell6.xib */,
-				BB55F5D029D5950C00F2F2C1 /* CustomTableViewCell7.swift */,
-				BB55F5D129D5950C00F2F2C1 /* CustomTableViewCell7.xib */,
-				BB55F5D429D5C04500F2F2C1 /* CustomTableViewCell8.swift */,
-				BB55F5D529D5C04500F2F2C1 /* CustomTableViewCell8.xib */,
+				BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */,
+				BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */,
+				BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */,
+				BB3E916B29D473970037EB8B /* MorningEntryCell.swift */,
+				BB3E916C29D473970037EB8B /* MorningEntryCell.xib */,
+				BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */,
+				BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */,
+				BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */,
+				BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */,
+				BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */,
+				BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */,
+				BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */,
+				BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -193,15 +193,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
-				BBA0419F29D4497700E39A06 /* CustomTableViewCell1.xib in Resources */,
-				BB55F5C929D5701100F2F2C1 /* CustomTableViewCell5.xib in Resources */,
-				BB55F5D329D5950C00F2F2C1 /* CustomTableViewCell7.xib in Resources */,
+				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
+				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
+				BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
-				BB3E916E29D473970037EB8B /* CustomTableViewCell4.xib in Resources */,
-				BB55F5CD29D5860900F2F2C1 /* CustomTableViewCell6.xib in Resources */,
+				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
+				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
-				BB91CECE29D46AD200B7032C /* CustomTableViewCell2.xib in Resources */,
-				BB55F5D729D5C04500F2F2C1 /* CustomTableViewCell8.xib in Resources */,
+				BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */,
+				BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,17 +214,17 @@
 			files = (
 				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
-				BB55F5D229D5950C00F2F2C1 /* CustomTableViewCell7.swift in Sources */,
+				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
-				BB55F5CC29D5860900F2F2C1 /* CustomTableViewCell6.swift in Sources */,
+				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
-				BB55F5D629D5C04500F2F2C1 /* CustomTableViewCell8.swift in Sources */,
-				BB3E916A29D473780037EB8B /* CustomTableViewCell3.swift in Sources */,
-				BB91CECD29D46AD200B7032C /* CustomTableViewCell2.swift in Sources */,
-				BB55F5C829D5701100F2F2C1 /* CustomTableViewCell5.swift in Sources */,
-				BB3E916D29D473970037EB8B /* CustomTableViewCell4.swift in Sources */,
+				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
+				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
+				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
+				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
+				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

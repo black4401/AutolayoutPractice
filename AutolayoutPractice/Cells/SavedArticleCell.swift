@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell7: UITableViewCell {
+class SavedArticleCell: UITableViewCell {
 
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
@@ -17,6 +17,7 @@ class CustomTableViewCell7: UITableViewCell {
         super.awakeFromNib()
         mainLabel.text = "Move more, live better: How moving your body changes your brain"
         secondaryLabel.text = "Jan 30, 2020 * 4 mins"
+        iconView.image = UIImage(named: "Rectangle 127")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

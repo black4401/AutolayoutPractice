@@ -8,18 +8,18 @@
 import UIKit
 
 class AutolayoutPracticeTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
         
-        self.tableView.register(UINib(nibName: "CustomTableViewCell1", bundle: nil), forCellReuseIdentifier: "Cell1")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell2", bundle: nil), forCellReuseIdentifier: "Cell2")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell4", bundle: nil), forCellReuseIdentifier: "Cell4")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell5", bundle: nil), forCellReuseIdentifier: "Cell5")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell6", bundle: nil), forCellReuseIdentifier: "Cell6")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell7", bundle: nil), forCellReuseIdentifier: "Cell7")
-        self.tableView.register(UINib(nibName: "CustomTableViewCell8", bundle: nil), forCellReuseIdentifier: "Cell8")
+        self.tableView.register(UINib(nibName: "HealthcareProvidersCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.healthcareProviders)
+        self.tableView.register(UINib(nibName: "AssociatedDoctorCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.associatedDoctor)
+        self.tableView.register(UINib(nibName: "MorningEntryCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.morningEntry)
+        self.tableView.register(UINib(nibName: "MorningPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.morningPain)
+        self.tableView.register(UINib(nibName: "MovementProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.movementProgress)
+        self.tableView.register(UINib(nibName: "SavedArticleCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.savedArticle)
+        self.tableView.register(UINib(nibName: "PainRateCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painRate)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -43,45 +43,31 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         
         switch indexPath.section {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! HealthcareProvidersCell
-                cell.iconView.image = UIImage(named: "doctor_bag_icon")
-                cell.label.text = "Healthcare Providers"
-                cell.accessoryType = .disclosureIndicator
-                
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.healthcareProviders, for: indexPath) as! HealthcareProvidersCell
                 return cell
             case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! CustomTableViewCell2
-                cell.icon.image = UIImage(named: "doctor_icon")
-                cell.mainLabel.text = "Associated Doctor"
-                cell.label.text = "123456"
-
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.associatedDoctor, for: indexPath) as! AssociatedDoctorCell
                 return cell
             case 2:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! CustomTableViewCell4
-                cell.mainLabel.text = "Morning entry"
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningEntry, for: indexPath) as! MorningEntryCell
                 return cell
             case 3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! CustomTableViewCell5
-                cell.iconView.image = UIImage(named: "sun_icon")
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningPain, for: indexPath) as! MorningPainCell
                 return cell
             case 4:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! CustomTableViewCell6
-                cell.iconView.image = UIImage(named: "movement_icon")
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.movementProgress, for: indexPath) as! MovementProgressCell
                 return cell
             case 5:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell7", for: indexPath) as! CustomTableViewCell7
-                cell.iconView.image = UIImage(named: "Rectangle 127")
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.savedArticle, for: indexPath) as! SavedArticleCell
                 return cell
             case 6:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell8", for: indexPath) as! CustomTableViewCell8
-                cell.painLocationLabel.layer.cornerRadius = 6
-                cell.painLocationLabel.clipsToBounds = true
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
                 return cell
             default:
                 return UITableViewCell()
         }
     }
-
+    
 }
 
 

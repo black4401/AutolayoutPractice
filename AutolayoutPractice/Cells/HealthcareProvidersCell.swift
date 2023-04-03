@@ -16,10 +16,22 @@ class HealthcareProvidersCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 8
+        iconView.image = UIImage(named: "doctor_bag_icon")
+        label.text = "Healthcare Providers"
+        setAccessory()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setAccessory() {
+        let image = UIImage(systemName: "chevron.right")
+        let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
+        accessory.image = image
+
+        accessory.tintColor = UIColor.black
+        accessoryView = accessory
     }
     
 }

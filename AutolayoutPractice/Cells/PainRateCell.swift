@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell8: UITableViewCell {
+class PainRateCell: UITableViewCell {
     
     
     @IBOutlet weak var iconView: UIImageView!
@@ -28,6 +28,8 @@ class CustomTableViewCell8: UITableViewCell {
         circleView.layer.cornerRadius = 25
         editIcon.image = UIImage(named: "edit_icon 1")
         
+        painLocationLabel.layer.cornerRadius = 6
+        painLocationLabel.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
