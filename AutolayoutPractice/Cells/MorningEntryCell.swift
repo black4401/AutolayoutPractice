@@ -15,7 +15,7 @@ class MorningEntryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainView.layer.cornerRadius = 8
+        mainSwitch.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         mainLabel.text = "Morning entry"
     }
 
