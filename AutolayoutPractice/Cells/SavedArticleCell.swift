@@ -15,8 +15,14 @@ class SavedArticleCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        mainLabel.font = .dmSansRegular(ofSize: 15)
         mainLabel.text = "Move more, live better: How moving your body changes your brain"
-        secondaryLabel.text = "Jan 30, 2020 • 4 mins"
+        mainLabel.textColor = .brandMainColor
+        
+        secondaryLabel.font = .dmSansRegular(ofSize: 12)
+        secondaryLabel.text = "Jan 30, 2020 • 01:24 mins"
+        secondaryLabel.textColor = .greyscale100
+        
         iconView.image = UIImage(named: "Rectangle 127")
     }
 

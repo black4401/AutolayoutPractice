@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,13 +24,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 30, 2020 * 4 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-Ig-obc">
-                        <rect key="frame" x="16" y="248.66666666666666" width="125" height="14.333333333333343"/>
+                        <rect key="frame" x="17" y="248.66666666666666" width="125" height="14.333333333333343"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move more, live better: How moving your body changes your brain" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-q1-8uO">
-                        <rect key="frame" x="16" y="201.66666666666666" width="288" height="42"/>
+                        <rect key="frame" x="17" y="201.66666666666666" width="287" height="42"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="ia6-IY-PCX"/>
                         </constraints>
@@ -39,7 +40,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4Tw-k2-GT0"/>
+                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="4Tw-k2-GT0"/>
                     <constraint firstItem="aFo-q1-8uO" firstAttribute="top" secondItem="lg6-Ku-qsA" secondAttribute="bottom" constant="5" id="C0b-oR-ia7"/>
                     <constraint firstItem="mbl-Ig-obc" firstAttribute="top" secondItem="aFo-q1-8uO" secondAttribute="bottom" constant="5" id="Evs-RS-WRF"/>
                     <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="mbl-Ig-obc" secondAttribute="leading" id="YKY-1Z-jeV"/>
