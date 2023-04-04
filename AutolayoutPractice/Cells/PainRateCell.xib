@@ -149,7 +149,7 @@
                 <outlet property="morningLabel" destination="JP1-Xh-U1e" id="JYl-Kc-T38"/>
                 <outlet property="painLabel" destination="nhN-3B-4gn" id="CLe-lq-jff"/>
                 <outlet property="painLocationLabel" destination="FCm-Lh-NE2" id="p4n-L3-d9e"/>
-                <outlet property="severitylabe" destination="33F-CN-MkG" id="tI2-lI-Bpa"/>
+                <outlet property="severitylabel" destination="33F-CN-MkG" id="tI2-lI-Bpa"/>
             </connections>
             <point key="canvasLocation" x="-32.061068702290072" y="-11.619718309859156"/>
         </tableViewCell>

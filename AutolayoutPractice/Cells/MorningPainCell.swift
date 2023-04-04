@@ -20,20 +20,23 @@ class MorningPainCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        morningPainLabel.textColor = .grayscale80
-        morningPainLabel.font = .dmSansRegular(ofSize: 11)
-        morningPainLabel.text = "MORNING PAIN"
         
         avgLabel.attributedText = createAttrString()
         avgLabel.textColor = .morningPainSecondaryLabelColor
+        
         iconView.image = UIImage(named: "sun_icon")
+        
         setSecondaryLabelText()
+        setUpMorningPainLabel()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+}
+
+private extension MorningPainCell {
     func createAttrString() -> NSMutableAttributedString {
         let attrString = NSMutableAttributedString(string: "avg. ",
                                                    attributes: textFontAttribute)
@@ -57,5 +60,11 @@ class MorningPainCell: UITableViewCell {
         attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrString.length))
         
         secondaryLabel.attributedText = attrString
+    }
+    
+    func setUpMorningPainLabel() {
+        morningPainLabel.textColor = .greyscale80
+        morningPainLabel.font = .dmSansRegular(ofSize: 11)
+        morningPainLabel.text = "MORNING PAIN"
     }
 }

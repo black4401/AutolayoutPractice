@@ -15,18 +15,25 @@ class SavedArticleCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainLabel.font = .dmSansRegular(ofSize: 15)
-        mainLabel.text = "Move more, live better: How moving your body changes your brain"
-        mainLabel.textColor = .brandMainColor
         
-        secondaryLabel.font = .dmSansRegular(ofSize: 12)
-        secondaryLabel.text = "Jan 30, 2020 • 01:24 mins"
-        secondaryLabel.textColor = .greyscale100
-        
+        setUpMainLabel()
+        setUpSecondaryLabel()
         iconView.image = UIImage(named: "Rectangle 127")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    private func setUpMainLabel() {
+        mainLabel.font = .dmSansRegular(ofSize: 15)
+        mainLabel.text = "Move more, live better: How moving your body changes your brain"
+        mainLabel.textColor = .brandMainColor
+    }
+    
+    private func setUpSecondaryLabel() {
+        secondaryLabel.font = .dmSansRegular(ofSize: 12)
+        secondaryLabel.text = "Jan 30, 2020 • 01:24 mins"
+        secondaryLabel.textColor = .greyscale100
     }
 }

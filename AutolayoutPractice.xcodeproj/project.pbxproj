@@ -37,6 +37,7 @@
 		BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */; };
 		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
 		BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */; };
+		BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
 		BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SetFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
 				BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */,
+				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
 				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
@@ -265,6 +268,7 @@
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */,
+				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
 				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,

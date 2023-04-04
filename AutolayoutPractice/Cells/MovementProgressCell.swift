@@ -16,23 +16,37 @@ class MovementProgressCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        movementLabel.text = "MOVEMENT"
-        movementLabel.font = .dmSansRegular(ofSize: 11)
-        movementLabel.textColor = .grayscale80
         
-        secondaryLabel.text = "Didn't move much"
-        secondaryLabel.font = .dmSansRegular(ofSize: 15)
-        secondaryLabel.textColor = .brandMainColor
+        setUpSecondaryLabel()
+        setUpMovementLabel()
+        setUpProgressView()
         
-        CGAffineTransformScale(progressView.transform, 1, 2)
-        progressView.layer.cornerRadius = 10
-        progressView.clipsToBounds = true
-        progressView.layer.sublayers![1].cornerRadius = 10
-        progressView.subviews[1].clipsToBounds = true
         iconView.image = UIImage(named: "movement_icon")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+}
+
+private extension MovementProgressCell {
+    func setUpSecondaryLabel() {
+        secondaryLabel.text = "Didn't move much"
+        secondaryLabel.font = .dmSansRegular(ofSize: 15)
+        secondaryLabel.textColor = .brandMainColor
+    }
+    
+    func setUpMovementLabel() {
+        movementLabel.text = "MOVEMENT"
+        movementLabel.font = .dmSansRegular(ofSize: 11)
+        movementLabel.textColor = .greyscale80
+    }
+    
+    func setUpProgressView() {
+        CGAffineTransformScale(progressView.transform, 1, 2)
+        progressView.layer.cornerRadius = 10
+        progressView.clipsToBounds = true
+        progressView.layer.sublayers![1].cornerRadius = 10
+        progressView.subviews[1].clipsToBounds = true
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class MorningEntryCell: UITableViewCell {
-
+    
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var mainSwitch: UISwitch!
@@ -16,12 +16,16 @@ class MorningEntryCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mainSwitch.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        mainLabel.text = "Morning entry"
-        mainLabel.textColor = .morningEntryColor
+        setUpMainLabel()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    private func setUpMainLabel() {
+        mainLabel.text = "Morning entry"
+        mainLabel.textColor = .morningEntryColor
+        mainLabel.setFontToDMSans(with: 17)
+    }
 }
