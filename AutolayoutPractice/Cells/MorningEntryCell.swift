@@ -17,6 +17,7 @@ class MorningEntryCell: UITableViewCell {
         super.awakeFromNib()
         mainSwitch.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         mainLabel.text = "Morning entry"
+        mainLabel.textColor = .morningEntryColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
