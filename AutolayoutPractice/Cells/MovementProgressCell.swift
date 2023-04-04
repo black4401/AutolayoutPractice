@@ -11,6 +11,7 @@ class MovementProgressCell: UITableViewCell {
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var iconView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         CGAffineTransformScale(progressView.transform, 1, 2)
@@ -24,5 +25,4 @@ class MovementProgressCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

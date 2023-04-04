@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,20 +24,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uga-Xf-4mN">
                                 <rect key="frame" x="256" y="14" width="50" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ip-gp-J7S">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-K3-Bay">
                                         <rect key="frame" x="3" y="3" width="44" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="azr-8N-EmH"/>
-                                            <constraint firstAttribute="width" constant="44" id="sdc-es-4qm"/>
+                                            <constraint firstAttribute="width" constant="44" id="PfH-9w-adv"/>
+                                            <constraint firstAttribute="height" constant="44" id="jpH-t3-Tav"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83471196889999999" green="0.83471196889999999" blue="0.83822232480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9ip-gp-J7S" firstAttribute="centerX" secondItem="uga-Xf-4mN" secondAttribute="centerX" id="IGl-wU-dOs"/>
+                                    <constraint firstItem="gBM-K3-Bay" firstAttribute="centerX" secondItem="uga-Xf-4mN" secondAttribute="centerX" id="1uj-cD-HBp"/>
                                     <constraint firstAttribute="height" constant="50" id="PqY-C7-Kfo"/>
+                                    <constraint firstItem="gBM-K3-Bay" firstAttribute="centerY" secondItem="uga-Xf-4mN" secondAttribute="centerY" id="Xpf-vb-Gkt"/>
                                     <constraint firstAttribute="width" constant="50" id="YFx-p2-Yvb"/>
-                                    <constraint firstItem="9ip-gp-J7S" firstAttribute="centerY" secondItem="uga-Xf-4mN" secondAttribute="centerY" id="jRb-iG-Hyj"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Vh-eLh">
@@ -138,7 +141,7 @@
             <connections>
                 <outlet property="backView" destination="Ybo-hm-GIT" id="Y9O-1J-Yex"/>
                 <outlet property="circleView" destination="uga-Xf-4mN" id="qRy-aQ-zV3"/>
-                <outlet property="editIcon" destination="9ip-gp-J7S" id="ecc-Ba-tb7"/>
+                <outlet property="editButton" destination="gBM-K3-Bay" id="sjW-uJ-vgS"/>
                 <outlet property="emojiView" destination="qGb-2K-JX4" id="gQs-WP-6nl"/>
                 <outlet property="iconView" destination="Fcd-IY-DNG" id="F6V-JX-HJa"/>
                 <outlet property="innerImageView" destination="oYb-Db-tY3" id="Pgq-sW-LxY"/>

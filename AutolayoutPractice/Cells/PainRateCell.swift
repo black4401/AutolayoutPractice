@@ -12,15 +12,17 @@ class PainRateCell: UITableViewCell {
     
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var emojiView: UIImageView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var innerImageView: UIImageView!
+    @IBOutlet weak var lineView: UIImageView!
+    
     @IBOutlet weak var morningLabel: UILabel!
     @IBOutlet weak var painLabel: UILabel!
     @IBOutlet weak var severitylabe: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var circleView: UIView!
-    @IBOutlet weak var editIcon: UIImageView!
-    @IBOutlet weak var innerImageView: UIImageView!
-    @IBOutlet weak var lineView: UIImageView!
+    
+    @IBOutlet weak var editButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +31,7 @@ class PainRateCell: UITableViewCell {
         emojiView.image = UIImage(named: "Progress")
         innerImageView.image = UIImage(named: "anguish")
         circleView.layer.cornerRadius = 25
-        editIcon.image = UIImage(named: "edit_icon 1")
+        editButton.setImage(UIImage(named: "edit_icon 1"), for: .normal)
         lineView.image = UIImage(named: "Line 13")
         
         painLocationLabel.layer.cornerRadius = 6

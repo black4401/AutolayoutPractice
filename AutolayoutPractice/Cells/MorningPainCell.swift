@@ -9,8 +9,8 @@ import UIKit
 
 class MorningPainCell: UITableViewCell {
     
-    let font1Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 12.0)! ]
-    let font2Attribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 22.0)! ]
+    let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 12.0)! ]
+    let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 22.0)! ]
 
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var percentLabel: UILabel!
@@ -30,10 +30,10 @@ class MorningPainCell: UITableViewCell {
     
     func createAttrString() -> NSMutableAttributedString {
         let attrString = NSMutableAttributedString(string: "avg. ",
-                                                   attributes: font1Attribute)
+                                                   attributes: textFontAttribute)
 
         attrString.append(NSMutableAttributedString(string: "7.4",
-                                                    attributes: font2Attribute))
+                                                    attributes: numberFontAttribute))
         return attrString
     }
     
