@@ -17,6 +17,7 @@ class HealthcareProvidersCell: UITableViewCell {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 8
         iconView.image = UIImage(named: "doctor_bag_icon")
+        label.font = .dmSansRegular(ofSize: 17)
         label.text = "Healthcare Providers"
         setAccessory()
     }

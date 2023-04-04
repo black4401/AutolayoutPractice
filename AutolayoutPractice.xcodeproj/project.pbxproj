@@ -30,6 +30,12 @@
 		BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */; };
 		BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */; };
 		BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */; };
+		BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */; };
+		BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */; };
+		BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */; };
+		BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */; };
+		BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */; };
+		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,14 @@
 		BBA0419629D43AA000E39A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareProvidersCell.swift; sourceTree = "<group>"; };
 		BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthcareProvidersCell.xib; sourceTree = "<group>"; };
+		BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DMSans.swift"; sourceTree = "<group>"; };
+		BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BBA4CD9C29DC545E008E23C1 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,8 @@
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
+				BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */,
+				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
 				BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */,
@@ -132,6 +148,28 @@
 				BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BBA4CD9729DC545E008E23C1 /* DM_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */,
+				BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */,
+				BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */,
+				BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */,
+				BBA4CD9C29DC545E008E23C1 /* OFL.txt */,
+				BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */,
+				BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */,
+			);
+			path = DM_Sans;
+			sourceTree = "<group>";
+		};
+		BBA4CDA429DC5855008E23C1 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4CD9729DC545E008E23C1 /* DM_Sans */,
+			);
+			path = CustomFonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,16 +230,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
+				BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */,
 				BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
 				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
-				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
+				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
+				BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */,
 				BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */,
 				BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */,
+				BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */,
+				BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +261,7 @@
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
+				BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
