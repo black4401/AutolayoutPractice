@@ -18,7 +18,9 @@ class AssociatedDoctorCell: UITableViewCell {
         super.awakeFromNib()
         iconView.image = UIImage(named: "doctor_icon")
         mainLabel.text = "Associated Doctor"
+        mainLabel.textColor = .brandMainColor
         secondaryLabel.text = "12345"
+        secondaryLabel.textColor = .greyscale100
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

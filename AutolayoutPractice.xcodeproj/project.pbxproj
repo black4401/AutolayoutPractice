@@ -36,6 +36,7 @@
 		BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */; };
 		BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */; };
 		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
+		BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		BBA4CD9C29DC545E008E23C1 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
 				BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */,
+				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
@@ -264,6 +267,7 @@
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
+				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
 				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
 				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,

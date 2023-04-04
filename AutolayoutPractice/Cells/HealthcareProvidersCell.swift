@@ -19,6 +19,7 @@ class HealthcareProvidersCell: UITableViewCell {
         iconView.image = UIImage(named: "doctor_bag_icon")
         label.font = .dmSansRegular(ofSize: 17)
         label.text = "Healthcare Providers"
+        label.textColor = .brandMainColor
         setAccessory()
     }
 
