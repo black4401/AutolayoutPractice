@@ -9,11 +9,21 @@ import UIKit
 
 class MovementProgressCell: UITableViewCell {
     
+    @IBOutlet weak var secondaryLabel: UILabel!
+    @IBOutlet weak var movementLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var iconView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        movementLabel.text = "MOVEMENT"
+        movementLabel.font = .dmSansRegular(ofSize: 11)
+        movementLabel.textColor = .grayscale80
+        
+        secondaryLabel.text = "Didn't move much"
+        secondaryLabel.font = .dmSansRegular(ofSize: 15)
+        secondaryLabel.textColor = .brandMainColor
+        
         CGAffineTransformScale(progressView.transform, 1, 2)
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true

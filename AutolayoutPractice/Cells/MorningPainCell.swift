@@ -20,12 +20,12 @@ class MorningPainCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        morningPainLabel.textColor = .morningPainColor
+        morningPainLabel.textColor = .grayscale80
         morningPainLabel.font = .dmSansRegular(ofSize: 11)
         morningPainLabel.text = "MORNING PAIN"
         
         avgLabel.attributedText = createAttrString()
-        avgLabel.textColor = .morningPainAvgLabelColor
+        avgLabel.textColor = .morningPainSecondaryLabelColor
         iconView.image = UIImage(named: "sun_icon")
         setSecondaryLabelText()
     }
