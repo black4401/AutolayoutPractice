@@ -9,9 +9,10 @@ import UIKit
 
 class MorningPainCell: UITableViewCell {
     
-    let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 12.0)! ]
-    let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "System Font Regular", size: 22.0)! ]
+    let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 12.0)! ]
+    let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 22.0)! ]
 
+    @IBOutlet weak var morningPainLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
@@ -19,7 +20,12 @@ class MorningPainCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        morningPainLabel.textColor = .morningPainColor
+        morningPainLabel.font = .dmSansRegular(ofSize: 11)
+        morningPainLabel.text = "MORNING PAIN"
+        
         avgLabel.attributedText = createAttrString()
+        avgLabel.textColor = .morningPainAvgLabelColor
         iconView.image = UIImage(named: "sun_icon")
         setSecondaryLabelText()
     }
@@ -38,9 +44,10 @@ class MorningPainCell: UITableViewCell {
     }
     
     func setSecondaryLabelText() {
+        secondaryLabel.font = .dmSansRegular(ofSize: 15)
+        secondaryLabel.textColor = .morningPainSecondaryLabelColor
         let text = "8% lower than last period"
         let attrString = NSMutableAttributedString(string: text)
-
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byWordWrapping
         paragraphStyle.alignment = .left
