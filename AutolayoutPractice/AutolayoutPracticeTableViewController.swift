@@ -19,6 +19,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "MovementProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.movementProgress)
         self.tableView.register(UINib(nibName: "SavedArticleCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.savedArticle)
         self.tableView.register(UINib(nibName: "PainRateCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painRate)
+        self.tableView.register(UINib(nibName: "PainMonitorCell", bundle: nil), forCellReuseIdentifier: "PainMonitorCell")
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -31,7 +32,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 7
+        return 8
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,11 +72,61 @@ class AutolayoutPracticeTableViewController: UITableViewController {
             case 6:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
                 return cell
+            case 7:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PainMonitorCell", for: indexPath) as! PainMonitorCell
+                let style = CellStyle.evening
+                cell.setUpPainLabel(text: style.painText)
+                cell.setSecondaryLabelText(text: style.secondaryText)
+                cell.setUpIconView(iconName: style.emojiName)
+                cell.setUpAvgLabel(value: style.percentValue)
+                return cell
             default:
                 return UITableViewCell()
         }
     }
     
+}
+
+enum CellStyle {
+    
+    case morning
+    case evening
+    
+    var emojiName: String {
+        switch self {
+            case .morning:
+                return "sun_icon"
+            case .evening:
+                return "moon_icon"
+        }
+    }
+    
+    var painText: String {
+        switch self {
+            case .morning:
+                return "MORNING PAIN"
+            case .evening:
+                return "EVENING PAIN"
+        }
+    }
+    
+    var secondaryText: String {
+        switch self {
+            case .morning:
+                return "8% lower than last period"
+            case .evening:
+                return "8% higher than last period"
+        }
+    }
+    
+    var percentValue: String {
+        switch self {
+            case .morning:
+                return "7.4"
+            case .evening:
+                return "6.4"
+        }
+    }
 }
 
 

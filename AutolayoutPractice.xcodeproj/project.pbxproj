@@ -38,6 +38,8 @@
 		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
 		BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */; };
 		BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */; };
+		BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */; };
+		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
 		BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SetFont.swift"; sourceTree = "<group>"; };
+		BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCell.swift; sourceTree = "<group>"; };
+		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */,
 				BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */,
 				BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */,
+				BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */,
+				BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
+				BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */,
 				BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */,
 				BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
@@ -271,6 +278,7 @@
 				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
+				BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */,
 				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
 				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
