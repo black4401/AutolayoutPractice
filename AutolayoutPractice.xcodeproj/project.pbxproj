@@ -21,6 +21,18 @@
 		BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */; };
 		BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */; };
 		BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */; };
+		BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */; };
+		BB6CA15029DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */; };
+		BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */; };
+		BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */; };
+		BB6CA15329DEDB92004B39BA /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */; };
+		BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */; };
+		BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */; };
+		BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */; };
+		BB6CA15829DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */; };
+		BB6CA15929DEDB92004B39BA /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */; };
+		BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */; };
+		BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
@@ -32,7 +44,7 @@
 		BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */; };
 		BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */; };
 		BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */; };
-		BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */; };
+		BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */; };
 		BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */; };
 		BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */; };
 		BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */; };
@@ -59,6 +71,18 @@
 		BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +96,7 @@
 		BBA0419629D43AA000E39A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareProvidersCell.swift; sourceTree = "<group>"; };
 		BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthcareProvidersCell.xib; sourceTree = "<group>"; };
-		BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DMSans.swift"; sourceTree = "<group>"; };
+		BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -105,6 +129,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BB6CA14129DEDB92004B39BA /* Source_Sans_Pro */ = {
+			isa = PBXGroup;
+			children = (
+				BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */,
+				BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */,
+				BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */,
+				BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */,
+				BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */,
+				BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */,
+				BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */,
+				BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */,
+				BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */,
+				BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */,
+				BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */,
+				BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */,
+			);
+			path = Source_Sans_Pro;
+			sourceTree = "<group>";
+		};
 		BBA0417929D43A9E00E39A06 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +173,7 @@
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
-				BBA4CD9329DC4FA5008E23C1 /* UIFont+DMSans.swift */,
+				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
 				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
 				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
@@ -185,6 +228,7 @@
 		BBA4CDA429DC5855008E23C1 /* CustomFonts */ = {
 			isa = PBXGroup;
 			children = (
+				BB6CA14129DEDB92004B39BA /* Source_Sans_Pro */,
 				BBA4CD9729DC545E008E23C1 /* DM_Sans */,
 			);
 			path = CustomFonts;
@@ -248,19 +292,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6CA15029DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				BB6CA15829DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf in Resources */,
+				BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */,
 				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
+				BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */,
 				BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */,
+				BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
+				BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
+				BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */,
+				BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
 				BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */,
+				BB6CA15929DEDB92004B39BA /* SourceSansPro-SemiBold.ttf in Resources */,
 				BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */,
 				BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
+				BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
 				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
 				BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */,
+				BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */,
+				BB6CA15329DEDB92004B39BA /* SourceSansPro-LightItalic.ttf in Resources */,
 				BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */,
 				BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */,
 				BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */,
@@ -282,7 +338,7 @@
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
-				BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */,
+				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
 				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,

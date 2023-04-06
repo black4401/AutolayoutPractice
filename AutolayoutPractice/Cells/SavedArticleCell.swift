@@ -12,12 +12,15 @@ class SavedArticleCell: UITableViewCell {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
+    @IBOutlet weak var recommendedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setUpMainLabel()
         setUpSecondaryLabel()
+        setUpRecommendedLabel()
+        
         iconView.image = UIImage(named: "Rectangle 127")
     }
 
@@ -35,5 +38,14 @@ class SavedArticleCell: UITableViewCell {
         secondaryLabel.font = .dmSansRegular(ofSize: 12)
         secondaryLabel.text = "Jan 30, 2020 • 01:24 mins"
         secondaryLabel.textColor = .greyscale100
+    }
+    
+    private func setUpRecommendedLabel() {
+        recommendedLabel.layer.cornerRadius = 4
+        recommendedLabel.clipsToBounds = true
+        recommendedLabel.backgroundColor = .brandAccentTitn
+        recommendedLabel.text = "RECOMMENDED"
+        recommendedLabel.textColor = .greyscale140
+        recommendedLabel.setFontToSourceSansPro(with: 11)
     }
 }
