@@ -75,7 +75,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pain rate (up to 8)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-3B-4gn">
-                        <rect key="frame" x="86" y="58.333333333333343" width="175" height="21"/>
+                        <rect key="frame" x="86" y="58.333333333333343" width="137" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                     <constraint firstAttribute="trailing" secondItem="Ybo-hm-GIT" secondAttribute="trailing" constant="35" id="3ce-Sp-lAc"/>
                     <constraint firstItem="FCm-Lh-NE2" firstAttribute="top" secondItem="33F-CN-MkG" secondAttribute="bottom" constant="16" id="3rq-Zf-tza"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fcd-IY-DNG" secondAttribute="trailing" priority="750" constant="284" id="4pc-Lv-JId"/>
-                    <constraint firstAttribute="trailing" secondItem="nhN-3B-4gn" secondAttribute="trailing" constant="59" id="7aO-9x-rIN"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nhN-3B-4gn" secondAttribute="trailing" constant="40" id="7aO-9x-rIN"/>
                     <constraint firstItem="Ybo-hm-GIT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="7wG-4P-3F4"/>
                     <constraint firstItem="qGb-2K-JX4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9Rm-ej-HsI"/>
                     <constraint firstItem="nhN-3B-4gn" firstAttribute="top" secondItem="JP1-Xh-U1e" secondAttribute="bottom" constant="28" id="Be1-m0-yTH"/>
@@ -144,7 +144,7 @@
                 <outlet property="painLocationLabel" destination="FCm-Lh-NE2" id="p4n-L3-d9e"/>
                 <outlet property="severitylabel" destination="33F-CN-MkG" id="tI2-lI-Bpa"/>
             </connections>
-            <point key="canvasLocation" x="-591" y="29"/>
+            <point key="canvasLocation" x="-592.36641221374043" y="28.52112676056338"/>
         </tableViewCell>
     </objects>
     <resources>
