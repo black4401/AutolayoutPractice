@@ -22,7 +22,7 @@ class MorningPainCell: UITableViewCell {
         super.awakeFromNib()
         
         avgLabel.attributedText = createAttrString()
-        avgLabel.textColor = .morningPainSecondaryLabelColor
+        avgLabel.textColor = .greyscale100
         
         iconView.image = UIImage(named: "sun_icon")
         
@@ -48,7 +48,7 @@ private extension MorningPainCell {
     
     func setSecondaryLabelText() {
         secondaryLabel.font = .dmSansRegular(ofSize: 15)
-        secondaryLabel.textColor = .morningPainSecondaryLabelColor
+        secondaryLabel.textColor = .greyscale100
         let text = "8% lower than last period"
         let attrString = NSMutableAttributedString(string: text)
         let paragraphStyle = NSMutableParagraphStyle()
