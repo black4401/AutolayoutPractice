@@ -19,6 +19,8 @@
 		BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */; };
 		BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */; };
 		BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */; };
+		BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */; };
+		BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 		BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainRateCell.swift; sourceTree = "<group>"; };
 		BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainRateCell.xib; sourceTree = "<group>"; };
 		BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,8 @@
 				BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */,
 				BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */,
 				BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */,
+				BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */,
+				BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
+				BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
@@ -272,6 +279,7 @@
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
+				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+DMSans.swift in Sources */,

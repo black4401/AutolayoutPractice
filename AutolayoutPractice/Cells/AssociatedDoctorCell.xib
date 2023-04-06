@@ -21,29 +21,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHg-ML-MRC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-np-eRA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor_icon" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-np-eRA">
                                 <rect key="frame" x="26" y="19" width="16" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="K3n-PE-8Xv"/>
                                     <constraint firstAttribute="width" constant="16" id="oQ8-V3-yln"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EW-eE-bIU">
-                                <rect key="frame" x="60" y="14.333333333333336" width="180" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="cjO-bY-HHL"/>
-                                    <constraint firstAttribute="height" constant="21" id="pky-4a-6Sk"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Doctor" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EW-eE-bIU">
+                                <rect key="frame" x="59.999999999999993" y="15.999999999999998" width="103.33333333333331" height="19.333333333333329"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aq-Ps-x83">
-                                <rect key="frame" x="62" y="39.333333333333336" width="55" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="OOC-4a-eZh"/>
-                                    <constraint firstAttribute="height" constant="16" id="mmE-i5-C00"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aq-Ps-x83">
+                                <rect key="frame" x="62" y="39.333333333333336" width="38.333333333333343" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -52,12 +45,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HXg-np-eRA" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="19" id="4ZU-Tr-6dF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5EW-eE-bIU" secondAttribute="trailing" constant="20" id="8bq-8d-2ov"/>
                             <constraint firstItem="2aq-Ps-x83" firstAttribute="top" secondItem="5EW-eE-bIU" secondAttribute="bottom" constant="4" id="Hjz-ET-cMU"/>
                             <constraint firstItem="5EW-eE-bIU" firstAttribute="leading" secondItem="HXg-np-eRA" secondAttribute="trailing" constant="18" id="IO5-DY-ddq"/>
                             <constraint firstItem="2aq-Ps-x83" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="62" id="JNI-hl-Jww"/>
                             <constraint firstItem="HXg-np-eRA" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="26" id="UWB-d9-RB9"/>
-                            <constraint firstAttribute="bottom" secondItem="2aq-Ps-x83" secondAttribute="bottom" constant="17.666666666666664" id="Ve0-zu-FwK"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2aq-Ps-x83" secondAttribute="bottom" constant="5" id="Ve0-zu-FwK"/>
                             <constraint firstAttribute="bottom" secondItem="HXg-np-eRA" secondAttribute="bottom" constant="34" id="aLg-fq-9Ku"/>
+                            <constraint firstItem="5EW-eE-bIU" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="16" id="cZ2-ZE-QcN"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -76,10 +71,11 @@
                 <outlet property="mainView" destination="gHg-ML-MRC" id="FsK-m3-tkn"/>
                 <outlet property="secondaryLabel" destination="2aq-Ps-x83" id="TPg-EW-AcJ"/>
             </connections>
-            <point key="canvasLocation" x="-15.267175572519083" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="-115" y="-12"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="doctor_icon" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

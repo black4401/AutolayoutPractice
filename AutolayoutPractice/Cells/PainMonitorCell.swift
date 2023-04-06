@@ -33,12 +33,12 @@ class PainMonitorCell: UITableViewCell {
      
      func setUpAvgLabel(value: String) {
          avgLabel.attributedText = createAttrString(value: value)
-         avgLabel.textColor = .morningPainSecondaryLabelColor
+         avgLabel.textColor = .greyscale100
      }
     
     func setSecondaryLabelText(text: String) {
         secondaryLabel.font = .dmSansRegular(ofSize: 15)
-        secondaryLabel.textColor = .morningPainSecondaryLabelColor
+        secondaryLabel.textColor = .greyscale100
         let text = text
         let attrString = NSMutableAttributedString(string: text)
         let paragraphStyle = NSMutableParagraphStyle()
