@@ -10,12 +10,12 @@ import UIKit
 class PainRateCell: UITableViewCell {
     
     
-    @IBOutlet weak var iconView: UIImageView!
-    @IBOutlet weak var emojiView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var emojiImageView: UIImageView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var innerImageView: UIImageView!
-    @IBOutlet weak var lineView: UIImageView!
+    @IBOutlet weak var lineImageView: UIImageView!
     
     @IBOutlet weak var morningLabel: UILabel!
     @IBOutlet weak var painLabel: UILabel!
@@ -33,12 +33,12 @@ class PainRateCell: UITableViewCell {
         setUpPainLocationLabel()
         
         backView.layer.cornerRadius = 12
-        iconView.image = UIImage(named: "sun_icon")
-        emojiView.image = UIImage(named: "Progress")
+        iconImageView.image = UIImage(named: "sun_icon")
+        emojiImageView.image = UIImage(named: "Progress")
         innerImageView.image = UIImage(named: "anguish")
         circleView.layer.cornerRadius = 25
         editButton.setImage(UIImage(named: "edit_icon 1"), for: .normal)
-        lineView.image = UIImage(named: "Line 13")
+        lineImageView.image = UIImage(named: "Line 13")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

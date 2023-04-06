@@ -13,7 +13,7 @@ class MorningPainCell: UITableViewCell {
     let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 22.0)! ]
 
     @IBOutlet weak var morningPainLabel: UILabel!
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
@@ -24,7 +24,7 @@ class MorningPainCell: UITableViewCell {
         avgLabel.attributedText = createAttrString()
         avgLabel.textColor = .greyscale100
         
-        iconView.image = UIImage(named: "sun_icon")
+        iconImageView.image = UIImage(named: "sun_icon")
         
         setSecondaryLabelText()
         setUpMorningPainLabel()

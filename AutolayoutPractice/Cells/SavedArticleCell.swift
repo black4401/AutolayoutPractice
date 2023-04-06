@@ -9,7 +9,7 @@ import UIKit
 
 class SavedArticleCell: UITableViewCell {
 
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var recommendedLabel: UILabel!
@@ -21,7 +21,7 @@ class SavedArticleCell: UITableViewCell {
         setUpSecondaryLabel()
         setUpRecommendedLabel()
         
-        iconView.image = UIImage(named: "Rectangle 127")
+        iconImageView.image = UIImage(named: "Rectangle 127")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

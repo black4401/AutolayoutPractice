@@ -135,10 +135,10 @@
                 <outlet property="backView" destination="Ybo-hm-GIT" id="Y9O-1J-Yex"/>
                 <outlet property="circleView" destination="uga-Xf-4mN" id="qRy-aQ-zV3"/>
                 <outlet property="editButton" destination="gBM-K3-Bay" id="sjW-uJ-vgS"/>
-                <outlet property="emojiView" destination="qGb-2K-JX4" id="gQs-WP-6nl"/>
-                <outlet property="iconView" destination="Fcd-IY-DNG" id="F6V-JX-HJa"/>
+                <outlet property="emojiImageView" destination="qGb-2K-JX4" id="gQs-WP-6nl"/>
+                <outlet property="iconImageView" destination="Fcd-IY-DNG" id="F6V-JX-HJa"/>
                 <outlet property="innerImageView" destination="oYb-Db-tY3" id="Pgq-sW-LxY"/>
-                <outlet property="lineView" destination="kqh-Vh-eLh" id="arz-3Y-Rsx"/>
+                <outlet property="lineImageView" destination="kqh-Vh-eLh" id="arz-3Y-Rsx"/>
                 <outlet property="morningLabel" destination="JP1-Xh-U1e" id="JYl-Kc-T38"/>
                 <outlet property="painLabel" destination="nhN-3B-4gn" id="CLe-lq-jff"/>
                 <outlet property="painLocationLabel" destination="FCm-Lh-NE2" id="p4n-L3-d9e"/>

@@ -10,13 +10,13 @@ import UIKit
 class AssociatedDoctorCell: UITableViewCell {
 
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        iconView.image = UIImage(named: "doctor_icon")
+        iconImageView.image = UIImage(named: "doctor_icon")
 
         setUpMainLabel()
         setUpSecondaryLabel()

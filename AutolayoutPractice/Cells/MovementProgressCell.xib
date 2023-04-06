@@ -60,7 +60,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="iconView" destination="VfU-Vk-7a3" id="Ped-zk-DGG"/>
+                <outlet property="iconImageView" destination="VfU-Vk-7a3" id="Ped-zk-DGG"/>
                 <outlet property="movementLabel" destination="vwj-AM-GEG" id="Nea-ZN-NRL"/>
                 <outlet property="progressView" destination="SpW-pD-IeE" id="wKb-xi-tNF"/>
                 <outlet property="secondaryLabel" destination="G2u-Zk-fBT" id="AH1-Db-jf2"/>

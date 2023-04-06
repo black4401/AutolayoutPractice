@@ -12,7 +12,7 @@ class ActivityCell: UITableViewCell {
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var movementLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class ActivityCell: UITableViewCell {
 extension ActivityCell {
     
     func setUpIconView(with name: String) {
-        iconView.image = UIImage(named: name)
+        iconImageView.image = UIImage(named: name)
     }
     
     func setUpSecondaryLabel(text: String) {

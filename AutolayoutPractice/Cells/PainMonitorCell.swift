@@ -13,7 +13,7 @@ class PainMonitorCell: UITableViewCell {
     let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 22.0)! ]
     
     @IBOutlet private weak var morningPainLabel: UILabel!
-    @IBOutlet private weak var iconView: UIImageView!
+    @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var avgLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
     
@@ -59,6 +59,6 @@ class PainMonitorCell: UITableViewCell {
     }
     
     func setUpIconView(iconName: String) {
-        iconView.image = UIImage(named: iconName)
+        iconImageView.image = UIImage(named: iconName)
     }
 }

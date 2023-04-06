@@ -42,7 +42,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="iconView" destination="TBi-wt-R3b" id="8bq-zL-NhB"/>
+                <outlet property="iconImageView" destination="TBi-wt-R3b" id="8bq-zL-NhB"/>
                 <outlet property="label" destination="9Cq-98-AIl" id="MYs-oj-Hot"/>
                 <outlet property="mainView" destination="H2p-sc-9uM" id="r4e-f7-6P4"/>
             </connections>

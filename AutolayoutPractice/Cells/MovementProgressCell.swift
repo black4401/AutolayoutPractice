@@ -12,7 +12,7 @@ class MovementProgressCell: UITableViewCell {
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var movementLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +21,7 @@ class MovementProgressCell: UITableViewCell {
         setUpMovementLabel()
         setUpProgressView()
         
-        iconView.image = UIImage(named: "movement_icon")
+        iconImageView.image = UIImage(named: "movement_icon")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

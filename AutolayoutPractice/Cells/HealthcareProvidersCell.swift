@@ -9,14 +9,14 @@ import UIKit
 
 class HealthcareProvidersCell: UITableViewCell {
     
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var label: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 8
-        iconView.image = UIImage(named: "doctor_bag_icon")
+        iconImageView.image = UIImage(named: "doctor_bag_icon")
 
         setUpAccessory()
         setUpLabel()

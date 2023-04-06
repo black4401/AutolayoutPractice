@@ -71,7 +71,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avgLabel" destination="Zme-NY-gBI" id="bfW-S2-whn"/>
-                <outlet property="iconView" destination="O0a-RY-mm4" id="2xV-sO-2ti"/>
+                <outlet property="iconImageView" destination="O0a-RY-mm4" id="2xV-sO-2ti"/>
                 <outlet property="morningPainLabel" destination="5qm-Oe-Fva" id="Unw-3g-Z5j"/>
                 <outlet property="percentLabel" destination="115-Ki-0IY" id="aoK-tc-nmd"/>
                 <outlet property="secondaryLabel" destination="115-Ki-0IY" id="llS-D5-AiT"/>

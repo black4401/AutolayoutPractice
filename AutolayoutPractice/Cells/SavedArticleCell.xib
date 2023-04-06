@@ -63,7 +63,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="iconView" destination="lg6-Ku-qsA" id="mff-Lr-crf"/>
+                <outlet property="iconImageView" destination="lg6-Ku-qsA" id="mff-Lr-crf"/>
                 <outlet property="mainLabel" destination="aFo-q1-8uO" id="Tye-wF-rWB"/>
                 <outlet property="recommendedLabel" destination="fWE-fB-tq6" id="YgG-lM-cni"/>
                 <outlet property="secondaryLabel" destination="mbl-Ig-obc" id="1qg-Rs-V2b"/>
