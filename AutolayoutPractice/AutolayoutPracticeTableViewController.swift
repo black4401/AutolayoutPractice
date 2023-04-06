@@ -22,15 +22,6 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "PainMonitorCell", bundle: nil), forCellReuseIdentifier: "PainMonitorCell")
         self.tableView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellReuseIdentifier: "ActivityCell")
     }
-//
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.section {
-//            case 5:
-//                return 270
-//            default:
-//                return tableView.rowHeight
-//        }
-//    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 8
@@ -52,9 +43,9 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.section {
-//            case 0:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.healthcareProviders, for: indexPath) as! HealthcareProvidersCell
-//                return cell
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.healthcareProviders, for: indexPath) as! HealthcareProvidersCell
+                return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.associatedDoctor, for: indexPath) as! AssociatedDoctorCell
                 return cell
@@ -62,12 +53,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningEntry, for: indexPath) as! MorningEntryCell
                 return cell
             case 3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "PainMonitorCell", for: indexPath) as! PainMonitorCell
-                let style = CellStyle.morning
-                cell.setUpPainLabel(text: style.painText)
-                cell.setSecondaryLabelText(text: style.secondaryText)
-                cell.setUpIconView(iconName: style.emojiName)
-                cell.setUpAvgLabel(value: style.percentValue)
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningPain, for: indexPath) as! MorningPainCell
                 return cell
             case 4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.movementProgress, for: indexPath) as! MovementProgressCell
@@ -75,20 +61,20 @@ class AutolayoutPracticeTableViewController: UITableViewController {
             case 5:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.savedArticle, for: indexPath) as! SavedArticleCell
                 return cell
-//            case 6:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
-//                return cell
-//            case 7:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "PainMonitorCell", for: indexPath) as! PainMonitorCell
-//                let style = CellStyle.evening
-//                cell.setUpPainLabel(text: style.painText)
-//                cell.setSecondaryLabelText(text: style.secondaryText)
-//                cell.setUpIconView(iconName: style.emojiName)
-//                cell.setUpAvgLabel(value: style.percentValue)
-//                return cell
-//            case 8:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
-//                return cell
+            case 6:
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
+                return cell
+            case 7:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PainMonitorCell", for: indexPath) as! PainMonitorCell
+                let style = CellStyle.evening
+                cell.setUpPainLabel(text: style.painText)
+                cell.setSecondaryLabelText(text: style.secondaryText)
+                cell.setUpIconView(iconName: style.emojiName)
+                cell.setUpAvgLabel(value: style.percentValue)
+                return cell
+            case 8:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
+                return cell
             default:
                 return UITableViewCell()
         }

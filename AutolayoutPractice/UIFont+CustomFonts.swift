@@ -11,4 +11,7 @@ extension UIFont {
     static func dmSansRegular(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "DMSans-Regular", size: size)!
     }
+    static func sourceSansPro(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "SourceSansPro-Regular", size: size)!
+    }
 }

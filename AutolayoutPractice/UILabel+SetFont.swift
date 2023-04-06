@@ -11,4 +11,7 @@ extension UILabel {
     func setFontToDMSans(with size: CGFloat) {
         self.font = .dmSansRegular(ofSize: size)
     }
+    func setFontToSourceSansPro(with size: CGFloat) {
+        self.font = .sourceSansPro(ofSize: size)
+    }
 }

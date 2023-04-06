@@ -51,7 +51,6 @@
                             <constraint firstItem="2aq-Ps-x83" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="62" id="JNI-hl-Jww"/>
                             <constraint firstItem="HXg-np-eRA" firstAttribute="leading" secondItem="gHg-ML-MRC" secondAttribute="leading" constant="26" id="UWB-d9-RB9"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2aq-Ps-x83" secondAttribute="bottom" constant="5" id="Ve0-zu-FwK"/>
-                            <constraint firstAttribute="bottom" secondItem="HXg-np-eRA" secondAttribute="bottom" constant="34" id="aLg-fq-9Ku"/>
                             <constraint firstItem="5EW-eE-bIU" firstAttribute="top" secondItem="gHg-ML-MRC" secondAttribute="top" constant="16" id="cZ2-ZE-QcN"/>
                         </constraints>
                     </view>

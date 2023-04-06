@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-c8-800" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="16" y="149" width="122" height="20"/>
+                        <rect key="frame" x="16" y="141" width="122" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="hsj-F6-OcD"/>
                         </constraints>
@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't move much" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohT-UH-d21">
-                        <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="26"/>
+                        <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.12858635190000001" green="0.13852727409999999" blue="0.15807771679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -48,13 +48,11 @@
                     <constraint firstItem="ohT-UH-d21" firstAttribute="top" secondItem="5Mb-Kf-Eok" secondAttribute="bottom" constant="19" id="7Np-tG-ugd"/>
                     <constraint firstItem="ZV4-c8-800" firstAttribute="leading" secondItem="LAI-NT-9hT" secondAttribute="leading" constant="16" id="CN7-IL-gJO"/>
                     <constraint firstAttribute="trailing" secondItem="ZV4-c8-800" secondAttribute="trailing" constant="29" id="OGi-lr-188"/>
-                    <constraint firstAttribute="bottom" secondItem="ZV4-c8-800" secondAttribute="bottom" constant="16" id="XTD-fy-IID"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZV4-c8-800" secondAttribute="bottom" constant="16" id="XTD-fy-IID"/>
                     <constraint firstItem="ZV4-c8-800" firstAttribute="top" secondItem="ohT-UH-d21" secondAttribute="bottom" constant="24" id="ZzA-IP-jeP"/>
                     <constraint firstItem="5Mb-Kf-Eok" firstAttribute="top" secondItem="bMO-m5-Ive" secondAttribute="bottom" constant="27" id="dlv-Tk-hno"/>
                     <constraint firstItem="ohT-UH-d21" firstAttribute="leading" secondItem="LAI-NT-9hT" secondAttribute="leading" constant="16" id="faT-jE-Hfe"/>
                     <constraint firstAttribute="trailing" secondItem="ohT-UH-d21" secondAttribute="trailing" constant="26.666666666666686" id="gv9-Ut-SOX"/>
-                    <constraint firstAttribute="bottom" secondItem="bMO-m5-Ive" secondAttribute="bottom" constant="156" id="iwa-R0-s3X"/>
-                    <constraint firstAttribute="trailing" secondItem="bMO-m5-Ive" secondAttribute="trailing" constant="87.333333333333343" id="iyl-OY-4OQ"/>
                     <constraint firstItem="5Mb-Kf-Eok" firstAttribute="leading" secondItem="LAI-NT-9hT" secondAttribute="leading" constant="16" id="vH0-wK-cgZ"/>
                     <constraint firstItem="bMO-m5-Ive" firstAttribute="top" secondItem="LAI-NT-9hT" secondAttribute="top" constant="16" id="vIx-Ls-thf"/>
                 </constraints>

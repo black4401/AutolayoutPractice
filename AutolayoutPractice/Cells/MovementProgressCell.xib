@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VfU-Vk-7a3">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movement_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VfU-Vk-7a3">
                         <rect key="frame" x="16" y="56" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="QOn-Sc-eZJ"/>
@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't move much" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2u-Zk-fBT">
-                        <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="26"/>
+                        <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.12858635190000001" green="0.13852727409999999" blue="0.15807771679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -47,12 +47,11 @@
                     <constraint firstItem="VfU-Vk-7a3" firstAttribute="top" secondItem="vwj-AM-GEG" secondAttribute="bottom" constant="27" id="67p-2H-YVh"/>
                     <constraint firstAttribute="trailing" secondItem="G2u-Zk-fBT" secondAttribute="trailing" constant="26.666666666666686" id="CIG-Y1-8wf"/>
                     <constraint firstItem="vwj-AM-GEG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="DKl-Ad-35G"/>
-                    <constraint firstItem="SpW-pD-IeE" firstAttribute="top" secondItem="G2u-Zk-fBT" secondAttribute="bottom" constant="24" id="E6z-DI-2aI"/>
+                    <constraint firstItem="SpW-pD-IeE" firstAttribute="top" secondItem="G2u-Zk-fBT" secondAttribute="bottom" constant="32" id="Edc-3V-Ezp"/>
                     <constraint firstItem="vwj-AM-GEG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="HI2-bO-LX6"/>
                     <constraint firstItem="SpW-pD-IeE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Kh9-E4-wYP"/>
                     <constraint firstAttribute="trailing" secondItem="SpW-pD-IeE" secondAttribute="trailing" constant="29" id="ZJo-H2-Fue"/>
                     <constraint firstItem="G2u-Zk-fBT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hAO-hK-k3v"/>
-                    <constraint firstAttribute="bottom" secondItem="vwj-AM-GEG" secondAttribute="bottom" constant="156" id="phz-qi-tdU"/>
                     <constraint firstItem="VfU-Vk-7a3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qyl-dK-htt"/>
                     <constraint firstAttribute="trailing" secondItem="vwj-AM-GEG" secondAttribute="trailing" constant="87.333333333333343" id="uBe-57-GtU"/>
                     <constraint firstItem="G2u-Zk-fBT" firstAttribute="top" secondItem="VfU-Vk-7a3" secondAttribute="bottom" constant="19" id="xd1-D3-BYS"/>
@@ -69,4 +68,7 @@
             <point key="canvasLocation" x="25.190839694656489" y="-11.619718309859156"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="movement_icon" width="24" height="24"/>
+    </resources>
 </document>
