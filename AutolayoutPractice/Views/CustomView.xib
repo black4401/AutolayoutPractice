@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="AutolayoutPractice" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
             <connections>
                 <outlet property="avgLabel" destination="ild-35-Gsl" id="6GZ-RK-FMs"/>
                 <outlet property="iconImageView" destination="y42-x9-gJc" id="ifT-w8-RVs"/>
@@ -67,6 +67,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="lPV-s5-p4B" firstAttribute="leading" secondItem="y42-x9-gJc" secondAttribute="trailing" constant="9" id="EF5-P8-U9a"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="144" id="J91-Gd-XJC"/>
                         <constraint firstItem="lPV-s5-p4B" firstAttribute="top" secondItem="8Zs-3M-ca2" secondAttribute="top" constant="18" id="Jur-S4-oqX"/>
                         <constraint firstAttribute="height" constant="144" id="Kzg-Cc-PJc"/>
                         <constraint firstItem="1u7-aD-yUx" firstAttribute="top" secondItem="ild-35-Gsl" secondAttribute="bottom" constant="8" id="L2O-nZ-CV6"/>
@@ -75,6 +76,7 @@
                         <constraint firstItem="y42-x9-gJc" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="ZhC-ed-IyO"/>
                         <constraint firstItem="y42-x9-gJc" firstAttribute="top" secondItem="8Zs-3M-ca2" secondAttribute="top" constant="17" id="d5I-6G-LgP"/>
                         <constraint firstItem="1u7-aD-yUx" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="dzZ-pI-D63"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="eO3-5s-lhr"/>
                         <constraint firstItem="ild-35-Gsl" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="eix-me-3ml"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ild-35-Gsl" secondAttribute="trailing" constant="50" id="pB9-68-5Lr"/>
                         <constraint firstAttribute="width" constant="167" id="qcN-F3-q1J"/>

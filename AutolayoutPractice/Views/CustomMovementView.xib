@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomMovementView" customModule="AutolayoutPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="2aB-gd-55u" id="jC6-sE-mQ7"/>
+                <outlet property="mainLabel" destination="kws-oh-Qj1" id="76b-Wo-GWn"/>
+                <outlet property="progressView" destination="aTc-iz-QhM" id="khW-1F-T3m"/>
+                <outlet property="secondaryLabel" destination="5o3-xY-Gb4" id="S5w-sY-QR1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-4k-TUl">
+                    <rect key="frame" x="113" y="333.66666666666669" width="167" height="185.00000000000006"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kws-oh-Qj1">
+                            <rect key="frame" x="15.999999999999996" y="16" width="63.666666666666657" height="13"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" red="0.55338245630000005" green="0.55720365049999998" blue="0.56483000520000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movement_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-gd-55u">
+                            <rect key="frame" x="16" y="56" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="V0d-Ft-fEv"/>
+                                <constraint firstAttribute="width" constant="24" id="tDs-ir-Neo"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't move much" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o3-xY-Gb4">
+                            <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.12858635190000001" green="0.13852727409999999" blue="0.15807771679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-iz-QhM" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
+                            <rect key="frame" x="16" y="149" width="122" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="xtY-Ax-eRe"/>
+                            </constraints>
+                        </progressView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="aTc-iz-QhM" firstAttribute="leading" secondItem="d5O-4k-TUl" secondAttribute="leading" constant="16" id="9No-Wc-dzl"/>
+                        <constraint firstItem="2aB-gd-55u" firstAttribute="top" secondItem="kws-oh-Qj1" secondAttribute="bottom" constant="27" id="Igc-Z4-ZJo"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5o3-xY-Gb4" secondAttribute="trailing" constant="10" id="NWR-ln-WTV"/>
+                        <constraint firstItem="aTc-iz-QhM" firstAttribute="top" secondItem="5o3-xY-Gb4" secondAttribute="bottom" constant="32" id="S3C-jW-Tc9"/>
+                        <constraint firstAttribute="trailing" secondItem="aTc-iz-QhM" secondAttribute="trailing" constant="29" id="Tq1-Hn-3ir"/>
+                        <constraint firstAttribute="height" constant="185" id="UYh-az-G2R"/>
+                        <constraint firstAttribute="width" constant="167" id="fUZ-h3-Wvg"/>
+                        <constraint firstItem="2aB-gd-55u" firstAttribute="leading" secondItem="d5O-4k-TUl" secondAttribute="leading" constant="16" id="hqB-Ip-tbE"/>
+                        <constraint firstItem="kws-oh-Qj1" firstAttribute="top" secondItem="d5O-4k-TUl" secondAttribute="top" constant="16" id="lZh-cN-gxU"/>
+                        <constraint firstItem="5o3-xY-Gb4" firstAttribute="leading" secondItem="d5O-4k-TUl" secondAttribute="leading" constant="16" id="nn4-5f-kOA"/>
+                        <constraint firstItem="kws-oh-Qj1" firstAttribute="leading" secondItem="d5O-4k-TUl" secondAttribute="leading" constant="16" id="s18-Vo-8jZ"/>
+                        <constraint firstItem="5o3-xY-Gb4" firstAttribute="top" secondItem="2aB-gd-55u" secondAttribute="bottom" constant="19" id="yRh-pR-RFw"/>
+                        <constraint firstAttribute="bottom" secondItem="aTc-iz-QhM" secondAttribute="bottom" constant="16" id="zcN-0M-OyT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.83471196889999999" green="0.83471196889999999" blue="0.83822232480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d5O-4k-TUl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="J9P-kN-c5k"/>
+                <constraint firstItem="d5O-4k-TUl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VIf-Vb-R5v"/>
+            </constraints>
+            <point key="canvasLocation" x="127" y="-99"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="movement_icon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

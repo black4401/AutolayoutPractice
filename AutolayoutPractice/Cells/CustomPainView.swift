@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomView: UIView {
+class CustomPainView: UIView {
     
     private let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 12.0)! ]
     private let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 22.0)! ]
@@ -31,17 +31,12 @@ class CustomView: UIView {
     
     func convenienceInit() {
         let view = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)![0] as! UIView
-        view.frame = self.bounds
+        view.frame = CGRect(x: 0, y: 0, width: 167, height: 144)
         addSubview(view)
-        view.frame = bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        
     }
-    
 }
 
-extension CustomView {
+extension CustomPainView {
    private func createAttrString(value: String) -> NSMutableAttributedString {
        let attrString = NSMutableAttributedString(string: "avg. ",
                                                   attributes: textFontAttribute)

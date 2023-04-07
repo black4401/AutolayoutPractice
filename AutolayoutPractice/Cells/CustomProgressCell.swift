@@ -1,17 +1,17 @@
 //
-//  NewCell.swift
+//  CustomProgressCell.swift
 //  AutolayoutPractice
 //
-//  Created by Alexander Angelov on 6.04.23.
+//  Created by Alexander Angelov on 7.04.23.
 //
 
 import UIKit
 
-class NewCell: UITableViewCell {
+class CustomProgressCell: UITableViewCell {
     
     
-    @IBOutlet weak var customView1: CustomView!
-    @IBOutlet weak var customView2: CustomView!
+    @IBOutlet weak var movementProgressView: CustomMovementView!
+    @IBOutlet weak var stressProgressView: CustomMovementView!
     
     
     override func awakeFromNib() {
