@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomProgressCell" customModule="AutolayoutPractice" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomProgressCell" id="KGk-i7-Jjw" customClass="CustomProgressCell" customModule="AutolayoutPractice" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="374" height="185"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="374" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BV-jV-fn5" customClass="CustomMovementView" customModule="AutolayoutPractice" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BV-jV-fn5" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="16" y="0.0" width="167" height="185"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -26,7 +26,7 @@
                             <constraint firstAttribute="height" constant="185" id="z7M-aA-0uR"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-lO-yhQ" customClass="CustomMovementView" customModule="AutolayoutPractice" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-lO-yhQ" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="191" y="0.0" width="167" height="185"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -48,8 +48,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="movementProgressView" destination="6BV-jV-fn5" id="y11-JW-H9U"/>
-                <outlet property="stressProgressView" destination="vmb-lO-yhQ" id="Zr7-Xr-luM"/>
+                <outlet property="movementProgressView" destination="6BV-jV-fn5" id="DGQ-S4-zvB"/>
+                <outlet property="stressProgressView" destination="vmb-lO-yhQ" id="FT3-vk-ZdK"/>
             </connections>
             <point key="canvasLocation" x="-9" y="-11"/>
         </tableViewCell>

@@ -13,7 +13,7 @@
 		BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */; };
 		BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */; };
 		BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */; };
-		BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */; };
+		BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */; };
 		BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */; };
 		BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */; };
 		BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */; };
@@ -36,11 +36,11 @@
 		BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */; };
 		BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA16029DF16D6004B39BA /* CustomPainCell.swift */; };
 		BB6CA16329DF16D6004B39BA /* CustomPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */; };
-		BB6CA16729DF27D1004B39BA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16629DF27D1004B39BA /* CustomView.xib */; };
-		BB6CA16929E02E57004B39BA /* CustomMovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA16829E02E57004B39BA /* CustomMovementView.swift */; };
-		BB6CA16B29E02E61004B39BA /* CustomMovementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16A29E02E61004B39BA /* CustomMovementView.xib */; };
+		BB6CA16729DF27D1004B39BA /* CustomPainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16629DF27D1004B39BA /* CustomPainView.xib */; };
 		BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */; };
 		BB6CA16F29E03636004B39BA /* CustomProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */; };
+		BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */; };
+		BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
@@ -71,7 +71,7 @@
 		BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningPainCell.xib; sourceTree = "<group>"; };
 		BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProgressCell.swift; sourceTree = "<group>"; };
 		BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementProgressCell.xib; sourceTree = "<group>"; };
-		BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticleCell.swift; sourceTree = "<group>"; };
 		BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedArticleCell.xib; sourceTree = "<group>"; };
 		BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainRateCell.swift; sourceTree = "<group>"; };
@@ -94,11 +94,11 @@
 		BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPainView.swift; path = AutolayoutPractice/Cells/CustomPainView.swift; sourceTree = SOURCE_ROOT; };
 		BB6CA16029DF16D6004B39BA /* CustomPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPainCell.swift; sourceTree = "<group>"; };
 		BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPainCell.xib; sourceTree = "<group>"; };
-		BB6CA16629DF27D1004B39BA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
-		BB6CA16829E02E57004B39BA /* CustomMovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovementView.swift; sourceTree = "<group>"; };
-		BB6CA16A29E02E61004B39BA /* CustomMovementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMovementView.xib; sourceTree = "<group>"; };
+		BB6CA16629DF27D1004B39BA /* CustomPainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPainView.xib; sourceTree = "<group>"; };
 		BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressCell.swift; sourceTree = "<group>"; };
 		BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressCell.xib; sourceTree = "<group>"; };
+		BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressView.xib; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */,
-				BB6CA16629DF27D1004B39BA /* CustomView.xib */,
-				BB6CA16829E02E57004B39BA /* CustomMovementView.swift */,
-				BB6CA16A29E02E61004B39BA /* CustomMovementView.xib */,
-				BB55F5CE29D58D6600F2F2C1 /* CustomProgressView.swift */,
+				BB6CA16629DF27D1004B39BA /* CustomPainView.xib */,
+				BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */,
+				BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */,
+				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,11 +336,11 @@
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
 				BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
-				BB6CA16B29E02E61004B39BA /* CustomMovementView.xib in Resources */,
+				BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
 				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
 				BB6CA16329DF16D6004B39BA /* CustomPainCell.xib in Resources */,
-				BB6CA16729DF27D1004B39BA /* CustomView.xib in Resources */,
+				BB6CA16729DF27D1004B39BA /* CustomPainView.xib in Resources */,
 				BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */,
 				BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */,
 				BB6CA15329DEDB92004B39BA /* SourceSansPro-LightItalic.ttf in Resources */,
@@ -364,16 +364,16 @@
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
-				BB55F5CF29D58D6600F2F2C1 /* CustomProgressView.swift in Sources */,
+				BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
-				BB6CA16929E02E57004B39BA /* CustomMovementView.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
 				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */,
 				BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
+				BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */,
 				BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */,
 				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
