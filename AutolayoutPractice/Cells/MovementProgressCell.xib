@@ -24,7 +24,7 @@
                             <constraint firstAttribute="height" constant="24" id="b8a-KM-xwf"/>
                         </constraints>
                     </imageView>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="SpW-pD-IeE" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="SpW-pD-IeE" customClass="ProgressBarView" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="16" y="149" width="122" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="J63-fZ-QaM"/>

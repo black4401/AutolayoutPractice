@@ -30,7 +30,7 @@ class CustomPainView: UIView {
     }
     
     func convenienceInit() {
-        let view = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)![0] as! UIView
+        let view = Bundle.main.loadNibNamed("CustomPainView", owner: self, options: nil)![0] as! UIView
         view.frame = CGRect(x: 0, y: 0, width: 167, height: 144)
         addSubview(view)
     }
