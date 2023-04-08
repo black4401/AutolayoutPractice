@@ -11,10 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
             <connections>
-                <outlet property="iconImageView" destination="7Ec-PN-a7l" id="alp-uK-gBf"/>
-                <outlet property="mainLabel" destination="ZNQ-YN-WEX" id="wP1-Cx-ZPw"/>
-                <outlet property="progressView" destination="ljp-6z-mg0" id="DYl-1T-WCM"/>
-                <outlet property="secondaryLabel" destination="kCQ-Dd-KeP" id="Ssx-QC-xgM"/>
+
+                <outlet property="iconImageView" destination="7Ec-PN-a7l" id="9cb-hF-4bl"/>
+                <outlet property="mainLabel" destination="ZNQ-YN-WEX" id="VGQ-tY-IpI"/>
+                <outlet property="progressView" destination="ljp-6z-mg0" id="RJI-Iz-g5Y"/>
+                <outlet property="secondaryLabel" destination="kCQ-Dd-KeP" id="H3r-Qn-H2t"/>
+
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
