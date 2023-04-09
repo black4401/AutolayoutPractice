@@ -31,12 +31,36 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
             case 5:
-                return "Recommended for you"
+                let headerView = UIView()
+                
+                let titleLabel = UILabel()
+                titleLabel.setFontToDMSans(with: 20)
+                titleLabel.textColor = .brandMainColor
+                titleLabel.text = "Recommended for you"
+                
+                headerView.addSubview(titleLabel)
+                
+                titleLabel.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    titleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 20),
+                    titleLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+                ])
+                
+                return headerView
             default:
                 return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+            case 5:
+                return UITableView.automaticDimension
+            default:
+                return 0
         }
     }
     
