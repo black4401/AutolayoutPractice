@@ -20,13 +20,10 @@ class CustomProgressCell: UITableViewCell {
         movementProgressView.setUpIconImageView(named: "movement_icon")
         movementProgressView.setUpMainLabel(text: "MOVEMENT")
         movementProgressView.setUpSecondaryLabel(text: "Didn't move much")
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        stressProgressView.setUpIconImageView(named: "stress")
+        stressProgressView.setUpMainLabel(text: "STRESS MANAGEMENT")
+        stressProgressView.setUpSecondaryLabel(text: "Feeling some \nstress")
+        stressProgressView.updateProgressView(to: 0.5, color: .redCritical100!)
     }
-    
-    
 }

@@ -33,6 +33,11 @@ class CustomProgressView: UIView {
         
         setUpProgressView()
     }
+    
+    func updateProgressView(to progress: Float, color: UIColor) {
+        progressView.progress = progress
+        progressView.progressTintColor = color
+    }
 
 }
 
@@ -58,5 +63,6 @@ extension CustomProgressView {
         progressView.clipsToBounds = true
         progressView.layer.sublayers![1].cornerRadius = 10
         progressView.subviews[1].clipsToBounds = true
+        progressView.progress = 0.3
     }
 }
