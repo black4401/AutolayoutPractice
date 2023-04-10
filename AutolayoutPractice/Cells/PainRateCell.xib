@@ -49,9 +49,10 @@
                                     <constraint firstAttribute="width" constant="264" id="ZQc-sd-eup"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-Ey-jnc" customClass="CustomHorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-Ey-jnc" customClass="CustomHorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
                                 <rect key="frame" x="97" y="112" width="145" height="27"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" priority="999" constant="145" id="U3i-O6-ibB"/>
                                     <constraint firstAttribute="height" constant="28" id="mwr-xc-Yzd"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="PLP-14-vVo"/>
@@ -124,7 +125,7 @@
                     <constraint firstAttribute="bottom" secondItem="Ybo-hm-GIT" secondAttribute="bottom" constant="5" id="fzv-aW-19q"/>
                     <constraint firstItem="Ybo-hm-GIT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="htS-6v-gV4"/>
                     <constraint firstItem="qGb-2K-JX4" firstAttribute="firstBaseline" secondItem="Fcd-IY-DNG" secondAttribute="baseline" constant="39" id="meN-Ol-gux"/>
-                    <constraint firstItem="bzb-Ey-jnc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="33F-CN-MkG" secondAttribute="bottom" constant="15" id="rEP-q6-cGX"/>
+                    <constraint firstItem="bzb-Ey-jnc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="33F-CN-MkG" secondAttribute="bottom" constant="5" id="oXH-ZY-R80"/>
                     <constraint firstItem="33F-CN-MkG" firstAttribute="leading" secondItem="qGb-2K-JX4" secondAttribute="trailing" constant="8" symbolic="YES" id="waa-wO-FG7"/>
                     <constraint firstItem="oYb-Db-tY3" firstAttribute="centerY" secondItem="qGb-2K-JX4" secondAttribute="centerY" id="zKz-GX-jgD"/>
                 </constraints>

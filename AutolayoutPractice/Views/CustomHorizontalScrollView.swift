@@ -10,6 +10,8 @@ import UIKit
 class CustomHorizontalScrollView: UIScrollView {
     
     private let contentView = UIView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
+    //self.addcontent
+    //collection view
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +24,7 @@ class CustomHorizontalScrollView: UIScrollView {
 
     func addSubview(_ subview: CustomConfigurableView) {
         contentView.addSubview(subview)
-        //layoutSubviews()
+        layoutSubviews()
     }
     
     override func layoutSubviews() {
