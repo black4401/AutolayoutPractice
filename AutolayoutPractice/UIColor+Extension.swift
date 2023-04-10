@@ -14,4 +14,5 @@ extension UIColor {
     static let greyscale80 = UIColor(named: "greyscale80")
     static let brandMainColor = UIColor(named: "brand_color")
     static let brandAccentTitn = UIColor(named: "brandAccentTint")
+    static let yellow10 = UIColor(named: "yellow10")
 }

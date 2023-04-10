@@ -23,6 +23,7 @@ class PainRateCell: UITableViewCell {
     @IBOutlet weak var painLocationLabel: UILabel!
     
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var horizontalScrollView: CustomHorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +31,8 @@ class PainRateCell: UITableViewCell {
         setUpPainLabel()
         setUpMorningLabel()
         setUpSeverityLabel()
-        setUpPainLocationLabel()
+        setUpHorizontalScrollView()
+        //setUpPainLocationLabel()
         
         backView.layer.cornerRadius = 12
         iconImageView.image = UIImage(named: "sun_icon")
@@ -65,12 +67,18 @@ private extension PainRateCell {
         severitylabel.textColor = .greyscale120
     }
     
-    func setUpPainLocationLabel() {
-        painLocationLabel.text = "Back of left knee (8)"
-        painLocationLabel.setFontToDMSans(with: 15)
-        painLocationLabel.textColor = .greyscale140
-        
-        painLocationLabel.layer.cornerRadius = 6
-        painLocationLabel.clipsToBounds = true
+//    func setUpPainLocationLabel() {
+//        painLocationLabel.text = "Back of left knee (8)"
+//        painLocationLabel.setFontToDMSans(with: 15)
+//        painLocationLabel.textColor = .greyscale140
+//
+//        painLocationLabel.layer.cornerRadius = 6
+//        painLocationLabel.clipsToBounds = true
+//    }
+    
+    func setUpHorizontalScrollView() {
+        let view = CustomConfigurableView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
+        view.setUpForPainRateCell(with: "Back of left knee")
+        horizontalScrollView.addSubview(view)
     }
 }

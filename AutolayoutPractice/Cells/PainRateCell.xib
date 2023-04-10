@@ -49,10 +49,21 @@
                                     <constraint firstAttribute="width" constant="264" id="ZQc-sd-eup"/>
                                 </constraints>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-Ey-jnc" customClass="CustomHorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
+                                <rect key="frame" x="97" y="112" width="145" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="mwr-xc-Yzd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PLP-14-vVo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YdU-6p-zBz"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bzb-Ey-jnc" secondAttribute="bottom" constant="12" id="FKe-Ty-mdX"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bzb-Ey-jnc" secondAttribute="trailing" id="K4c-Ba-uP5"/>
                             <constraint firstItem="kqh-Vh-eLh" firstAttribute="leading" secondItem="Ybo-hm-GIT" secondAttribute="leading" constant="17" id="KVz-gZ-IrE"/>
+                            <constraint firstItem="bzb-Ey-jnc" firstAttribute="leading" secondItem="Ybo-hm-GIT" secondAttribute="leading" constant="102" id="Sfp-ww-Sah"/>
                             <constraint firstAttribute="trailing" secondItem="uga-Xf-4mN" secondAttribute="trailing" constant="-26" id="Trq-x6-AM2"/>
                             <constraint firstItem="uga-Xf-4mN" firstAttribute="top" secondItem="Ybo-hm-GIT" secondAttribute="top" constant="14" id="Wa8-c9-PbO"/>
                             <constraint firstItem="kqh-Vh-eLh" firstAttribute="top" secondItem="Ybo-hm-GIT" secondAttribute="top" constant="45" id="w76-CX-gRW"/>
@@ -86,17 +97,6 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (8)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCm-Lh-NE2">
-                        <rect key="frame" x="86" y="117.33333333333331" width="160" height="26"/>
-                        <color key="backgroundColor" red="1" green="0.96266549830000003" blue="0.88011103869999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="160" id="1hX-ob-oEm"/>
-                            <constraint firstAttribute="height" constant="26" id="HDz-R1-JwP"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anguish" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-Db-tY3">
                         <rect key="frame" x="28" y="84" width="38" height="38"/>
                         <constraints>
@@ -108,9 +108,7 @@
                 <color key="backgroundColor" red="0.83471196889999999" green="0.83471196889999999" blue="0.83822232480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="oYb-Db-tY3" firstAttribute="centerX" secondItem="qGb-2K-JX4" secondAttribute="centerX" id="1LR-Re-Go6"/>
-                    <constraint firstItem="FCm-Lh-NE2" firstAttribute="leading" secondItem="qGb-2K-JX4" secondAttribute="trailing" constant="8" symbolic="YES" id="1xJ-pN-ePS"/>
                     <constraint firstAttribute="trailing" secondItem="Ybo-hm-GIT" secondAttribute="trailing" constant="35" id="3ce-Sp-lAc"/>
-                    <constraint firstItem="FCm-Lh-NE2" firstAttribute="top" secondItem="33F-CN-MkG" secondAttribute="bottom" constant="16" id="3rq-Zf-tza"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fcd-IY-DNG" secondAttribute="trailing" priority="750" constant="284" id="4pc-Lv-JId"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nhN-3B-4gn" secondAttribute="trailing" constant="40" id="7aO-9x-rIN"/>
                     <constraint firstItem="Ybo-hm-GIT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="7wG-4P-3F4"/>
@@ -126,6 +124,7 @@
                     <constraint firstAttribute="bottom" secondItem="Ybo-hm-GIT" secondAttribute="bottom" constant="5" id="fzv-aW-19q"/>
                     <constraint firstItem="Ybo-hm-GIT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="htS-6v-gV4"/>
                     <constraint firstItem="qGb-2K-JX4" firstAttribute="firstBaseline" secondItem="Fcd-IY-DNG" secondAttribute="baseline" constant="39" id="meN-Ol-gux"/>
+                    <constraint firstItem="bzb-Ey-jnc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="33F-CN-MkG" secondAttribute="bottom" constant="15" id="rEP-q6-cGX"/>
                     <constraint firstItem="33F-CN-MkG" firstAttribute="leading" secondItem="qGb-2K-JX4" secondAttribute="trailing" constant="8" symbolic="YES" id="waa-wO-FG7"/>
                     <constraint firstItem="oYb-Db-tY3" firstAttribute="centerY" secondItem="qGb-2K-JX4" secondAttribute="centerY" id="zKz-GX-jgD"/>
                 </constraints>
@@ -136,12 +135,12 @@
                 <outlet property="circleView" destination="uga-Xf-4mN" id="qRy-aQ-zV3"/>
                 <outlet property="editButton" destination="gBM-K3-Bay" id="sjW-uJ-vgS"/>
                 <outlet property="emojiImageView" destination="qGb-2K-JX4" id="gQs-WP-6nl"/>
+                <outlet property="horizontalScrollView" destination="bzb-Ey-jnc" id="abV-t9-xEk"/>
                 <outlet property="iconImageView" destination="Fcd-IY-DNG" id="F6V-JX-HJa"/>
                 <outlet property="innerImageView" destination="oYb-Db-tY3" id="Pgq-sW-LxY"/>
                 <outlet property="lineImageView" destination="kqh-Vh-eLh" id="arz-3Y-Rsx"/>
                 <outlet property="morningLabel" destination="JP1-Xh-U1e" id="JYl-Kc-T38"/>
                 <outlet property="painLabel" destination="nhN-3B-4gn" id="CLe-lq-jff"/>
-                <outlet property="painLocationLabel" destination="FCm-Lh-NE2" id="p4n-L3-d9e"/>
                 <outlet property="severitylabel" destination="33F-CN-MkG" id="tI2-lI-Bpa"/>
             </connections>
             <point key="canvasLocation" x="-592.36641221374043" y="28.52112676056338"/>
