@@ -28,7 +28,6 @@ class CustomProgressView: UIView {
     
     func convenienceInit() {
         let view = Bundle.main.loadNibNamed("CustomProgressView", owner: self, options: nil)![0] as! UIView
-        view.frame = CGRect(x: 0, y: 0, width: 167, height: 185)
         addSubview(view)
         
         setUpProgressView()

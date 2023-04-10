@@ -19,11 +19,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qk-bG-BnP">
-                    <rect key="frame" x="113" y="333.66666666666669" width="167" height="185.00000000000006"/>
+                    <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNQ-YN-WEX">
                             <rect key="frame" x="15.999999999999996" y="16" width="63.666666666666657" height="13"/>
@@ -55,13 +55,11 @@
                     <constraints>
                         <constraint firstItem="ljp-6z-mg0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kCQ-Dd-KeP" secondAttribute="bottom" constant="10" id="4hl-Wg-KHV"/>
                         <constraint firstItem="7Ec-PN-a7l" firstAttribute="leading" secondItem="3qk-bG-BnP" secondAttribute="leading" constant="16" id="77v-NJ-R3m"/>
-                        <constraint firstAttribute="width" constant="167" id="7hi-9f-jbb"/>
                         <constraint firstAttribute="bottom" secondItem="ljp-6z-mg0" secondAttribute="bottom" constant="16" id="99i-fy-tTi"/>
                         <constraint firstItem="kCQ-Dd-KeP" firstAttribute="leading" secondItem="3qk-bG-BnP" secondAttribute="leading" constant="16" id="9eh-lA-nn5"/>
                         <constraint firstItem="7Ec-PN-a7l" firstAttribute="top" secondItem="ZNQ-YN-WEX" secondAttribute="bottom" constant="27" id="Nqo-T5-Cwg"/>
                         <constraint firstItem="kCQ-Dd-KeP" firstAttribute="top" secondItem="3qk-bG-BnP" secondAttribute="top" constant="93" id="QPB-Ty-wz3"/>
                         <constraint firstItem="ZNQ-YN-WEX" firstAttribute="top" secondItem="3qk-bG-BnP" secondAttribute="top" constant="16" id="VsV-Qw-gZ8"/>
-                        <constraint firstAttribute="height" constant="185" id="atP-PM-wYY"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kCQ-Dd-KeP" secondAttribute="trailing" constant="10" id="ih1-Ud-J6w"/>
                         <constraint firstItem="ljp-6z-mg0" firstAttribute="leading" secondItem="3qk-bG-BnP" secondAttribute="leading" constant="16" id="na6-Sk-BFz"/>
                         <constraint firstAttribute="trailing" secondItem="ljp-6z-mg0" secondAttribute="trailing" constant="29" id="qLb-kq-8lv"/>
@@ -72,9 +70,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="3qk-bG-BnP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QgE-2z-PI4"/>
-                <constraint firstItem="3qk-bG-BnP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iUW-Dy-C8R"/>
+                <constraint firstItem="3qk-bG-BnP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="WSk-tt-BOR"/>
+                <constraint firstItem="3qk-bG-BnP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Zaz-eJ-DT5"/>
+                <constraint firstAttribute="bottom" secondItem="3qk-bG-BnP" secondAttribute="bottom" id="e2c-cg-leN"/>
+                <constraint firstItem="3qk-bG-BnP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sJg-1W-JZe"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131" y="-11"/>
         </view>
     </objects>

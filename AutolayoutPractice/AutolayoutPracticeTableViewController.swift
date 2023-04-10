@@ -35,8 +35,8 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-            case 0:
-                return tableView.rowHeight
+            case 8:
+                return 144
             default:
                 return tableView.rowHeight
         }
