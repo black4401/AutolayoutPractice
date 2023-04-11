@@ -7,7 +7,23 @@
 
 import UIKit
 
-class PainRateCell: UITableViewCell {
+class PainRateCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.row {
+            case 0:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TagCollectionViewCell
+                return cell
+            default:
+                return UICollectionViewCell()
+        }
+        
+    }
+    
     
     
     @IBOutlet weak var iconImageView: UIImageView!
@@ -22,11 +38,15 @@ class PainRateCell: UITableViewCell {
     @IBOutlet weak var severitylabel: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
     
+    @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var horizontalScrollView: CustomHorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        tagCollectionView.dataSource = self
+        tagCollectionView.delegate = self
         
         setUpPainLabel()
         setUpMorningLabel()
@@ -78,7 +98,10 @@ private extension PainRateCell {
     
     func setUpHorizontalScrollView() {
         let view = CustomConfigurableView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
-        view.setUpForPainRateCell(with: "Back of left knee")
+        view.setUpForPainRateCell(with: "Back of left knee (2)")
+
         horizontalScrollView.addSubview(view)
     }
+    
+    
 }

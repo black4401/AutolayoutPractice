@@ -41,6 +41,8 @@
 		BB6CA16F29E03636004B39BA /* CustomProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */; };
 		BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */; };
 		BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */; };
+		BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */; };
+		BB73E8B829E5B857005D6717 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73E8B729E5B857005D6717 /* TagCollectionViewCell.swift */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BB92E17B29E4019000025FF5 /* CustomHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */; };
@@ -101,6 +103,8 @@
 		BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressCell.xib; sourceTree = "<group>"; };
 		BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressView.xib; sourceTree = "<group>"; };
+		BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomConfigurableView.xib; sourceTree = "<group>"; };
+		BB73E8B729E5B857005D6717 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHorizontalScrollView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
 				BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */,
 				BB92E17C29E4031B00025FF5 /* CustomConfigurableView.swift */,
+				BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */,
+				BB73E8B729E5B857005D6717 /* TagCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
+				BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */,
 				BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */,
 				BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
@@ -367,6 +374,7 @@
 			files = (
 				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
+				BB73E8B829E5B857005D6717 /* TagCollectionViewCell.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
