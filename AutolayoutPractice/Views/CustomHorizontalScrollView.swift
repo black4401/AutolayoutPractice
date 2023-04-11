@@ -9,22 +9,34 @@ import UIKit
 
 class CustomHorizontalScrollView: UIScrollView {
     
-    private let contentView = UIView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
-    //self.addcontent
-    //collection view
-
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(contentView)
+        setupCollectionView()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupCollectionView()
     }
 
     func addSubview(_ subview: CustomConfigurableView) {
-        contentView.addSubview(subview)
+        collectionView.addSubview(subview)
         layoutSubviews()
+    }
+    
+    func setupCollectionView() {
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(collectionView)
+
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: collectionView.collectionViewLayout.collectionViewContentSize.height)
+        ])
     }
     
     override func layoutSubviews() {

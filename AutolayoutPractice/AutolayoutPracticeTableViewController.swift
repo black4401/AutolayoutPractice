@@ -42,7 +42,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
             case 5:
                 let headerView = UIView()
