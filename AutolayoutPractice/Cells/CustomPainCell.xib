@@ -21,17 +21,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVU-PU-SDy" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="16" y="0.0" width="167" height="144"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="144" id="LC1-YR-YyM"/>
-                            <constraint firstAttribute="width" constant="167" id="YCS-qW-OS4"/>
-                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scu-qW-evO" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="191" y="0.0" width="167" height="144"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="144" id="gva-B3-w5g"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.95584470030000002" green="0.95584470030000002" blue="0.95584470030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,6 +36,7 @@
                     <constraint firstItem="Scu-qW-evO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Uvp-n4-bUv"/>
                     <constraint firstAttribute="bottom" secondItem="LVU-PU-SDy" secondAttribute="bottom" id="ald-eW-uWf"/>
                     <constraint firstAttribute="bottom" secondItem="Scu-qW-evO" secondAttribute="bottom" id="bHq-Nt-MBv"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="191" id="m3M-gb-UMe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

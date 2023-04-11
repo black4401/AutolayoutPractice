@@ -10,7 +10,7 @@ import UIKit
 class CustomPainView: UIView {
     
     private let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 12.0)! ]
-    private let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 22.0)! ]
+    private let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Bold", size: 22.0)! ]
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
@@ -31,7 +31,6 @@ class CustomPainView: UIView {
     
     func convenienceInit() {
         let view = Bundle.main.loadNibNamed("CustomPainView", owner: self, options: nil)![0] as! UIView
-        view.frame = CGRect(x: 0, y: 0, width: 167, height: 144)
         addSubview(view)
     }
 }

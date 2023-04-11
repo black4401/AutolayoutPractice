@@ -15,4 +15,5 @@ extension UIColor {
     static let brandMainColor = UIColor(named: "brand_color")
     static let brandAccentTitn = UIColor(named: "brandAccentTint")
     static let yellow10 = UIColor(named: "yellow10")
+    static let redCritical100 = UIColor(named: "redCritical100")
 }
