@@ -7,23 +7,69 @@
 
 import UIKit
 
-class PainRateCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.row {
-            case 0:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TagCollectionViewCell
-                return cell
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        switch indexPath.row {
+////            case 0:
+////                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionReusableView
+////                return cell
+//            default:
+//                return UICollectionViewCell()
+//        }
+//
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.scrollDirection = .horizontal
+        
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+            case UICollectionView.elementKindSectionHeader:
+                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CustomCollectionReusableView", for: indexPath) as! CustomCollectionReusableView
+                view.backgroundView.backgroundColor = .yellow10
+                view.closeButton.isHidden = true
+                view.textLabel.text = "TextTexttext (21)"
+                view.textLabel.setFontToDMSans(with: 15)
+                collectionView.addSubview(view)
+                return view
             default:
-                return UICollectionViewCell()
+                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CustomCollectionReusableView", for: indexPath) as! CustomCollectionReusableView
+                view.backgroundView.backgroundColor = .yellow10
+                view.closeButton.isHidden = true
+                view.textLabel.text = "TextTexttext (21)"
+                view.textLabel.setFontToDMSans(with: 15)
+                collectionView.addSubview(view)
+                return view
         }
         
     }
+
     
+    
+    private func setUpCollectionView() {
+        collectionView.register(CustomCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CustomCollectionReusableView")
+        
+        let layout = HorizontalCollectionViewFlowLayout()
+        layout.numberOfViews = 3
+        collectionView.collectionViewLayout = layout
+        let view = CustomCollectionReusableView()
+//        view.backgroundView.backgroundColor = .yellow10
+//        view.closeButton.isHidden = true
+//        view.textLabel.text = "TextTexttext (21)"
+//        view.textLabel.setFontToDMSans(with: 15)
+        collectionView.addSubview(view)
+    }
+
     
     
     @IBOutlet weak var iconImageView: UIImageView!
@@ -38,20 +84,20 @@ class PainRateCell: UITableViewCell, UICollectionViewDataSource, UICollectionVie
     @IBOutlet weak var severitylabel: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
     
-    @IBOutlet weak var tagCollectionView: UICollectionView!
+   
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var horizontalScrollView: CustomHorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        tagCollectionView.dataSource = self
-        tagCollectionView.delegate = self
+        setUpCollectionView()
+    //collectionView.dataSource = self
+        collectionView.delegate = self
         
         setUpPainLabel()
         setUpMorningLabel()
         setUpSeverityLabel()
-        setUpHorizontalScrollView()
+        //setUpHorizontalScrollView()
         //setUpPainLocationLabel()
         
         backView.layer.cornerRadius = 12
@@ -96,12 +142,58 @@ private extension PainRateCell {
 //        painLocationLabel.clipsToBounds = true
 //    }
     
-    func setUpHorizontalScrollView() {
-        let view = CustomConfigurableView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
-        view.setUpForPainRateCell(with: "Back of left knee (2)")
-
-        horizontalScrollView.addSubview(view)
-    }
+//    func setUpHorizontalScrollView() {
+//        let view = CustomConfigurableView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
+//        view.setUpForPainRateCell(with: "Back of left knee (2)")
+//
+//        horizontalScrollView.addSubview(view)
+//    }
     
     
 }
+
+
+
+class HorizontalCollectionViewFlowLayout: UICollectionViewFlowLayout {
+    
+    var numberOfViews: CGFloat = 3 {
+        didSet {
+            invalidateLayout()
+        }
+    }
+
+    override func prepare() {
+        super.prepare()
+
+        guard let collectionView = collectionView else { return }
+        
+        scrollDirection = .horizontal
+        minimumInteritemSpacing = 0
+        minimumLineSpacing = 0
+        minimumInteritemSpacing = 10
+        
+        //let viewWidth = (collectionView.bounds.width - minimumInteritemSpacing * (numberOfViews - 1)) / numberOfViews
+        //let viewHeight = collectionView.bounds.height
+        
+        // Set the size of each view
+        itemSize = CGSize(width: 145, height: 28)
+    }
+    
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        let attributes = super.layoutAttributesForElements(in: rect)
+        guard let collectionView = collectionView else { return attributes }
+        
+        // Loop through the attributes and adjust their positions based on their index path
+        for attribute in attributes ?? [] {
+            if attribute.representedElementCategory == .cell {
+                let indexPath = attribute.indexPath
+                let xPosition = CGFloat(indexPath.item) * (itemSize.width + minimumInteritemSpacing)
+                attribute.frame.origin.x = xPosition
+                attribute.frame.origin.y = 0
+            }
+        }
+        
+        return attributes
+    }
+}
+
