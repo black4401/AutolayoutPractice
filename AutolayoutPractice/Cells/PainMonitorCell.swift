@@ -17,10 +17,8 @@ class PainMonitorCell: UITableViewCell {
     @IBOutlet private weak var avgLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }
+
  extension PainMonitorCell {
     private func createAttrString(value: String) -> NSMutableAttributedString {
         let attrString = NSMutableAttributedString(string: "avg. ",

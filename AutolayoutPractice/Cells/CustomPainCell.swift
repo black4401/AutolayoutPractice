@@ -27,11 +27,4 @@ class CustomPainCell: UITableViewCell {
         customView2.setUpPainLabel(text: "EVENING PAIN")
         customView2.setUpIconView(iconName: "moon_icon")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -43,13 +43,10 @@
 		BB6CA16F29E03636004B39BA /* CustomProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */; };
 		BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */; };
 		BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */; };
-		BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */; };
 		BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */; };
 		BB73E8C029E6AC03005D6717 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
-		BB92E17B29E4019000025FF5 /* CustomHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */; };
-		BB92E17D29E4031B00025FF5 /* CustomConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB92E17C29E4031B00025FF5 /* CustomConfigurableView.swift */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
 		BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */; };
 		BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */; };
@@ -110,13 +107,10 @@
 		BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressCell.xib; sourceTree = "<group>"; };
 		BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressView.xib; sourceTree = "<group>"; };
-		BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomConfigurableView.xib; sourceTree = "<group>"; };
 		BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
-		BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHorizontalScrollView.swift; sourceTree = "<group>"; };
-		BB92E17C29E4031B00025FF5 /* CustomConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConfigurableView.swift; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA0418529D43A9E00E39A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,9 +157,6 @@
 				BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */,
 				BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */,
 				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
-				BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */,
-				BB92E17C29E4031B00025FF5 /* CustomConfigurableView.swift */,
-				BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */,
 				BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */,
 				BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */,
 			);
@@ -354,7 +345,6 @@
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
 				BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */,
 				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
-				BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */,
 				BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */,
 				BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */,
 				BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */,
@@ -403,7 +393,6 @@
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
 				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */,
-				BB92E17B29E4019000025FF5 /* CustomHorizontalScrollView.swift in Sources */,
 				BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
@@ -415,7 +404,6 @@
 				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
 				BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */,
 				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
-				BB92E17D29E4031B00025FF5 /* CustomConfigurableView.swift in Sources */,
 				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

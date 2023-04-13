@@ -19,12 +19,12 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "MovementProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.movementProgress)
         self.tableView.register(UINib(nibName: "SavedArticleCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.savedArticle)
         self.tableView.register(UINib(nibName: "PainRateCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painRate)
-        self.tableView.register(UINib(nibName: "PainMonitorCell", bundle: nil), forCellReuseIdentifier: "PainMonitorCell")
-        self.tableView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellReuseIdentifier: "ActivityCell")
-        self.tableView.register(UINib(nibName: "CustomPainCell", bundle: nil), forCellReuseIdentifier: "CustomPainCell")
-        self.tableView.register(UINib(nibName: "CustomProgressCell", bundle: nil), forCellReuseIdentifier: "CustomProgressCell")
-        self.tableView.register(UINib(nibName: "BodyPainCell", bundle: nil), forCellReuseIdentifier: "BodyPainCell")
-        self.tableView.register(UINib(nibName: "PainLocationCell", bundle: nil), forCellReuseIdentifier: "PainLocationCell")
+        self.tableView.register(UINib(nibName: "PainMonitorCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painMonitorCell)
+        self.tableView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.activityCell)
+        self.tableView.register(UINib(nibName: "CustomPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.customPainCell)
+        self.tableView.register(UINib(nibName: "CustomProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.customProgressCell)
+        self.tableView.register(UINib(nibName: "BodyPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.bodyPainCell)
+        self.tableView.register(UINib(nibName: "PainLocationCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painLocationCell)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,7 +102,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
                 return cell
             case 7:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "PainMonitorCell", for: indexPath) as! PainMonitorCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painMonitorCell, for: indexPath) as! PainMonitorCell
                 let style = CellStyle.evening
                 cell.setUpPainLabel(text: style.painText)
                 cell.setSecondaryLabelText(text: style.secondaryText)
@@ -110,16 +110,16 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 cell.setUpAvgLabel(value: style.percentValue)
                 return cell
             case 8:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomPainCell", for: indexPath) as! CustomPainCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.customPainCell, for: indexPath) as! CustomPainCell
                 return cell
             case 9:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomProgressCell", for: indexPath) as! CustomProgressCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.customProgressCell, for: indexPath) as! CustomProgressCell
                 return cell
             case 10:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BodyPainCell", for: indexPath) as! BodyPainCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.bodyPainCell, for: indexPath) as! BodyPainCell
                 return cell
             case 11:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "PainLocationCell", for: indexPath) as! PainLocationCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
                 return cell
             default:
                 return UITableViewCell()

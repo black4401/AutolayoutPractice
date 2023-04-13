@@ -23,7 +23,6 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var severitylabel: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
     
-   
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var editButton: UIButton!
     
