@@ -7,70 +7,9 @@
 
 import UIKit
 
-class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        switch indexPath.row {
-////            case 0:
-////                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionReusableView
-////                return cell
-//            default:
-//                return UICollectionViewCell()
-//        }
-//
-//    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        flowLayout.scrollDirection = .horizontal
-        
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-            case UICollectionView.elementKindSectionHeader:
-                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CustomCollectionReusableView", for: indexPath) as! CustomCollectionReusableView
-                view.backgroundView.backgroundColor = .yellow10
-                view.closeButton.isHidden = true
-                view.textLabel.text = "TextTexttext (21)"
-                view.textLabel.setFontToDMSans(with: 15)
-                collectionView.addSubview(view)
-                return view
-            default:
-                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CustomCollectionReusableView", for: indexPath) as! CustomCollectionReusableView
-                view.backgroundView.backgroundColor = .yellow10
-                view.closeButton.isHidden = true
-                view.textLabel.text = "TextTexttext (21)"
-                view.textLabel.setFontToDMSans(with: 15)
-                collectionView.addSubview(view)
-                return view
-        }
-        
-    }
+fileprivate let cellIdentifier = "tagCell"
 
-    
-    
-    private func setUpCollectionView() {
-        collectionView.register(CustomCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CustomCollectionReusableView")
-        
-        let layout = HorizontalCollectionViewFlowLayout()
-        layout.numberOfViews = 3
-        collectionView.collectionViewLayout = layout
-        let view = CustomCollectionReusableView()
-//        view.backgroundView.backgroundColor = .yellow10
-//        view.closeButton.isHidden = true
-//        view.textLabel.text = "TextTexttext (21)"
-//        view.textLabel.setFontToDMSans(with: 15)
-        collectionView.addSubview(view)
-    }
-
-    
+class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var emojiImageView: UIImageView!
@@ -88,17 +27,18 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var editButton: UIButton!
     
+    var dataSource: [TagModel] = [TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUpCollectionView()
-    //collectionView.dataSource = self
+
+        collectionView.dataSource = self
         collectionView.delegate = self
+        setUpCollectionView()
         
         setUpPainLabel()
         setUpMorningLabel()
         setUpSeverityLabel()
-        //setUpHorizontalScrollView()
-        //setUpPainLocationLabel()
         
         backView.layer.cornerRadius = 12
         iconImageView.image = UIImage(named: "sun_icon")
@@ -111,6 +51,39 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? TagCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        if dataSource[indexPath.item].hasCloseButton {
+            cell.delegate = self
+            cell.closeButton.isHidden = false
+        }
+        cell.backgroundColor = dataSource[indexPath.item].backgroundColor
+        cell.layer.cornerRadius = 6
+        cell.clipsToBounds = true
+        cell.closeButton.isHidden = !dataSource[indexPath.item].hasCloseButton
+        cell.textLabel.text = dataSource[indexPath.item].textLabel
+        cell.textLabel.setFontToDMSans(with: 15)
+        cell.textLabel.textAlignment = .center
+        return cell
+    }
+    
+    private func setUpCollectionView() {
+        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 146, height: 28)
+        layout.minimumInteritemSpacing = 4
+
+        collectionView.collectionViewLayout =  layout
     }
 }
 
@@ -132,68 +105,31 @@ private extension PainRateCell {
         severitylabel.setFontToDMSans(with: 15)
         severitylabel.textColor = .greyscale120
     }
-    
-//    func setUpPainLocationLabel() {
-//        painLocationLabel.text = "Back of left knee (8)"
-//        painLocationLabel.setFontToDMSans(with: 15)
-//        painLocationLabel.textColor = .greyscale140
-//
-//        painLocationLabel.layer.cornerRadius = 6
-//        painLocationLabel.clipsToBounds = true
-//    }
-    
-//    func setUpHorizontalScrollView() {
-//        let view = CustomConfigurableView(frame: CGRect(x: 0, y: 0, width: 145, height: 28))
-//        view.setUpForPainRateCell(with: "Back of left knee (2)")
-//
-//        horizontalScrollView.addSubview(view)
-//    }
-    
-    
 }
 
-
-
-class HorizontalCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    
-    var numberOfViews: CGFloat = 3 {
-        didSet {
-            invalidateLayout()
+extension PainRateCell: TagCollectionViewCellDelegate {
+    func didTapClose(on cell: TagCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            dataSource.remove(at: indexPath.item)
+            collectionView.deleteItems(at: [indexPath])
         }
-    }
-
-    override func prepare() {
-        super.prepare()
-
-        guard let collectionView = collectionView else { return }
-        
-        scrollDirection = .horizontal
-        minimumInteritemSpacing = 0
-        minimumLineSpacing = 0
-        minimumInteritemSpacing = 10
-        
-        //let viewWidth = (collectionView.bounds.width - minimumInteritemSpacing * (numberOfViews - 1)) / numberOfViews
-        //let viewHeight = collectionView.bounds.height
-        
-        // Set the size of each view
-        itemSize = CGSize(width: 145, height: 28)
-    }
-    
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let attributes = super.layoutAttributesForElements(in: rect)
-        guard let collectionView = collectionView else { return attributes }
-        
-        // Loop through the attributes and adjust their positions based on their index path
-        for attribute in attributes ?? [] {
-            if attribute.representedElementCategory == .cell {
-                let indexPath = attribute.indexPath
-                let xPosition = CGFloat(indexPath.item) * (itemSize.width + minimumInteritemSpacing)
-                attribute.frame.origin.x = xPosition
-                attribute.frame.origin.y = 0
-            }
-        }
-        
-        return attributes
     }
 }
 
+extension PainRateCell {
+    struct TagModel {
+        let backgroundColor: UIColor?
+        let textLabel: String
+        let labelWidth: CGFloat
+        let hasCloseButton: Bool
+        let isTextCentered: Bool
+        
+        init(backgroundColor: UIColor, textLabel: String, labelWidth: CGFloat, hasCloseButton: Bool, isTextCentered: Bool) {
+            self.backgroundColor = backgroundColor
+            self.textLabel = textLabel
+            self.labelWidth = labelWidth
+            self.hasCloseButton = hasCloseButton
+            self.isTextCentered = isTextCentered
+        }
+    }
+}
