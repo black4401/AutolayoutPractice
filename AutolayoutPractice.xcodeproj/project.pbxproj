@@ -21,6 +21,8 @@
 		BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */; };
 		BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */; };
 		BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */; };
+		BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */; };
+		BB642E4B29E6CDE000E2B258 /* BodyPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */; };
 		BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */; };
 		BB6CA15029DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */; };
 		BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */; };
@@ -42,8 +44,8 @@
 		BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */; };
 		BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */; };
 		BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */; };
-		BB73E8BB29E69203005D6717 /* CustomCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73E8B929E69203005D6717 /* CustomCollectionReusableView.swift */; };
-		BB73E8BC29E69203005D6717 /* CustomCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8BA29E69203005D6717 /* CustomCollectionReusableView.xib */; };
+		BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */; };
+		BB73E8C029E6AC03005D6717 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */; };
 		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BB92E17B29E4019000025FF5 /* CustomHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */; };
@@ -67,6 +69,8 @@
 		BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */; };
 		BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */; };
 		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
+		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
+		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,8 @@
 		BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		BB5EFA1229DDB6550006CC94 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		BB5EFA1329DDB6550006CC94 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPainCell.swift; sourceTree = "<group>"; };
+		BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyPainCell.xib; sourceTree = "<group>"; };
 		BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
 		BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
@@ -105,8 +111,8 @@
 		BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressView.xib; sourceTree = "<group>"; };
 		BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomConfigurableView.xib; sourceTree = "<group>"; };
-		BB73E8B929E69203005D6717 /* CustomCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionReusableView.swift; sourceTree = "<group>"; };
-		BB73E8BA29E69203005D6717 /* CustomCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionReusableView.xib; sourceTree = "<group>"; };
+		BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
 		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHorizontalScrollView.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 		BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SetFont.swift"; sourceTree = "<group>"; };
 		BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCell.swift; sourceTree = "<group>"; };
 		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
+		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
+		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +166,8 @@
 				BB92E17A29E4019000025FF5 /* CustomHorizontalScrollView.swift */,
 				BB92E17C29E4031B00025FF5 /* CustomConfigurableView.swift */,
 				BB73E8B529E56DA7005D6717 /* CustomConfigurableView.xib */,
-				BB73E8B929E69203005D6717 /* CustomCollectionReusableView.swift */,
-				BB73E8BA29E69203005D6717 /* CustomCollectionReusableView.xib */,
+				BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */,
+				BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +254,10 @@
 				BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */,
 				BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */,
 				BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */,
+				BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */,
+				BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */,
+				BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */,
+				BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 				BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */,
 				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
 				BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */,
+				BB642E4B29E6CDE000E2B258 /* BodyPainCell.xib in Resources */,
 				BB5EFA1529DDB6550006CC94 /* ActivityCell.xib in Resources */,
 				BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
@@ -344,6 +357,7 @@
 				BB73E8B629E56DA7005D6717 /* CustomConfigurableView.xib in Resources */,
 				BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */,
 				BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */,
+				BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */,
 				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
 				BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */,
 				BB6CA15929DEDB92004B39BA /* SourceSansPro-SemiBold.ttf in Resources */,
@@ -353,7 +367,7 @@
 				BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
 				BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */,
-				BB73E8BC29E69203005D6717 /* CustomCollectionReusableView.xib in Resources */,
+				BB73E8C029E6AC03005D6717 /* TagCollectionViewCell.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
 				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
 				BB6CA16329DF16D6004B39BA /* CustomPainCell.xib in Resources */,
@@ -376,9 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */,
 				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
-				BB73E8BB29E69203005D6717 /* CustomCollectionReusableView.swift in Sources */,
+				BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
@@ -398,6 +413,7 @@
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
 				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
 				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
+				BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */,
 				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
 				BB92E17D29E4031B00025FF5 /* CustomConfigurableView.swift in Sources */,
 				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,
