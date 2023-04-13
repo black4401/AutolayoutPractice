@@ -23,10 +23,12 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellReuseIdentifier: "ActivityCell")
         self.tableView.register(UINib(nibName: "CustomPainCell", bundle: nil), forCellReuseIdentifier: "CustomPainCell")
         self.tableView.register(UINib(nibName: "CustomProgressCell", bundle: nil), forCellReuseIdentifier: "CustomProgressCell")
+        self.tableView.register(UINib(nibName: "BodyPainCell", bundle: nil), forCellReuseIdentifier: "BodyPainCell")
+        self.tableView.register(UINib(nibName: "PainLocationCell", bundle: nil), forCellReuseIdentifier: "PainLocationCell")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return 12
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +114,12 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 9:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CustomProgressCell", for: indexPath) as! CustomProgressCell
+                return cell
+            case 10:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BodyPainCell", for: indexPath) as! BodyPainCell
+                return cell
+            case 11:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PainLocationCell", for: indexPath) as! PainLocationCell
                 return cell
             default:
                 return UITableViewCell()
