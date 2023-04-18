@@ -8,13 +8,13 @@
 import Foundation
 
 enum CellIdentifiers {
-    static let healthcareProviders = "Cell1"
-    static let associatedDoctor = "Cell2"
-    static let morningEntry = "Cell4"
-    static let morningPain = "Cell5"
-    static let movementProgress = "Cell6"
-    static let savedArticle = "Cell7"
-    static let painRate = "Cell8"
+    static let healthcareProviders = "HealthcareProvidersCell"
+    static let associatedDoctor = "AssociatedDoctorCell"
+    static let morningEntry = "MorningEntryCell"
+    static let morningPain = "MorningPainCell"
+    static let movementProgress = "MovementProgressCell"
+    static let savedArticle = "SavedArticleCell"
+    static let painRate = "PainRateCell"
     static let painMonitorCell = "PainMonitorCell"
     static let activityCell = "ActivityCell"
     static let customPainCell = "CustomPainCell"
