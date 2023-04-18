@@ -24,6 +24,8 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -155,6 +157,18 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         }
     }
     
+    @objc func appWillEnterForeground() {
+        tableView.contentOffset = .zero
+        visibleSectionIndices = data
+        for cell in collectionView.visibleCells {
+            cell.isSelected = false
+        }
+        tableView.reloadData()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate {
