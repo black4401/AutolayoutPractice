@@ -68,6 +68,7 @@
 		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
 		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
 		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
+		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
 		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
 		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
+		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
 				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
 				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
+				BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */,
 				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
@@ -387,6 +390,7 @@
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
+				BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
@@ -559,6 +563,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,6 +592,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

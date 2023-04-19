@@ -27,7 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
                         <rect key="frame" x="124" y="6" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="2OW-U4-uyg"/>

@@ -24,7 +24,7 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var painLocationLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var editButton: ImageOnlyButton!
     
     var dataSource: [TagModel] = [TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
     

@@ -19,7 +19,7 @@ class TagCollectionViewCell: UICollectionViewCell {
     var selectedStateBackgroundColor: UIColor?
     
     @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var closeButton: ImageOnlyButton!
     
     weak var delegate: TagCollectionViewCellDelegate?
     
