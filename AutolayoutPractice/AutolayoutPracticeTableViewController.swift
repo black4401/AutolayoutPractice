@@ -12,7 +12,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     var data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     
-    private let collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20), collectionViewLayout: layout)
@@ -24,7 +24,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        addNotificationEnteringForeground()
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -157,19 +157,6 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return UITableViewCell()
         }
     }
-    
-    @objc func appWillEnterForeground() {
-        tableView.contentOffset = .zero
-        visibleSectionIndices = data
-        for cell in collectionView.visibleCells {
-            cell.isSelected = false
-        }
-        tableView.reloadData()
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
 }
 
 extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -213,6 +200,24 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
             cell.setLabelText(text: "Cell \(indexPath.row + 1)")
         }
         return cell
+    }
+}
+
+private extension AutolayoutPracticeTableViewController {
+    func addNotificationEnteringForeground() {
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func appWillEnterForeground() {
+        tableView.setContentOffset(.zero, animated: true)
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
+        collectionView.setContentOffset(.zero, animated: true)
+        
+        visibleSectionIndices = data
+        for cell in collectionView.visibleCells {
+            cell.isSelected = false
+        }
+        tableView.reloadData()
     }
 }
 
