@@ -60,17 +60,12 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? TagCollectionViewCell else {
             return UICollectionViewCell()
         }
-        if dataSource[indexPath.item].hasCloseButton {
-            cell.delegate = self
-            cell.closeButton.isHidden = false
-        }
-        cell.backgroundColor = dataSource[indexPath.item].backgroundColor
-        cell.layer.cornerRadius = 6
-        cell.clipsToBounds = true
-        cell.closeButton.isHidden = !dataSource[indexPath.item].hasCloseButton
-        cell.textLabel.text = dataSource[indexPath.item].textLabel
-        cell.textLabel.setFontToDMSans(with: 15)
-        cell.textLabel.textAlignment = .center
+        
+        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+        cell.setLabelText(text: dataSource[indexPath.item].textLabel)
+        cell.setCornerRadius(to: 6)
+        cell.setBackGroundColor(to: dataSource[indexPath.item].backgroundColor!)
+        cell.centerLabelText()
         return cell
     }
     

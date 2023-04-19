@@ -29,6 +29,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
         collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "tagCell")
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
@@ -197,21 +198,19 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tagCell", for: indexPath) as! TagCollectionViewCell
         
-        cell.backgroundColor = .brandWhite
-        cell.textLabel.textColor = .brandMainColor
-        cell.layer.cornerRadius = 6
-        cell.clipsToBounds = true
-        cell.closeButton.isHidden = true
-        cell.textLabel.setFontToDMSans(with: 15)
-        cell.textLabel.textAlignment = .center
+        cell.setBackGroundColor(to: .brandWhite)
+        cell.setLabelTextColor(color: .brandMainColor)
+        cell.setCornerRadius(to: 6)
+        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+        cell.centerLabelText()
+        cell.setUpBorder(color: .greyscale10, width: 1)
         cell.setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
-        cell.layer.borderColor = UIColor.greyscale10?.cgColor
-        cell.layer.borderWidth = 1
         
         if indexPath.section == 0 {
-            cell.textLabel.text = "All"
+            cell.setLabelText(text: "All")
+            cell.isSelected = true
         } else {
-            cell.textLabel.text = "Cell \(indexPath.row)"
+            cell.setLabelText(text: "Cell \(indexPath.row + 1)")
         }
         return cell
     }

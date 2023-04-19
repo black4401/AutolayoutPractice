@@ -19,18 +19,15 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
                         <rect key="frame" x="0.0" y="0.0" width="146" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="146" id="ILy-1A-VKG"/>
-                            <constraint firstAttribute="height" constant="28" id="Qk5-1w-iLK"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="124" y="6" width="16" height="16"/>
+                        <rect key="frame" x="128" y="8" width="12" height="12"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="16" id="2OW-U4-uyg"/>
+                            <constraint firstAttribute="width" constant="12" id="Rnp-vw-jkH"/>
+                            <constraint firstAttribute="height" constant="12" id="Vrt-6J-aJz"/>
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="Vector"/>
@@ -45,14 +42,15 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="T3M-mW-IZf" secondAttribute="trailing" constant="6" id="0zD-nZ-mr2"/>
                 <constraint firstItem="NG1-u0-4TN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Fj-Rr-zyq"/>
-                <constraint firstAttribute="bottom" secondItem="T3M-mW-IZf" secondAttribute="bottom" constant="6" id="JSO-Kd-PFt"/>
-                <constraint firstItem="T3M-mW-IZf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="X6L-Pn-Pxi"/>
+                <constraint firstItem="NG1-u0-4TN" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="OzM-tc-AWX"/>
                 <constraint firstAttribute="bottom" secondItem="NG1-u0-4TN" secondAttribute="bottom" id="jMN-8V-RtB"/>
                 <constraint firstItem="NG1-u0-4TN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x3f-Qk-Crj"/>
+                <constraint firstItem="T3M-mW-IZf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="xJH-iO-LVL"/>
                 <constraint firstAttribute="trailing" secondItem="NG1-u0-4TN" secondAttribute="trailing" id="zZF-hl-eKY"/>
             </constraints>
             <connections>
                 <outlet property="closeButton" destination="T3M-mW-IZf" id="jkL-nu-NB0"/>
+                <outlet property="leadingToTextLabelConstraint" destination="2Fj-Rr-zyq" id="dqY-KI-xfa"/>
                 <outlet property="textLabel" destination="NG1-u0-4TN" id="a1b-2I-9KJ"/>
             </connections>
             <point key="canvasLocation" x="-121" y="-11"/>

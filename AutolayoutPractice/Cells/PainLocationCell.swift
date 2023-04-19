@@ -12,7 +12,7 @@ fileprivate let cellIdentifier = "tagCell"
 class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cellCollectionView: UICollectionView!
     @IBOutlet weak var continueButton: UIButton!
     
     var numberOfTags: Int = 0 {
@@ -29,27 +29,28 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! TagCollectionViewCell
-        cell.delegate = self
-        cell.textLabel.text = dataSource[indexPath.item].textForLabel
-        cell.textLabel.setFontToDMSans(with: 15)
-        cell.textLabel.textColor = .greyscale140
         
-        cell.closeButton.isHidden = false
-        cell.backgroundColor = .greyscale05
+        cell.setLabelText(text: dataSource[indexPath.item].textForLabel)
+        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+        cell.setLabelTextColor(color: .greyscale140)
+        cell.setBackGroundColor(to: .greyscale05)
+        cell.setConstraintLeadingToTextLabel(value: 6)
+        cell.configureCloseButton()
+        cell.delegate = self
         
         numberOfTags+=1
         return cell
     }
     
     func setUpCollectionView() {
-        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        cellCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 121, height: 36)
         layout.minimumInteritemSpacing = 4
         
-        collectionView.collectionViewLayout =  layout
+        cellCollectionView.collectionViewLayout =  layout
     }
     
     override func awakeFromNib() {
@@ -57,8 +58,8 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
         setUpMainLabel()
         setUpContinueButton()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        cellCollectionView.dataSource = self
+        cellCollectionView.delegate = self
         setUpCollectionView()
     }
     
@@ -90,9 +91,9 @@ extension PainLocationCell {
 
 extension PainLocationCell: TagCollectionViewCellDelegate {
     func didTapClose(on cell: TagCollectionViewCell) {
-        if let indexPath = collectionView.indexPath(for: cell) {
+        if let indexPath = cellCollectionView.indexPath(for: cell) {
             dataSource.remove(at: indexPath.item)
-            collectionView.deleteItems(at: [indexPath])
+            cellCollectionView.deleteItems(at: [indexPath])
             numberOfTags-=1
         }
     }

@@ -13,13 +13,14 @@ protocol TagCollectionViewCellDelegate: AnyObject {
 
 class TagCollectionViewCell: UICollectionViewCell {
     
-    var normalStateTextColor: UIColor?
-    var normalStateBackgroundColor: UIColor?
-    var selectedStateTextColor: UIColor?
-    var selectedStateBackgroundColor: UIColor?
+    private var normalStateTextColor: UIColor?
+    private var normalStateBackgroundColor: UIColor?
+    private var selectedStateTextColor: UIColor?
+    private var selectedStateBackgroundColor: UIColor?
     
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var closeButton: ImageOnlyButton!
+    @IBOutlet private weak var leadingToTextLabelConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var closeButton: ImageOnlyButton!
     
     weak var delegate: TagCollectionViewCellDelegate?
     
@@ -43,6 +44,7 @@ class TagCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        closeButton.isHidden = true
     }
 
     @IBAction func didTapCloseButton(_ sender: Any) {
@@ -54,5 +56,49 @@ class TagCollectionViewCell: UICollectionViewCell {
         self.normalStateBackgroundColor = normalStateBackgroundColor
         self.selectedStateTextColor = selectedStateTextColor
         self.selectedStateBackgroundColor = selectedStateBackgroundColor
+    }
+    
+    func setLabelText(text: String) {
+        textLabel.text = text
+    }
+    
+    func setLabelFont(to font: UIFont) {
+        textLabel.font = font
+    }
+    
+    func setBackGroundColor(to color: UIColor?) {
+        if color != nil {
+            self.backgroundColor = color
+        }
+    }
+    
+    func setLabelTextColor(color: UIColor?) {
+        if color != nil {
+            self.textLabel.textColor = color
+        }
+    }
+    
+    func setCornerRadius(to radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
+    }
+    
+    func centerLabelText() {
+        self.textLabel.textAlignment = .center
+    }
+    
+    func configureCloseButton() {
+        closeButton.isHidden = false
+    }
+    
+    func setUpBorder(color: UIColor?, width: CGFloat) {
+        if color != nil {
+            self.layer.borderColor = color!.cgColor
+            self.layer.borderWidth = width
+        }
+    }
+    
+    func setConstraintLeadingToTextLabel(value: CGFloat) {
+        self.leadingToTextLabelConstraint.constant = value
     }
 }
