@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PainLocationCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
+class PainLocationCell: UITableViewCell {
     
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var cellCollectionView: UICollectionView!
@@ -24,7 +24,6 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 121, height: 36)
         layout.minimumInteritemSpacing = 4
         
         cellCollectionView.collectionViewLayout =  layout
@@ -49,17 +48,5 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
         continueButton.titleLabel?.textColor = .brandWhite
         continueButton.layer.cornerRadius = 4
         continueButton.clipsToBounds = true
-    }
-}
-
-extension PainLocationCell {
-    struct TagModel {
-        let textForLabel: String
-        let labelWidth: CGFloat
-        
-        init(textLabel: String, labelWidth: CGFloat) {
-            self.textForLabel = textLabel
-            self.labelWidth = labelWidth
-        }
     }
 }

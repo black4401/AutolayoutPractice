@@ -13,9 +13,11 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe", labelWidth: 121), TagModel(textLabel: "Right big toe", labelWidth: 121), TagModel(textLabel: "Left knee cap", labelWidth: 121)]
     var painRateCellData: [PainRateTagModel] = [PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
+    var bodyPainCellData: [BodyPainCellTagModel] = [BodyPainCellTagModel(textLabel: "Overall", labelWidth: 65), BodyPainCellTagModel(textLabel: "Front of right head", labelWidth: 141), BodyPainCellTagModel(textLabel: "Right face", labelWidth: 85)]
     
     var painLocationCell: PainLocationCell?
     var painRateCell: PainRateCell?
+    var bodyPainCell: BodyPainCell?
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -156,6 +158,9 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 10:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.bodyPainCell, for: indexPath) as! BodyPainCell
+                bodyPainCell = cell
+                cell.cellCollectionView.dataSource = self
+                cell.cellCollectionView.delegate = self
                 return cell
             case 11:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
@@ -169,7 +174,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     }
 }
 
-extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
             case self.collectionView:
@@ -182,6 +187,8 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                 return painLocationCellData.count
             case painRateCell?.cellCollectionView:
                 return painRateCellData.count
+            case bodyPainCell?.cellCollectionView:
+                return bodyPainCellData.count
             default:
                 return 0
         }
@@ -194,6 +201,8 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
             case painLocationCell?.cellCollectionView:
                 return 1
             case painRateCell?.cellCollectionView:
+                return 1
+            case bodyPainCell?.cellCollectionView:
                 return 1
             default:
                 return 0
@@ -255,11 +264,42 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                 cell.setLabelText(text: painRateCellData[indexPath.item].textLabel)
                 cell.setCornerRadius(to: 6)
                 cell.setBackGroundColor(to: painRateCellData[indexPath.item].backgroundColor!)
+                cell.setConstraintLeadingToTextLabel(value: 4)
                 cell.centerLabelText()
+                
+                return cell
+            case bodyPainCell?.cellCollectionView:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+                
+                cell.setBackGroundColor(to: .brandWhite)
+                cell.setCornerRadius(to: 6)
+                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+                cell.setLabelTextColor(color: .greyscale100)
+                cell.centerLabelText()
+                cell.setLabelText(text: bodyPainCellData[indexPath.item].textLabel)
+                cell.setUpBorder(color: UIColor.greyscale10, width: 1)
+                cell.setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
+                bodyPainCell!.cellCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
                 return cell
             default:
                 return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionView {
+            case self.collectionView:
+                return CGSize(width: 50, height: 28)
+            case painRateCell?.cellCollectionView:
+                return CGSize(width: 146, height: 28)
+            case bodyPainCell?.cellCollectionView:
+                return CGSize(width: 128, height: 28)
+            case painLocationCell?.cellCollectionView:
+                return CGSize(width: 121, height: 36)
+            default:
+                return CGSize(width: 146, height: 28)
+        }
+
     }
 }
 
@@ -288,6 +328,7 @@ extension AutolayoutPracticeTableViewController {
             self.labelWidth = labelWidth
         }
     }
+    
     struct PainRateTagModel {
         let backgroundColor: UIColor?
         let textLabel: String
@@ -303,6 +344,16 @@ extension AutolayoutPracticeTableViewController {
             self.isTextCentered = isTextCentered
         }
     }
+    
+    struct BodyPainCellTagModel {
+        let textLabel: String
+        let labelWidth: CGFloat
+        
+        init(textLabel: String, labelWidth: CGFloat) {
+            self.textLabel = textLabel
+            self.labelWidth = labelWidth
+        }
+    }
 }
 
 private extension AutolayoutPracticeTableViewController {
@@ -316,9 +367,6 @@ private extension AutolayoutPracticeTableViewController {
         collectionView.setContentOffset(.zero, animated: true)
         
         visibleSectionIndices = filterCellsData
-        for cell in collectionView.visibleCells {
-            cell.isSelected = false
-        }
         tableView.reloadData()
     }
 }

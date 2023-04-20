@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -104,7 +103,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collectionView" destination="x7M-0O-KNj" id="iZB-VV-Ihh"/>
+                <outlet property="cellCollectionView" destination="x7M-0O-KNj" id="iZB-VV-Ihh"/>
                 <outlet property="eveningLabel" destination="ZR9-Av-TO9" id="3tV-Lk-Vz5"/>
                 <outlet property="headerLabel" destination="16p-QM-DzW" id="nWT-0V-akp"/>
                 <outlet property="mainLabel" destination="Xmd-ZZ-JHZ" id="kVn-eF-Z7Y"/>

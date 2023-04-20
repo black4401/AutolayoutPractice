@@ -19,7 +19,7 @@ class TagCollectionViewCell: UICollectionViewCell {
     private var selectedStateBackgroundColor: UIColor?
     
     @IBOutlet private weak var leadingToTextLabelConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private(set) weak var textLabel: UILabel!
     @IBOutlet private weak var closeButton: ImageOnlyButton!
     
     weak var delegate: TagCollectionViewCellDelegate?

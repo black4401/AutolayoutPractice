@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PainRateCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
+class PainRateCell: UITableViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var emojiImageView: UIImageView!
@@ -51,7 +51,6 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 146, height: 28)
         layout.minimumInteritemSpacing = 4
 
         cellCollectionView.collectionViewLayout =  layout
