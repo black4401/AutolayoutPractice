@@ -11,9 +11,9 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe", labelWidth: 121), TagModel(textLabel: "Right big toe", labelWidth: 121), TagModel(textLabel: "Left knee cap", labelWidth: 121)]
-    var painRateCellData: [PainRateTagModel] = [PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
-    var bodyPainCellData: [BodyPainCellTagModel] = [BodyPainCellTagModel(textLabel: "Overall", labelWidth: 65), BodyPainCellTagModel(textLabel: "Front of right head", labelWidth: 141), BodyPainCellTagModel(textLabel: "Right face", labelWidth: 85)]
+    var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe"), TagModel(textLabel: "Right big toe"), TagModel(textLabel: "Left knee cap")]
+    var painRateCellData: [PainRateTagModel] = [PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", hasCloseButton: false, isTextCentered: false),PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", hasCloseButton: false, isTextCentered: false)]
+    var bodyPainCellData: [BodyPainCellTagModel] = [BodyPainCellTagModel(textLabel: "Overall"), BodyPainCellTagModel(textLabel: "Front of right head"), BodyPainCellTagModel(textLabel: "Right face")]
     
     var painLocationCell: PainLocationCell?
     var painRateCell: PainRateCell?
@@ -321,25 +321,21 @@ extension AutolayoutPracticeTableViewController: TagCollectionViewCellDelegate {
 extension AutolayoutPracticeTableViewController {
     struct TagModel {
         let textForLabel: String
-        let labelWidth: CGFloat
         
-        init(textLabel: String, labelWidth: CGFloat) {
+        init(textLabel: String) {
             self.textForLabel = textLabel
-            self.labelWidth = labelWidth
         }
     }
     
     struct PainRateTagModel {
         let backgroundColor: UIColor?
         let textLabel: String
-        let labelWidth: CGFloat
         let hasCloseButton: Bool
         let isTextCentered: Bool
         
-        init(backgroundColor: UIColor, textLabel: String, labelWidth: CGFloat, hasCloseButton: Bool, isTextCentered: Bool) {
+        init(backgroundColor: UIColor, textLabel: String, hasCloseButton: Bool, isTextCentered: Bool) {
             self.backgroundColor = backgroundColor
             self.textLabel = textLabel
-            self.labelWidth = labelWidth
             self.hasCloseButton = hasCloseButton
             self.isTextCentered = isTextCentered
         }
@@ -347,11 +343,9 @@ extension AutolayoutPracticeTableViewController {
     
     struct BodyPainCellTagModel {
         let textLabel: String
-        let labelWidth: CGFloat
         
-        init(textLabel: String, labelWidth: CGFloat) {
+        init(textLabel: String) {
             self.textLabel = textLabel
-            self.labelWidth = labelWidth
         }
     }
 }

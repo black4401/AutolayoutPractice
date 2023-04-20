@@ -20,13 +20,11 @@ class CustomPainView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         convenienceInit()
-        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         convenienceInit()
-        
     }
     
     func convenienceInit() {

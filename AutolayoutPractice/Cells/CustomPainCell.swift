@@ -9,7 +9,6 @@ import UIKit
 
 class CustomPainCell: UITableViewCell {
     
-    
     @IBOutlet weak var customView1: CustomPainView!
     @IBOutlet weak var customView2: CustomPainView!
     @IBOutlet weak var contentVIew: UIView!
