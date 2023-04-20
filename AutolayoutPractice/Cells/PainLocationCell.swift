@@ -7,9 +7,7 @@
 
 import UIKit
 
-fileprivate let cellIdentifier = "tagCell"
-
-class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PainLocationCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var cellCollectionView: UICollectionView!
@@ -21,29 +19,8 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
         }
     }
     
-    var dataSource: [TagModel] = [TagModel(textLabel: "Left big toe", labelWidth: 121), TagModel(textLabel: "Right big toe", labelWidth: 121), TagModel(textLabel: "Left knee cap", labelWidth: 121)]
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! TagCollectionViewCell
-        
-        cell.setLabelText(text: dataSource[indexPath.item].textForLabel)
-        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-        cell.setLabelTextColor(color: .greyscale140)
-        cell.setBackGroundColor(to: .greyscale05)
-        cell.setConstraintLeadingToTextLabel(value: 6)
-        cell.configureCloseButton()
-        cell.delegate = self
-        
-        numberOfTags+=1
-        return cell
-    }
-    
     func setUpCollectionView() {
-        cellCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        cellCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -58,8 +35,6 @@ class PainLocationCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
         setUpMainLabel()
         setUpContinueButton()
         
-        cellCollectionView.dataSource = self
-        cellCollectionView.delegate = self
         setUpCollectionView()
     }
     
@@ -85,16 +60,6 @@ extension PainLocationCell {
         init(textLabel: String, labelWidth: CGFloat) {
             self.textForLabel = textLabel
             self.labelWidth = labelWidth
-        }
-    }
-}
-
-extension PainLocationCell: TagCollectionViewCellDelegate {
-    func didTapClose(on cell: TagCollectionViewCell) {
-        if let indexPath = cellCollectionView.indexPath(for: cell) {
-            dataSource.remove(at: indexPath.item)
-            cellCollectionView.deleteItems(at: [indexPath])
-            numberOfTags-=1
         }
     }
 }

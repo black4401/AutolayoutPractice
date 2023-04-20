@@ -9,15 +9,16 @@ import UIKit
 
 class AutolayoutPracticeTableViewController: UITableViewController {
     
-    var data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe", labelWidth: 121), TagModel(textLabel: "Right big toe", labelWidth: 121), TagModel(textLabel: "Left knee cap", labelWidth: 121)]
+    var painLocationCell: PainLocationCell?
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20), collectionViewLayout: layout)
         collectionView.backgroundColor = .white
-        collectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
         return collectionView
     }()
     
@@ -30,7 +31,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         collectionView.delegate = self
         
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
-        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "tagCell")
+        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
         headerView.addSubview(collectionView)
@@ -152,6 +153,9 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 11:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
+                painLocationCell = cell
+                cell.cellCollectionView.delegate = self
+                cell.cellCollectionView.dataSource = self
                 return cell
             default:
                 return UITableViewCell()
@@ -161,45 +165,110 @@ class AutolayoutPracticeTableViewController: UITableViewController {
 
 extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return data.count
+        switch collectionView {
+            case self.collectionView:
+                if section == 0 {
+                    return 1
+                } else {
+                    return filterCellsData.count
+                }
+            case painLocationCell?.cellCollectionView:
+                return painLocationCellData.count
+            default:
+                return 0
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        switch collectionView {
+            case self.collectionView:
+                return 2
+            case painLocationCell?.cellCollectionView:
+                return 1
+            default:
+                return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            visibleSectionIndices = data
-        } else {
-            visibleSectionIndices = [indexPath.item]
+        switch collectionView {
+            case self.collectionView:
+                if indexPath.section == 0 {
+                    visibleSectionIndices = filterCellsData
+                } else {
+                    visibleSectionIndices = [indexPath.item]
+                }
+                tableView.reloadData()
+            default:
+                return
         }
-        tableView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tagCell", for: indexPath) as! TagCollectionViewCell
-        
-        cell.setBackGroundColor(to: .brandWhite)
-        cell.setLabelTextColor(color: .brandMainColor)
-        cell.setCornerRadius(to: 6)
-        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-        cell.centerLabelText()
-        cell.setUpBorder(color: .greyscale10, width: 1)
-        cell.setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
-        
-        if indexPath.section == 0 {
-            cell.setLabelText(text: "All")
-            cell.isSelected = true
-        } else {
-            cell.setLabelText(text: "Cell \(indexPath.row + 1)")
+        switch collectionView {
+            case self.collectionView:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+                
+                cell.setBackGroundColor(to: .brandWhite)
+                cell.setLabelTextColor(color: .brandMainColor)
+                cell.setCornerRadius(to: 6)
+                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+                cell.centerLabelText()
+                cell.setUpBorder(color: .greyscale10, width: 1)
+                cell.setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
+                
+                if indexPath.section == 0 {
+                    cell.setLabelText(text: "All")
+                    cell.isSelected = true
+                } else {
+                    cell.setLabelText(text: "Cell \(indexPath.row + 1)")
+                }
+                return cell
+            case painLocationCell!.cellCollectionView:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+                
+                cell.setLabelText(text: painLocationCellData[indexPath.row].textForLabel)
+                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+                cell.setLabelTextColor(color: .greyscale140)
+                cell.setBackGroundColor(to: .greyscale05)
+                cell.setConstraintLeadingToTextLabel(value: 6)
+                cell.configureCloseButton()
+                if painLocationCell != nil {
+                    cell.delegate = self
+                    painLocationCell!.numberOfTags+=1
+                }
+                
+                return cell
+            default:
+                return UICollectionViewCell()
         }
-        return cell
+    }
+}
+
+extension AutolayoutPracticeTableViewController: TagCollectionViewCellDelegate {
+    func didTapClose(on cell: TagCollectionViewCell) {
+        guard let painLocationCell = painLocationCell else {
+            return
+        }
+        if let indexPath = painLocationCell.cellCollectionView.indexPath(for: cell) {
+            painLocationCell.cellCollectionView.performBatchUpdates {
+                painLocationCellData.remove(at: indexPath.item)
+                painLocationCell.cellCollectionView.deleteItems(at: [indexPath])
+            }
+            painLocationCell.numberOfTags-=1
+        }
+    }
+}
+
+extension AutolayoutPracticeTableViewController {
+    struct TagModel {
+        let textForLabel: String
+        let labelWidth: CGFloat
+        
+        init(textLabel: String, labelWidth: CGFloat) {
+            self.textForLabel = textLabel
+            self.labelWidth = labelWidth
+        }
     }
 }
 
@@ -213,7 +282,7 @@ private extension AutolayoutPracticeTableViewController {
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
         collectionView.setContentOffset(.zero, animated: true)
         
-        visibleSectionIndices = data
+        visibleSectionIndices = filterCellsData
         for cell in collectionView.visibleCells {
             cell.isSelected = false
         }

@@ -21,4 +21,6 @@ enum CellIdentifiers {
     static let customProgressCell = "CustomProgressCell"
     static let bodyPainCell = "BodyPainCell"
     static let painLocationCell = "PainLocationCell"
+    
+    static let tagCellIdentifier = "tagCell"
 }
