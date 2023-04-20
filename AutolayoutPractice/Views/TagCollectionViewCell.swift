@@ -19,7 +19,7 @@ class TagCollectionViewCell: UICollectionViewCell {
     private var selectedStateBackgroundColor: UIColor?
     
     @IBOutlet private weak var leadingToTextLabelConstraint: NSLayoutConstraint!
-    @IBOutlet private(set) weak var textLabel: UILabel!
+    @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var closeButton: ImageOnlyButton!
     
     weak var delegate: TagCollectionViewCellDelegate?
@@ -100,5 +100,12 @@ class TagCollectionViewCell: UICollectionViewCell {
     
     func setConstraintLeadingToTextLabel(value: CGFloat) {
         self.leadingToTextLabelConstraint.constant = value
+    }
+    
+    func configureCell(with model: PainLocationTagModel) {
+        textLabel.text = model.textForLabel
+        if model.hasCloseButton {
+            closeButton.isHidden = false
+        }
     }
 }

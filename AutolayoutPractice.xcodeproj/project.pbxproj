@@ -69,6 +69,7 @@
 		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
 		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
 		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
+		BBF8C89A29F1360C00E6E2BC /* CellModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89929F1360C00E6E2BC /* CellModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
 		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
 		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
+		BBF8C89929F1360C00E6E2BC /* CellModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
 				BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */,
+				BBF8C89929F1360C00E6E2BC /* CellModels.swift */,
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
@@ -389,6 +392,7 @@
 				BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
+				BBF8C89A29F1360C00E6E2BC /* CellModels.swift in Sources */,
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
 				BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */,

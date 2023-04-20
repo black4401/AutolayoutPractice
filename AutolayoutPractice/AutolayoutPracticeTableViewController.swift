@@ -11,7 +11,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe"), TagModel(textLabel: "Right big toe"), TagModel(textLabel: "Left knee cap")]
+    var painLocationCellData: [PainLocationTagModel] = [PainLocationTagModel(textLabel: "Left big toe", hasCloseButton: true), PainLocationTagModel(textLabel: "Right big toe", hasCloseButton: true), PainLocationTagModel(textLabel: "Left knee cap", hasCloseButton: true)]
     var painRateCellData: [PainRateTagModel] = [PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", hasCloseButton: false, isTextCentered: false),PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", hasCloseButton: false, isTextCentered: false)]
     var bodyPainCellData: [BodyPainCellTagModel] = [BodyPainCellTagModel(textLabel: "Overall"), BodyPainCellTagModel(textLabel: "Front of right head"), BodyPainCellTagModel(textLabel: "Right face")]
     
@@ -164,9 +164,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 11:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
-                painLocationCell = cell
-                cell.cellCollectionView.delegate = self
-                cell.cellCollectionView.dataSource = self
+                cell.collectionViewModels = painLocationCellData
                 return cell
             default:
                 return UITableViewCell()
@@ -243,20 +241,20 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                     cell.setLabelText(text: "Cell \(indexPath.row + 1)")
                 }
                 return cell
-            case painLocationCell?.cellCollectionView:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-                
-                cell.setLabelText(text: painLocationCellData[indexPath.row].textForLabel)
-                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-                cell.setLabelTextColor(color: .greyscale140)
-                cell.setBackGroundColor(to: .greyscale05)
-                cell.setConstraintLeadingToTextLabel(value: 6)
-                cell.configureCloseButton()
-                if painLocationCell != nil {
-                    cell.delegate = self
-                    painLocationCell!.numberOfTags+=1
-                }
-                return cell
+//            case painLocationCell?.cellCollectionView:
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+//                
+//                cell.setLabelText(text: painLocationCellData[indexPath.row].textForLabel)
+//                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+//                cell.setLabelTextColor(color: .greyscale140)
+//                cell.setBackGroundColor(to: .greyscale05)
+//                cell.setConstraintLeadingToTextLabel(value: 6)
+//                cell.configureCloseButton()
+//                if painLocationCell != nil {
+//                    cell.delegate = self
+//                    painLocationCell!.numberOfTags+=1
+//                }
+//                return cell
             case painRateCell?.cellCollectionView:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
                 
@@ -313,39 +311,6 @@ extension AutolayoutPracticeTableViewController: TagCollectionViewCellDelegate {
                 painLocationCellData.remove(at: indexPath.item)
                 painLocationCell.cellCollectionView.deleteItems(at: [indexPath])
             }
-            painLocationCell.numberOfTags-=1
-        }
-    }
-}
-
-extension AutolayoutPracticeTableViewController {
-    struct TagModel {
-        let textForLabel: String
-        
-        init(textLabel: String) {
-            self.textForLabel = textLabel
-        }
-    }
-    
-    struct PainRateTagModel {
-        let backgroundColor: UIColor?
-        let textLabel: String
-        let hasCloseButton: Bool
-        let isTextCentered: Bool
-        
-        init(backgroundColor: UIColor, textLabel: String, hasCloseButton: Bool, isTextCentered: Bool) {
-            self.backgroundColor = backgroundColor
-            self.textLabel = textLabel
-            self.hasCloseButton = hasCloseButton
-            self.isTextCentered = isTextCentered
-        }
-    }
-    
-    struct BodyPainCellTagModel {
-        let textLabel: String
-        
-        init(textLabel: String) {
-            self.textLabel = textLabel
         }
     }
 }
