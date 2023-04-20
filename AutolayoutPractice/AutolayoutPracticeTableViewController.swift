@@ -12,7 +12,10 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var painLocationCellData: [TagModel] = [TagModel(textLabel: "Left big toe", labelWidth: 121), TagModel(textLabel: "Right big toe", labelWidth: 121), TagModel(textLabel: "Left knee cap", labelWidth: 121)]
+    var painRateCellData: [PainRateTagModel] = [PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), PainRateTagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
+    
     var painLocationCell: PainLocationCell?
+    var painRateCell: PainRateCell?
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -133,6 +136,9 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 6:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
+                painRateCell = cell
+                cell.cellCollectionView.dataSource = self
+                cell.cellCollectionView.delegate = self
                 return cell
             case 7:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painMonitorCell, for: indexPath) as! PainMonitorCell
@@ -174,6 +180,8 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                 }
             case painLocationCell?.cellCollectionView:
                 return painLocationCellData.count
+            case painRateCell?.cellCollectionView:
+                return painRateCellData.count
             default:
                 return 0
         }
@@ -184,6 +192,8 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
             case self.collectionView:
                 return 2
             case painLocationCell?.cellCollectionView:
+                return 1
+            case painRateCell?.cellCollectionView:
                 return 1
             default:
                 return 0
@@ -224,7 +234,7 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                     cell.setLabelText(text: "Cell \(indexPath.row + 1)")
                 }
                 return cell
-            case painLocationCell!.cellCollectionView:
+            case painLocationCell?.cellCollectionView:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
                 
                 cell.setLabelText(text: painLocationCellData[indexPath.row].textForLabel)
@@ -237,7 +247,15 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
                     cell.delegate = self
                     painLocationCell!.numberOfTags+=1
                 }
+                return cell
+            case painRateCell?.cellCollectionView:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
                 
+                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+                cell.setLabelText(text: painRateCellData[indexPath.item].textLabel)
+                cell.setCornerRadius(to: 6)
+                cell.setBackGroundColor(to: painRateCellData[indexPath.item].backgroundColor!)
+                cell.centerLabelText()
                 return cell
             default:
                 return UICollectionViewCell()
@@ -268,6 +286,21 @@ extension AutolayoutPracticeTableViewController {
         init(textLabel: String, labelWidth: CGFloat) {
             self.textForLabel = textLabel
             self.labelWidth = labelWidth
+        }
+    }
+    struct PainRateTagModel {
+        let backgroundColor: UIColor?
+        let textLabel: String
+        let labelWidth: CGFloat
+        let hasCloseButton: Bool
+        let isTextCentered: Bool
+        
+        init(backgroundColor: UIColor, textLabel: String, labelWidth: CGFloat, hasCloseButton: Bool, isTextCentered: Bool) {
+            self.backgroundColor = backgroundColor
+            self.textLabel = textLabel
+            self.labelWidth = labelWidth
+            self.hasCloseButton = hasCloseButton
+            self.isTextCentered = isTextCentered
         }
     }
 }

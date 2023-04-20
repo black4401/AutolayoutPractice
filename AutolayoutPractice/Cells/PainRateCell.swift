@@ -7,9 +7,7 @@
 
 import UIKit
 
-fileprivate let cellIdentifier = "tagCell"
-
-class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PainRateCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var emojiImageView: UIImageView!
@@ -23,16 +21,12 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var severitylabel: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cellCollectionView: UICollectionView!
     @IBOutlet weak var editButton: ImageOnlyButton!
-    
-    var dataSource: [TagModel] = [TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false),TagModel(backgroundColor: .yellow10!, textLabel: "Back of left knee (2)", labelWidth: 146, hasCloseButton: false, isTextCentered: true), TagModel(backgroundColor: .yellow10!, textLabel: "Right knee cap (3)", labelWidth: 146, hasCloseButton: false, isTextCentered: false)]
     
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        collectionView.dataSource = self
-        collectionView.delegate = self
         setUpCollectionView()
         
         setUpPainLabel()
@@ -52,32 +46,15 @@ class PainRateCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
         super.setSelected(selected, animated: animated)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? TagCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-        cell.setLabelText(text: dataSource[indexPath.item].textLabel)
-        cell.setCornerRadius(to: 6)
-        cell.setBackGroundColor(to: dataSource[indexPath.item].backgroundColor!)
-        cell.centerLabelText()
-        return cell
-    }
-    
     private func setUpCollectionView() {
-        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        cellCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 146, height: 28)
         layout.minimumInteritemSpacing = 4
 
-        collectionView.collectionViewLayout =  layout
+        cellCollectionView.collectionViewLayout =  layout
     }
 }
 
@@ -98,32 +75,5 @@ private extension PainRateCell {
         severitylabel.text = "Severe"
         severitylabel.setFontToDMSans(with: 15)
         severitylabel.textColor = .greyscale120
-    }
-}
-
-extension PainRateCell: TagCollectionViewCellDelegate {
-    func didTapClose(on cell: TagCollectionViewCell) {
-        if let indexPath = collectionView.indexPath(for: cell) {
-            dataSource.remove(at: indexPath.item)
-            collectionView.deleteItems(at: [indexPath])
-        }
-    }
-}
-
-extension PainRateCell {
-    struct TagModel {
-        let backgroundColor: UIColor?
-        let textLabel: String
-        let labelWidth: CGFloat
-        let hasCloseButton: Bool
-        let isTextCentered: Bool
-        
-        init(backgroundColor: UIColor, textLabel: String, labelWidth: CGFloat, hasCloseButton: Bool, isTextCentered: Bool) {
-            self.backgroundColor = backgroundColor
-            self.textLabel = textLabel
-            self.labelWidth = labelWidth
-            self.hasCloseButton = hasCloseButton
-            self.isTextCentered = isTextCentered
-        }
     }
 }
