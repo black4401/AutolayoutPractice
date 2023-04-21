@@ -12,12 +12,10 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var painLocationCellData: [TagModel] = [TagModel(labelText: "Left big toe", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05), TagModel(labelText: "Right big toe", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05), TagModel(labelText: "Left knee cap", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05)]
-   
+    
     var painRateCellData: [TagModel] = [TagModel(labelText: "Back of left knee (2)", hasCloseButton: false, isSelectable: false, isTextCentered: true, horizontalPadding: 3, verticalPadding: 3, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .yellow10), TagModel(labelText: "Back of right knee (6)", hasCloseButton: false, isSelectable: false, isTextCentered: true, horizontalPadding: 3, verticalPadding: 3, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .yellow10), TagModel(labelText: "Back of left knee (3)", hasCloseButton: false, isSelectable: false, isTextCentered: true, horizontalPadding: 3, verticalPadding: 3, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .yellow10)]
     
-    var bodyPainCellData: [BodyPainCellTagModel] = [BodyPainCellTagModel(textLabel: "Overall"), BodyPainCellTagModel(textLabel: "Front of right head"), BodyPainCellTagModel(textLabel: "Right face")]
-    
-    var bodyPainCell: BodyPainCell?
+    var bodyPainCellData: [TagModel] = [TagModel(labelText: "Overall", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Front of right head", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Right face", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite)]
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,7 +27,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.backgroundColor = .brandMainColor
         addNotificationEnteringForeground()
         
         collectionView.dataSource = self
@@ -156,9 +154,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 10:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.bodyPainCell, for: indexPath) as! BodyPainCell
-                bodyPainCell = cell
-                cell.cellCollectionView.dataSource = self
-                cell.cellCollectionView.delegate = self
+                cell.collectionViewModels = bodyPainCellData
                 return cell
             case 11:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
@@ -172,93 +168,48 @@ class AutolayoutPracticeTableViewController: UITableViewController {
 
 extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView {
-            case self.collectionView:
-                if section == 0 {
-                    return 1
-                } else {
-                    return filterCellsData.count
-                }
-            case bodyPainCell?.cellCollectionView:
-                return bodyPainCellData.count
-            default:
-                return 0
+        if section == 0 {
+            return 1
+        } else {
+            return filterCellsData.count
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        switch collectionView {
-            case self.collectionView:
-                return 2
-            case bodyPainCell?.cellCollectionView:
-                return 1
-            default:
-                return 0
-        }
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch collectionView {
-            case self.collectionView:
-                if indexPath.section == 0 {
-                    visibleSectionIndices = filterCellsData
-                } else {
-                    visibleSectionIndices = [indexPath.item]
-                }
-                tableView.reloadData()
-            default:
-                return
+        if indexPath.section == 0 {
+            visibleSectionIndices = filterCellsData
+        } else {
+            visibleSectionIndices = [indexPath.item]
         }
+        tableView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch collectionView {
-            case self.collectionView:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-                
-//                cell.setBackGroundColor(to: .brandWhite)
-//                cell.setLabelTextColor(color: .brandMainColor)
-//                cell.setCornerRadius(to: 6)
-//                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-//                cell.centerLabelText()
-//                cell.setUpBorder(color: .greyscale10, width: 1)
-//
-//
-//                if indexPath.section == 0 {
-//                    cell.setLabelText(text: "All")
-//                    cell.isSelected = true
-//                } else {
-//                    cell.setLabelText(text: "Cell \(indexPath.row + 1)")
-//                }
-                return cell
-            case bodyPainCell?.cellCollectionView:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-                
-//                cell.setBackGroundColor(to: .brandWhite)
-//                cell.setCornerRadius(to: 6)
-//                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-//                cell.setLabelTextColor(color: .greyscale100)
-//                cell.centerLabelText()
-//                cell.setLabelText(text: bodyPainCellData[indexPath.item].textLabel)
-//                cell.setUpBorder(color: UIColor.greyscale10, width: 1)
-//
-                bodyPainCell!.cellCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
-                return cell
-            default:
-                return UICollectionViewCell()
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+        
+        //                cell.setBackGroundColor(to: .brandWhite)
+        //                cell.setLabelTextColor(color: .brandMainColor)
+        //                cell.setCornerRadius(to: 6)
+        //                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
+        //                cell.centerLabelText()
+        //                cell.setUpBorder(color: .greyscale10, width: 1)
+        //
+        //
+        //                if indexPath.section == 0 {
+        //                    cell.setLabelText(text: "All")
+        //                    cell.isSelected = true
+        //                } else {
+        //                    cell.setLabelText(text: "Cell \(indexPath.row + 1)")
+        //                }
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch collectionView {
-            case self.collectionView:
-                return CGSize(width: 50, height: 28)
-            case bodyPainCell?.cellCollectionView:
-                return CGSize(width: 128, height: 28)
-            default:
-                return CGSize(width: 146, height: 28)
-        }
-
+        return CGSize(width: 50, height: 28)
     }
 }
 
