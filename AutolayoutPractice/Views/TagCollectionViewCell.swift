@@ -18,9 +18,23 @@ class TagCollectionViewCell: UICollectionViewCell {
     private var selectedStateTextColor: UIColor?
     private var selectedStateBackgroundColor: UIColor?
     
-    @IBOutlet private weak var leadingToTextLabelConstraint: NSLayoutConstraint!
+    private var isSelectable: Bool? {
+        didSet {
+            setUpBorder(color: .greyscale10, width: 1)
+            if isSelectable! {
+                setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
+            }
+        }
+    }
+    
     @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var closeButton: ImageOnlyButton!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    @IBOutlet weak var stackViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackViewBottomConstraint: NSLayoutConstraint!
     
     weak var delegate: TagCollectionViewCellDelegate?
     
@@ -45,17 +59,53 @@ class TagCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         closeButton.isHidden = true
+        setCloseButtonSize(width: 12, height: 14)
+        setCornerRadius(to: 4)
     }
-
+    
     @IBAction func didTapCloseButton(_ sender: Any) {
         delegate?.didTapClose(on: self)
     }
     
-    func setColorsForStates(normalStateTextColor: UIColor, normalStateBackgroundColor: UIColor, selectedStateTextColor: UIColor, selectedStateBackgroundColor: UIColor) {
-        self.normalStateTextColor = normalStateTextColor
-        self.normalStateBackgroundColor = normalStateBackgroundColor
-        self.selectedStateTextColor = selectedStateTextColor
-        self.selectedStateBackgroundColor = selectedStateBackgroundColor
+    func configureCell(with model: TagModel) {
+        textLabel.text = model.labelText
+        closeButton.isHidden = !model.hasCloseButton
+        isSelectable = model.isSelectable
+        if model.isTextCentered {
+            centerLabelText()
+        }
+        configureHorizontalPadding(padding: model.horizontalPadding)
+        configureVerticalPadding(padding: model.verticalPadding)
+        setLabelFont(to: model.font)
+        setLabelTextColor(color: model.textColor)
+        setBackGroundColor(to: model.backgroundColor)
+    }
+}
+
+private extension TagCollectionViewCell {
+//    func configureCloseButton() {
+//        closeButton.isHidden = false
+//    }
+    
+    func centerLabelText() {
+        self.textLabel.textAlignment = .center
+    }
+    
+    func setUpBorder(color: UIColor?, width: CGFloat) {
+        if color != nil {
+            self.layer.borderColor = color!.cgColor
+            self.layer.borderWidth = width
+        }
+    }
+    
+    func configureVerticalPadding(padding: CGFloat) {
+        stackViewTopConstraint.constant = padding
+        stackViewBottomConstraint.constant = padding
+    }
+    
+    func configureHorizontalPadding(padding: CGFloat) {
+        stackViewLeadingConstraint.constant = padding
+        stackViewTrailingConstraint.constant = padding
     }
     
     func setLabelText(text: String) {
@@ -83,29 +133,16 @@ class TagCollectionViewCell: UICollectionViewCell {
         self.clipsToBounds = true
     }
     
-    func centerLabelText() {
-        self.textLabel.textAlignment = .center
+    func setColorsForStates(normalStateTextColor: UIColor, normalStateBackgroundColor: UIColor, selectedStateTextColor: UIColor, selectedStateBackgroundColor: UIColor) {
+        self.normalStateTextColor = normalStateTextColor
+        self.normalStateBackgroundColor = normalStateBackgroundColor
+        self.selectedStateTextColor = selectedStateTextColor
+        self.selectedStateBackgroundColor = selectedStateBackgroundColor
     }
     
-    func configureCloseButton() {
-        closeButton.isHidden = false
-    }
-    
-    func setUpBorder(color: UIColor?, width: CGFloat) {
-        if color != nil {
-            self.layer.borderColor = color!.cgColor
-            self.layer.borderWidth = width
-        }
-    }
-    
-    func setConstraintLeadingToTextLabel(value: CGFloat) {
-        self.leadingToTextLabelConstraint.constant = value
-    }
-    
-    func configureCell(with model: PainLocationTagModel) {
-        textLabel.text = model.textForLabel
-        if model.hasCloseButton {
-            closeButton.isHidden = false
-        }
+    func setCloseButtonSize(width: CGFloat, height: CGFloat) {
+        closeButton.imageView?.contentMode = .center
+        closeButton.imageView?.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        closeButton.imageView?.heightAnchor.constraint(equalToConstant: 12).isActive = true
     }
 }

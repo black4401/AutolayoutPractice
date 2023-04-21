@@ -17,40 +17,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
-                        <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="188" y="8" width="12" height="12"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="12" id="Rnp-vw-jkH"/>
-                            <constraint firstAttribute="height" constant="12" id="Vrt-6J-aJz"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="Vector"/>
-                        <connections>
-                            <action selector="didTapCloseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0it-P9-7Hx"/>
-                        </connections>
-                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
+                        <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
+                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
+                                <rect key="frame" x="168" y="0.0" width="38" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Vector"/>
+                                <connections>
+                                    <action selector="didTapCloseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0it-P9-7Hx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="pNZ-zb-oK1"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="T3M-mW-IZf" secondAttribute="trailing" constant="6" id="0zD-nZ-mr2"/>
-                <constraint firstItem="NG1-u0-4TN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Fj-Rr-zyq"/>
-                <constraint firstItem="NG1-u0-4TN" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="OzM-tc-AWX"/>
-                <constraint firstAttribute="bottom" secondItem="NG1-u0-4TN" secondAttribute="bottom" id="jMN-8V-RtB"/>
-                <constraint firstItem="NG1-u0-4TN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x3f-Qk-Crj"/>
-                <constraint firstItem="T3M-mW-IZf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="xJH-iO-LVL"/>
+                <constraint firstAttribute="bottom" secondItem="NSi-sz-GFv" secondAttribute="bottom" id="FfW-hH-8Gc"/>
+                <constraint firstAttribute="trailing" secondItem="NSi-sz-GFv" secondAttribute="trailing" id="ZqO-Vd-1Nf"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ffP-za-nJ9"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iwC-Jy-LxC"/>
             </constraints>
             <size key="customSize" width="206" height="28"/>
             <connections>
                 <outlet property="closeButton" destination="T3M-mW-IZf" id="jkL-nu-NB0"/>
-                <outlet property="leadingToTextLabelConstraint" destination="2Fj-Rr-zyq" id="dqY-KI-xfa"/>
+                <outlet property="stackView" destination="NSi-sz-GFv" id="R1v-dA-z3Z"/>
+                <outlet property="stackViewBottomConstraint" destination="FfW-hH-8Gc" id="Quh-M6-1OS"/>
+                <outlet property="stackViewLeadingConstraint" destination="ffP-za-nJ9" id="dle-pX-ur6"/>
+                <outlet property="stackViewTopConstraint" destination="iwC-Jy-LxC" id="FYa-EC-i0a"/>
+                <outlet property="stackViewTrailingConstraint" destination="ZqO-Vd-1Nf" id="ZhU-i5-Qbz"/>
                 <outlet property="textLabel" destination="NG1-u0-4TN" id="a1b-2I-9KJ"/>
             </connections>
             <point key="canvasLocation" x="-76.33587786259541" y="-11.267605633802818"/>
