@@ -132,7 +132,7 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 7:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painMonitorCell, for: indexPath) as! PainMonitorCell
-                let style = CellStyle.evening
+                let style = PainMonitorCellStyle.evening
                 cell.setUpPainLabel(text: style.painText)
                 cell.setSecondaryLabelText(text: style.secondaryText)
                 cell.setUpIconView(iconName: style.emojiName)
@@ -212,47 +212,3 @@ private extension AutolayoutPracticeTableViewController {
         tableView.reloadData()
     }
 }
-
-enum CellStyle {
-    
-    case morning
-    case evening
-    
-    var emojiName: String {
-        switch self {
-            case .morning:
-                return "sun_icon"
-            case .evening:
-                return "moon_icon"
-        }
-    }
-    
-    var painText: String {
-        switch self {
-            case .morning:
-                return "MORNING PAIN"
-            case .evening:
-                return "EVENING PAIN"
-        }
-    }
-    
-    var secondaryText: String {
-        switch self {
-            case .morning:
-                return "8% lower than last period"
-            case .evening:
-                return "8% higher than last period"
-        }
-    }
-    
-    var percentValue: String {
-        switch self {
-            case .morning:
-                return "7.4"
-            case .evening:
-                return "6.4"
-        }
-    }
-}
-
-

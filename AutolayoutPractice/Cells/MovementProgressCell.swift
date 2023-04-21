@@ -17,6 +17,9 @@ class MovementProgressCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.layer.cornerRadius = 6
+        self.clipsToBounds = true
+        
         setUpSecondaryLabel()
         setUpMovementLabel()
         setUpProgressView()

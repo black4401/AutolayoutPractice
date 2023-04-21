@@ -20,7 +20,8 @@ class MorningPainCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.layer.cornerRadius = 6
+        self.clipsToBounds = true
         avgLabel.attributedText = createAttrString()
         avgLabel.textColor = .greyscale100
         

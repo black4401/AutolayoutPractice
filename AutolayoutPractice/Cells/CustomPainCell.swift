@@ -15,6 +15,11 @@ class CustomPainCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        customView1.layer.cornerRadius = 6
+        customView1.clipsToBounds = true
+        
+        customView2.layer.cornerRadius = 6
+        customView2.clipsToBounds = true
         
         customView1.setUpAvgLabel(value: "7.4")
         customView1.setSecondaryLabelText(text: "8% lower than last period")

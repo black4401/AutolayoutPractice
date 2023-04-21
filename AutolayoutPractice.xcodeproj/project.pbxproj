@@ -69,6 +69,7 @@
 		BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */; };
 		BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */; };
 		BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */; };
+		BBC6DAFC29F2B4E100005A83 /* PainMonitorCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */; };
 		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
 		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
 		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
@@ -142,6 +143,7 @@
 		BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue&Register.swift"; sourceTree = "<group>"; };
 		BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue&Register.swift"; sourceTree = "<group>"; };
+		BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCellStyle.swift; sourceTree = "<group>"; };
 		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
 		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
 		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
 				BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */,
+				BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */,
 				BBF8C89929F1360C00E6E2BC /* CellModels.swift */,
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
@@ -413,6 +416,7 @@
 				BB5EFA1429DDB6550006CC94 /* ActivityCell.swift in Sources */,
 				BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */,
 				BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */,
+				BBC6DAFC29F2B4E100005A83 /* PainMonitorCellStyle.swift in Sources */,
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,

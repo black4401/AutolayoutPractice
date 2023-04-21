@@ -15,6 +15,12 @@ class CustomProgressCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        movementProgressView.layer.cornerRadius = 6
+        movementProgressView.clipsToBounds = true
+        
+        stressProgressView.layer.cornerRadius = 6
+        stressProgressView.clipsToBounds = true
+        
         movementProgressView.setUpIconImageView(named: "movement_icon")
         movementProgressView.setUpMainLabel(text: "MOVEMENT")
         movementProgressView.setUpSecondaryLabel(text: "Didn't move much")
