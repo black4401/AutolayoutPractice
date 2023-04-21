@@ -7,13 +7,28 @@
 
 import UIKit
 
-class PainLocationTagModel {
-    let textForLabel: String
-    let hasCloseButton: Bool
+class TagModel {
     
-    init(textLabel: String, hasCloseButton: Bool) {
-        self.textForLabel = textLabel
+    let labelText: String
+    let hasCloseButton: Bool
+    let isSelectable: Bool
+    let isTextCentered: Bool
+    let horizontalPadding: CGFloat
+    let verticalPadding: CGFloat
+    let font: UIFont
+    let textColor: UIColor?
+    let backgroundColor: UIColor?
+    
+    init(labelText: String, hasCloseButton: Bool, isSelectable: Bool, isTextCentered: Bool, horizontalPadding: CGFloat, verticalPadding: CGFloat, font: UIFont, textColor: UIColor?, backgroundColor: UIColor?) {
+        self.labelText = labelText
         self.hasCloseButton = hasCloseButton
+        self.isSelectable = isSelectable
+        self.isTextCentered = isTextCentered
+        self.horizontalPadding = horizontalPadding
+        self.verticalPadding = verticalPadding
+        self.font = font
+        self.textColor = textColor
+        self.backgroundColor = backgroundColor
     }
 }
 

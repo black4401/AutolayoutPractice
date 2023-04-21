@@ -9,7 +9,7 @@ import UIKit
 
 class PainLocationCell: UITableViewCell {
     
-    var collectionViewModels: [PainLocationTagModel] = [] {
+    var collectionViewModels: [TagModel] = [] {
         didSet {
             continueButton.titleLabel?.text = "Continue (\(collectionViewModels.count))"
         }
@@ -61,20 +61,19 @@ extension PainLocationCell: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cellCollectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+        let model = collectionViewModels[indexPath.row]
         cell.configureCell(with: collectionViewModels[indexPath.row])
-        cell.delegate = self
-        cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-        cell.setLabelTextColor(color: .greyscale140)
-        cell.setBackGroundColor(to: .greyscale05)
-        cell.setCornerRadius(to: 4)
+        cell.delegate = model.hasCloseButton ? self : nil
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel()
-        label.text = collectionViewModels[indexPath.row].textForLabel
+        let model = collectionViewModels[indexPath.row]
+        let spaceForButton = model.hasCloseButton ? 10 : 0
+        label.text = collectionViewModels[indexPath.row].labelText
         let size = label.sizeThatFits(CGSize(width: 200, height: 100))
-        return CGSize(width: size.width + 20, height: size.height)
+        return CGSize(width: size.width + CGFloat(spaceForButton) + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
