@@ -13,16 +13,15 @@ protocol TagCollectionViewCellDelegate: AnyObject {
 
 class TagCollectionViewCell: UICollectionViewCell {
     
-    private var normalStateTextColor: UIColor?
-    private var normalStateBackgroundColor: UIColor?
-    private var selectedStateTextColor: UIColor?
-    private var selectedStateBackgroundColor: UIColor?
+    private var normalStateTextColor: UIColor = .greyscale100!
+    private var normalStateBackgroundColor: UIColor = .brandWhite!
+    private var selectedStateTextColor: UIColor = .brandMainColor!
+    private var selectedStateBackgroundColor: UIColor = .greyscale10!
     
     private var isSelectable: Bool? {
         didSet {
-            setUpBorder(color: .greyscale10, width: 1)
             if isSelectable! {
-                setColorsForStates(normalStateTextColor: .greyscale100!, normalStateBackgroundColor: .brandWhite!, selectedStateTextColor: .brandMainColor!, selectedStateBackgroundColor: .greyscale10!)
+                setUpBorder(color: .greyscale10, width: 1)
             }
         }
     }
@@ -40,19 +39,8 @@ class TagCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            if isSelected {
-                guard selectedStateTextColor != nil && selectedStateBackgroundColor != nil else {
-                    return
-                }
-                self.backgroundColor = selectedStateBackgroundColor
-                self.textLabel.textColor = selectedStateTextColor
-            } else {
-                guard normalStateTextColor != nil && normalStateBackgroundColor != nil else {
-                    return
-                }
-                self.backgroundColor = normalStateBackgroundColor
-                self.textLabel.textColor = normalStateTextColor
-            }
+            self.backgroundColor = isSelected ? selectedStateBackgroundColor : normalStateBackgroundColor
+            self.textLabel.textColor = isSelected ? selectedStateTextColor : normalStateTextColor
         }
     }
     
@@ -83,9 +71,6 @@ class TagCollectionViewCell: UICollectionViewCell {
 }
 
 private extension TagCollectionViewCell {
-//    func configureCloseButton() {
-//        closeButton.isHidden = false
-//    }
     
     func centerLabelText() {
         self.textLabel.textAlignment = .center

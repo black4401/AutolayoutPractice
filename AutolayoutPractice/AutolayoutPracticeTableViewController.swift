@@ -9,7 +9,6 @@ import UIKit
 
 class AutolayoutPracticeTableViewController: UITableViewController {
     
-    var filterCellsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var visibleSectionIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     var painLocationCellData: [TagModel] = [TagModel(labelText: "Left big toe", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05), TagModel(labelText: "Right big toe", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05), TagModel(labelText: "Left knee cap", hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05)]
     
@@ -17,10 +16,12 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     var bodyPainCellData: [TagModel] = [TagModel(labelText: "Overall", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Front of right head", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Right face", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite)]
     
+    var filterCellsData: [TagModel] = [TagModel(labelText: "All", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "First", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Second", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Third", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Forth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Fifth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Sixth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Seventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Seventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Eight", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Ninght", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Tenth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Eleventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite)]
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20), collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35), collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -33,7 +34,6 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
         collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
@@ -168,22 +168,18 @@ class AutolayoutPracticeTableViewController: UITableViewController {
 
 extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return filterCellsData.count
-        }
+        return filterCellsData.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            visibleSectionIndices = filterCellsData
+        if indexPath.row == 0 {
+            visibleSectionIndices = filterCellsData.enumerated().map { $0.offset }
         } else {
-            visibleSectionIndices = [indexPath.item]
+            visibleSectionIndices = [indexPath.item - 1]
         }
         tableView.reloadData()
     }
@@ -191,41 +187,25 @@ extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
         
-        //                cell.setBackGroundColor(to: .brandWhite)
-        //                cell.setLabelTextColor(color: .brandMainColor)
-        //                cell.setCornerRadius(to: 6)
-        //                cell.setLabelFont(to: UIFont.dmSansRegular(ofSize: 15))
-        //                cell.centerLabelText()
-        //                cell.setUpBorder(color: .greyscale10, width: 1)
-        //
-        //
-        //                if indexPath.section == 0 {
-        //                    cell.setLabelText(text: "All")
-        //                    cell.isSelected = true
-        //                } else {
-        //                    cell.setLabelText(text: "Cell \(indexPath.row + 1)")
-        //                }
+        if indexPath.row == 0 {
+            cell.isSelected = true
+        }
+        cell.configureCell(with: filterCellsData[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 28)
+        let label = UILabel()
+        let model = filterCellsData[indexPath.row]
+        label.text = model.labelText
+        let size = label.sizeThatFits(CGSize(width: 200, height: 100))
+        return CGSize(width: size.width + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
     }
 }
-
-//extension AutolayoutPracticeTableViewController: TagCollectionViewCellDelegate {
-//    func didTapClose(on cell: TagCollectionViewCell) {
-//        guard let painLocationCell = painLocationCell else {
-//            return
-//        }
-//        if let indexPath = painLocationCell.cellCollectionView.indexPath(for: cell) {
-//            painLocationCell.cellCollectionView.performBatchUpdates {
-//                painLocationCellData.remove(at: indexPath.item)
-//                painLocationCell.cellCollectionView.deleteItems(at: [indexPath])
-//            }
-//        }
-//    }
-//}
 
 private extension AutolayoutPracticeTableViewController {
     func addNotificationEnteringForeground() {
@@ -236,8 +216,7 @@ private extension AutolayoutPracticeTableViewController {
         tableView.setContentOffset(.zero, animated: true)
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
         collectionView.setContentOffset(.zero, animated: true)
-        
-        visibleSectionIndices = filterCellsData
+        visibleSectionIndices = filterCellsData.enumerated().map { $0.offset }
         tableView.reloadData()
     }
 }

@@ -77,7 +77,7 @@ extension PainRateCell: UICollectionViewDataSource, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel()
         let model = collectionViewModels[indexPath.row]
-        label.text = collectionViewModels[indexPath.row].labelText
+        label.text = model.labelText
         let size = label.sizeThatFits(CGSize(width: 200, height: 100))
         return CGSize(width: size.width + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)
     }
