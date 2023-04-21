@@ -66,6 +66,9 @@
 		BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */; };
 		BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */; };
 		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
+		BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */; };
+		BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */; };
+		BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */; };
 		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
 		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
 		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
@@ -136,6 +139,9 @@
 		BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SetFont.swift"; sourceTree = "<group>"; };
 		BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCell.swift; sourceTree = "<group>"; };
 		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
+		BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue&Register.swift"; sourceTree = "<group>"; };
+		BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue&Register.swift"; sourceTree = "<group>"; };
 		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
 		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
 		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
@@ -212,13 +218,11 @@
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
-				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
-				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
-				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */,
 				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
+				BBC6DAF829F2AB5200005A83 /* Extensions */,
 				BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */,
 				BBA0419629D43AA000E39A06 /* Info.plist */,
 				BBA0418E29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld */,
@@ -280,6 +284,19 @@
 				BBA4CD9729DC545E008E23C1 /* DM_Sans */,
 			);
 			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		BBC6DAF829F2AB5200005A83 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
+				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
+				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
+				BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */,
+				BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */,
+				BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,13 +422,16 @@
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
 				BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */,
+				BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */,
 				BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */,
 				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,
 				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
+				BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */,
 				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
 				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
 				BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */,
 				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
+				BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */,
 				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

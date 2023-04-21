@@ -22,5 +22,5 @@ enum CellIdentifiers {
     static let bodyPainCell = "BodyPainCell"
     static let painLocationCell = "PainLocationCell"
     
-    static let tagCellIdentifier = "tagCell"
+    static let tagCellIdentifier = "TagCollectionViewCell"
 }

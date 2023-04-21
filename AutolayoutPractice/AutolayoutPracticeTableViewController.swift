@@ -26,6 +26,8 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         return collectionView
     }()
     
+    let listOfCells = [HealthcareProvidersCell.self, AssociatedDoctorCell.self, MorningEntryCell.self, MorningPainCell.self, MovementProgressCell.self, SavedArticleCell.self, PainRateCell.self, PainMonitorCell.self, CustomPainCell.self, CustomProgressCell.self, BodyPainCell.self, CustomProgressCell.self, BodyPainCell.self, PainLocationCell.self]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .brandMainColor
@@ -34,25 +36,15 @@ class AutolayoutPracticeTableViewController: UITableViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
+        collectionView.register(TagCollectionViewCell.self)
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
         headerView.addSubview(collectionView)
         tableView.tableHeaderView = collectionView
         
-        self.tableView.register(UINib(nibName: "HealthcareProvidersCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.healthcareProviders)
-        self.tableView.register(UINib(nibName: "AssociatedDoctorCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.associatedDoctor)
-        self.tableView.register(UINib(nibName: "MorningEntryCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.morningEntry)
-        self.tableView.register(UINib(nibName: "MorningPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.morningPain)
-        self.tableView.register(UINib(nibName: "MovementProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.movementProgress)
-        self.tableView.register(UINib(nibName: "SavedArticleCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.savedArticle)
-        self.tableView.register(UINib(nibName: "PainRateCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painRate)
-        self.tableView.register(UINib(nibName: "PainMonitorCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painMonitorCell)
-        self.tableView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.activityCell)
-        self.tableView.register(UINib(nibName: "CustomPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.customPainCell)
-        self.tableView.register(UINib(nibName: "CustomProgressCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.customProgressCell)
-        self.tableView.register(UINib(nibName: "BodyPainCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.bodyPainCell)
-        self.tableView.register(UINib(nibName: "PainLocationCell", bundle: nil), forCellReuseIdentifier: CellIdentifiers.painLocationCell)
+        for cell in listOfCells {
+            tableView.register(cell)
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
