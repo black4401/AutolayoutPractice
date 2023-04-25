@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,19 +33,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="x7M-0O-KNj">
-                        <rect key="frame" x="16" y="84" width="311" height="28"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="28" id="OQU-fk-4GH"/>
-                        </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Gf-KO-eJ1">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                    </collectionView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph" translatesAutoresizingMaskIntoConstraints="NO" id="181-ST-m2q">
                         <rect key="frame" x="16" y="127" width="311" height="123"/>
                         <constraints>
@@ -77,6 +65,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-MA-HvT" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
+                        <rect key="frame" x="16" y="84" width="311" height="28"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="bex-nK-UVV"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="KvV-Ze-pLa" firstAttribute="leading" secondItem="PK7-H0-2YL" secondAttribute="trailing" constant="4.0000000000000142" id="0nN-z0-HC3"/>
@@ -86,30 +81,30 @@
                     <constraint firstItem="16p-QM-DzW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="7dD-di-Bm5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="PK7-H0-2YL" secondAttribute="bottom" constant="16" id="7m6-IH-NVe"/>
                     <constraint firstItem="KvV-Ze-pLa" firstAttribute="leading" secondItem="PK7-H0-2YL" secondAttribute="trailing" constant="4" id="BwP-qT-qBt"/>
-                    <constraint firstItem="x7M-0O-KNj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LCy-YG-J5W"/>
+                    <constraint firstAttribute="trailing" secondItem="PCw-MA-HvT" secondAttribute="trailing" constant="16" id="Ggk-6U-gw9"/>
                     <constraint firstItem="Xmd-ZZ-JHZ" firstAttribute="top" secondItem="16p-QM-DzW" secondAttribute="bottom" constant="14" id="MyV-3y-Bih"/>
                     <constraint firstItem="PK7-H0-2YL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="105" id="NNr-92-b5A"/>
                     <constraint firstItem="Xmd-ZZ-JHZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RaZ-gO-EVI"/>
                     <constraint firstAttribute="bottom" secondItem="ZR9-Av-TO9" secondAttribute="bottom" constant="23.666666666666686" id="Rpd-qW-3Zs"/>
+                    <constraint firstItem="PCw-MA-HvT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="VgD-rv-7fo"/>
+                    <constraint firstItem="181-ST-m2q" firstAttribute="top" secondItem="PCw-MA-HvT" secondAttribute="bottom" constant="15" id="iaa-g7-suv"/>
                     <constraint firstItem="16p-QM-DzW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kAA-wJ-dal"/>
                     <constraint firstAttribute="bottom" secondItem="KvV-Ze-pLa" secondAttribute="bottom" constant="23.666666666666686" id="nJT-Ep-dVr"/>
                     <constraint firstItem="ZR9-Av-TO9" firstAttribute="leading" secondItem="FJo-uJ-Fiw" secondAttribute="trailing" constant="4" id="ops-gU-ggQ"/>
-                    <constraint firstItem="181-ST-m2q" firstAttribute="top" secondItem="x7M-0O-KNj" secondAttribute="bottom" constant="15" id="p5O-dJ-sCL"/>
-                    <constraint firstAttribute="trailing" secondItem="x7M-0O-KNj" secondAttribute="trailing" constant="16" id="pwh-SK-QAZ"/>
                     <constraint firstAttribute="trailing" secondItem="181-ST-m2q" secondAttribute="trailing" constant="16" id="tri-u4-3tO"/>
-                    <constraint firstItem="x7M-0O-KNj" firstAttribute="top" secondItem="Xmd-ZZ-JHZ" secondAttribute="bottom" constant="20" id="uMS-wd-3AM"/>
                     <constraint firstAttribute="trailing" secondItem="ZR9-Av-TO9" secondAttribute="trailing" constant="105" id="v1m-Aa-b8V"/>
+                    <constraint firstItem="PCw-MA-HvT" firstAttribute="top" secondItem="Xmd-ZZ-JHZ" secondAttribute="bottom" constant="20" id="wIP-Ep-yqr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cellCollectionView" destination="x7M-0O-KNj" id="iZB-VV-Ihh"/>
                 <outlet property="eveningLabel" destination="ZR9-Av-TO9" id="3tV-Lk-Vz5"/>
                 <outlet property="headerLabel" destination="16p-QM-DzW" id="nWT-0V-akp"/>
+                <outlet property="horizontalScrollView" destination="PCw-MA-HvT" id="pLH-WW-aLv"/>
                 <outlet property="mainLabel" destination="Xmd-ZZ-JHZ" id="kVn-eF-Z7Y"/>
                 <outlet property="morningLabel" destination="KvV-Ze-pLa" id="fh3-dN-tYb"/>
             </connections>
-            <point key="canvasLocation" x="144.27480916030532" y="-13.028169014084508"/>
+            <point key="canvasLocation" x="142.74809160305344" y="-13.028169014084508"/>
         </tableViewCell>
     </objects>
     <resources>

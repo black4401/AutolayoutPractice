@@ -30,7 +30,7 @@ class HorizontalScrollView: UIView {
     }
     
     private func setUpCollectionView() {
-        collectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
+        collectionView.register(TagCollectionViewCell.self)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -41,6 +41,7 @@ class HorizontalScrollView: UIView {
         
         collectionView.collectionViewLayout =  layout
     }
+    
     
     private func loadNib() {
         let nib = UINib(nibName: "HorizontalScrollView", bundle: nil)
