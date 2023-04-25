@@ -68,6 +68,8 @@
 		BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */; };
 		BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */; };
 		BBC6DAFC29F2B4E100005A83 /* PainMonitorCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */; };
+		BBC6DAFE29F7E27B00005A83 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */; };
+		BBC6DB0029F7ED8500005A83 /* HorizontalScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */; };
 		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
 		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
 		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
@@ -140,6 +142,8 @@
 		BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue&Register.swift"; sourceTree = "<group>"; };
 		BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCellStyle.swift; sourceTree = "<group>"; };
+		BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalScrollView.xib; sourceTree = "<group>"; };
 		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
 		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
 		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 		BB55F5DA29D6FF1700F2F2C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */,
+				BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */,
 				BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */,
 				BB6CA16629DF27D1004B39BA /* CustomPainView.xib */,
 				BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */,
@@ -359,6 +365,7 @@
 				BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */,
 				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
 				BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */,
+				BBC6DB0029F7ED8500005A83 /* HorizontalScrollView.xib in Resources */,
 				BB642E4B29E6CDE000E2B258 /* BodyPainCell.xib in Resources */,
 				BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
@@ -399,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC6DAFE29F7E27B00005A83 /* HorizontalScrollView.swift in Sources */,
 				BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */,
 				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
 				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
