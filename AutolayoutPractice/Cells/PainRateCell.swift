@@ -9,7 +9,11 @@ import UIKit
 
 class PainRateCell: UITableViewCell {
     
-    var collectionViewModels: [TagModel] = []
+    var collectionViewModels: [TagModel] = [] {
+        didSet {
+            horizontalScrollView.data = collectionViewModels
+        }
+    }
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var emojiImageView: UIImageView!
@@ -23,16 +27,12 @@ class PainRateCell: UITableViewCell {
     @IBOutlet weak var severitylabel: UILabel!
     @IBOutlet weak var painLocationLabel: UILabel!
     
-    @IBOutlet weak var cellCollectionView: UICollectionView!
     @IBOutlet weak var editButton: ImageOnlyButton!
+    @IBOutlet weak var horizontalScrollView: HorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        setUpCollectionView()
-        cellCollectionView.dataSource = self
-        cellCollectionView.delegate = self
-        
         setUpPainLabel()
         setUpMorningLabel()
         setUpSeverityLabel()
@@ -44,46 +44,6 @@ class PainRateCell: UITableViewCell {
         circleView.layer.cornerRadius = 25
         editButton.setImage(UIImage(named: "edit_icon 1"), for: .normal)
         lineImageView.image = UIImage(named: "Line 13")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    private func setUpCollectionView() {
-        cellCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.tagCellIdentifier)
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 4
-
-        cellCollectionView.collectionViewLayout =  layout
-    }
-}
-
-extension PainRateCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionViewModels.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = cellCollectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-        let model = collectionViewModels[indexPath.row]
-        cell.configureCell(with: model)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let label = UILabel()
-        let model = collectionViewModels[indexPath.row]
-        label.text = model.labelText
-        let size = label.sizeThatFits(CGSize(width: 200, height: 100))
-        return CGSize(width: size.width + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
     }
 }
 
