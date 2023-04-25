@@ -25,64 +25,70 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zs-3M-ca2">
                     <rect key="frame" x="0.0" y="0.0" width="167" height="144"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun_icon" translatesAutoresizingMaskIntoConstraints="NO" id="y42-x9-gJc">
-                            <rect key="frame" x="17" y="17" width="16" height="16"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="16" id="He5-KL-NeW"/>
-                                <constraint firstAttribute="width" constant="16" id="Zar-Uw-49k"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="jv9-Yj-S6h"/>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="pQk-J7-kNw"/>
-                            </constraints>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORNING PAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-s5-p4B">
-                            <rect key="frame" x="42.000000000000007" y="18" width="81.666666666666686" height="14"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <color key="textColor" red="0.54188650849999997" green="0.54955589770000002" blue="0.55720365049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ild-35-Gsl">
-                            <rect key="frame" x="17" y="63" width="34" height="14"/>
-                            <attributedString key="attributedText">
-                                <fragment content="avg. 7">
-                                    <attributes>
-                                        <color key="NSColor" red="0.14835506679999999" green="0.15807771679999999" blue="0.17723390459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" metaFont="cellTitle"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8% lower than last period" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-aD-yUx">
-                            <rect key="frame" x="16.999999999999993" y="85" width="102.33333333333331" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.42795485259999999" green="0.43599325420000001" blue="0.45198273659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HUU-VD-Czb">
+                            <rect key="frame" x="16" y="15.999999999999993" width="130.66666666666666" height="112.33333333333331"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pAl-fB-lrf">
+                                    <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="16"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun_icon" translatesAutoresizingMaskIntoConstraints="NO" id="y42-x9-gJc">
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="Zar-Uw-49k"/>
+                                                <constraint firstAttribute="width" secondItem="y42-x9-gJc" secondAttribute="height" multiplier="1:1" id="wEv-1J-dgt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORNING PAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-s5-p4B">
+                                            <rect key="frame" x="24.000000000000007" y="1.3333333333333321" width="81.666666666666686" height="13.333333333333334"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.54188650849999997" green="0.54955589770000002" blue="0.55720365049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-U2-BBK">
+                                    <rect key="frame" x="0.0" y="35.999999999999993" width="130.66666666666666" height="76.333333333333314"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ild-35-Gsl">
+                                            <rect key="frame" x="0.0" y="0.0" width="34" height="14.333333333333334"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="avg. 7">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.14835506679999999" green="0.15807771679999999" blue="0.17723390459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8% lower than last period8% lower than last period" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-aD-yUx">
+                                            <rect key="frame" x="0.0" y="22.333333333333329" width="130.66666666666666" height="54"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.42795485259999999" green="0.43599325420000001" blue="0.45198273659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="lPV-s5-p4B" firstAttribute="leading" secondItem="y42-x9-gJc" secondAttribute="trailing" constant="9" id="EF5-P8-U9a"/>
-                        <constraint firstItem="lPV-s5-p4B" firstAttribute="top" secondItem="8Zs-3M-ca2" secondAttribute="top" constant="18" id="Jur-S4-oqX"/>
-                        <constraint firstItem="1u7-aD-yUx" firstAttribute="top" secondItem="ild-35-Gsl" secondAttribute="bottom" constant="8" id="L2O-nZ-CV6"/>
-                        <constraint firstItem="ild-35-Gsl" firstAttribute="top" secondItem="y42-x9-gJc" secondAttribute="bottom" constant="30" id="TWV-Md-rJH"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1u7-aD-yUx" secondAttribute="trailing" constant="5" id="Yc8-bT-OCt"/>
-                        <constraint firstItem="y42-x9-gJc" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="ZhC-ed-IyO"/>
-                        <constraint firstItem="y42-x9-gJc" firstAttribute="top" secondItem="8Zs-3M-ca2" secondAttribute="top" constant="17" id="d5I-6G-LgP"/>
-                        <constraint firstItem="1u7-aD-yUx" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="dzZ-pI-D63"/>
-                        <constraint firstItem="ild-35-Gsl" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="17" id="eix-me-3ml"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ild-35-Gsl" secondAttribute="trailing" constant="50" id="pB9-68-5Lr"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1u7-aD-yUx" secondAttribute="bottom" constant="5" id="x5u-F2-I7b"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HUU-VD-Czb" secondAttribute="bottom" constant="5" id="C2S-jm-AeF"/>
+                        <constraint firstItem="HUU-VD-Czb" firstAttribute="leading" secondItem="8Zs-3M-ca2" secondAttribute="leading" constant="16" id="bGS-rA-V3H"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HUU-VD-Czb" secondAttribute="trailing" constant="16" id="mq8-S5-fSc"/>
+                        <constraint firstItem="HUU-VD-Czb" firstAttribute="top" secondItem="8Zs-3M-ca2" secondAttribute="top" constant="16" id="ugZ-N5-YFZ"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="yWC-x6-pDK"/>
             <color key="backgroundColor" systemColor="systemGrayColor"/>
             <constraints>
-                <constraint firstItem="8Zs-3M-ca2" firstAttribute="leading" secondItem="yWC-x6-pDK" secondAttribute="leading" id="TbO-8k-ICO"/>
-                <constraint firstItem="8Zs-3M-ca2" firstAttribute="trailing" secondItem="yWC-x6-pDK" secondAttribute="trailing" id="ceB-Sr-nXb"/>
-                <constraint firstItem="8Zs-3M-ca2" firstAttribute="top" secondItem="s4M-Qy-AkE" secondAttribute="top" id="kvn-Rr-VJf"/>
-                <constraint firstAttribute="bottom" secondItem="8Zs-3M-ca2" secondAttribute="bottom" id="zaS-NK-OA1"/>
+                <constraint firstItem="8Zs-3M-ca2" firstAttribute="trailing" secondItem="yWC-x6-pDK" secondAttribute="trailing" id="7Sg-gT-s6B"/>
+                <constraint firstAttribute="bottom" secondItem="8Zs-3M-ca2" secondAttribute="bottom" id="88Y-qF-qwY"/>
+                <constraint firstItem="8Zs-3M-ca2" firstAttribute="top" secondItem="s4M-Qy-AkE" secondAttribute="top" id="VSv-s8-WCQ"/>
+                <constraint firstItem="8Zs-3M-ca2" firstAttribute="leading" secondItem="yWC-x6-pDK" secondAttribute="leading" id="a5X-3O-bx0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="343" y="-7"/>

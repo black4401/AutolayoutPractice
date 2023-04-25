@@ -80,6 +80,10 @@ extension PainLocationCell: UICollectionViewDataSource, UICollectionViewDelegate
         return 4
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return collectionViewModels[indexPath.row].isSelectable
+    }
+    
     func didTapClose(on cell: TagCollectionViewCell) {
         
         if let indexPath = self.cellCollectionView.indexPath(for: cell) {

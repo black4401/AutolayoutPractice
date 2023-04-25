@@ -25,7 +25,7 @@ class MorningEntryCell: UITableViewCell {
     
     private func setUpMainLabel() {
         mainLabel.text = "Morning entry"
-        mainLabel.textColor = .greyscale80
+        mainLabel.textColor = .greyscale120
         mainLabel.setFontToDMSans(with: 17)
     }
 }

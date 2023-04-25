@@ -61,6 +61,10 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
+            case 3:
+                return 144
+            case 7:
+                return 144
             case 8:
                 return 144
             default:
@@ -132,11 +136,6 @@ class AutolayoutPracticeTableViewController: UITableViewController {
                 return cell
             case 7:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painMonitorCell, for: indexPath) as! PainMonitorCell
-                let style = PainMonitorCellStyle.evening
-                cell.setUpPainLabel(text: style.painText)
-                cell.setSecondaryLabelText(text: style.secondaryText)
-                cell.setUpIconView(iconName: style.emojiName)
-                cell.setUpAvgLabel(value: style.percentValue)
                 return cell
             case 8:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.customPainCell, for: indexPath) as! CustomPainCell

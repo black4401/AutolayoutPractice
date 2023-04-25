@@ -9,6 +9,9 @@ import UIKit
 
 class CustomPainCell: UITableViewCell {
     
+    let styleMorning = PainMonitorCellStyle.morning
+    let styleEvening = PainMonitorCellStyle.evening
+    
     @IBOutlet weak var customView1: CustomPainView!
     @IBOutlet weak var customView2: CustomPainView!
     @IBOutlet weak var contentVIew: UIView!
@@ -21,14 +24,8 @@ class CustomPainCell: UITableViewCell {
         customView2.layer.cornerRadius = 6
         customView2.clipsToBounds = true
         
-        customView1.setUpAvgLabel(value: "7.4")
-        customView1.setSecondaryLabelText(text: "8% lower than last period")
-        customView1.setUpPainLabel(text: "MORNING PAIN")
-        customView1.setUpIconView(iconName: "sun_icon")
+        customView1.configure(with: styleMorning)
         
-        customView2.setUpAvgLabel(value: "6.4")
-        customView2.setSecondaryLabelText(text: "8% higher than last period")
-        customView2.setUpPainLabel(text: "EVENING PAIN")
-        customView2.setUpIconView(iconName: "moon_icon")
+        customView2.configure(with: styleEvening)
     }
 }

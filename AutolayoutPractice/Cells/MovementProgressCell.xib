@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,58 +18,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movement_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VfU-Vk-7a3">
-                        <rect key="frame" x="16" y="56" width="24" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="24" id="QOn-Sc-eZJ"/>
-                            <constraint firstAttribute="height" constant="24" id="b8a-KM-xwf"/>
-                        </constraints>
-                    </imageView>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="SpW-pD-IeE" customClass="ProgressBarView" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="16" y="149" width="122" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="J63-fZ-QaM"/>
-                        </constraints>
-                    </progressView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwj-AM-GEG">
-                        <rect key="frame" x="15.999999999999996" y="16" width="63.666666666666657" height="13"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.55338245630000005" green="0.55720365049999998" blue="0.56483000520000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't move much" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2u-Zk-fBT">
-                        <rect key="frame" x="15.999999999999993" y="99" width="124.33333333333331" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.12858635190000001" green="0.13852727409999999" blue="0.15807771679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhR-Ii-Y2c" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="VfU-Vk-7a3" firstAttribute="top" secondItem="vwj-AM-GEG" secondAttribute="bottom" constant="27" id="67p-2H-YVh"/>
-                    <constraint firstAttribute="trailing" secondItem="G2u-Zk-fBT" secondAttribute="trailing" constant="26.666666666666686" id="CIG-Y1-8wf"/>
-                    <constraint firstItem="vwj-AM-GEG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="DKl-Ad-35G"/>
-                    <constraint firstItem="SpW-pD-IeE" firstAttribute="top" secondItem="G2u-Zk-fBT" secondAttribute="bottom" constant="32" id="Edc-3V-Ezp"/>
-                    <constraint firstItem="vwj-AM-GEG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="HI2-bO-LX6"/>
-                    <constraint firstItem="SpW-pD-IeE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Kh9-E4-wYP"/>
-                    <constraint firstAttribute="trailing" secondItem="SpW-pD-IeE" secondAttribute="trailing" constant="29" id="ZJo-H2-Fue"/>
-                    <constraint firstItem="G2u-Zk-fBT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hAO-hK-k3v"/>
-                    <constraint firstItem="VfU-Vk-7a3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qyl-dK-htt"/>
-                    <constraint firstAttribute="trailing" secondItem="vwj-AM-GEG" secondAttribute="trailing" constant="87.333333333333343" id="uBe-57-GtU"/>
-                    <constraint firstItem="G2u-Zk-fBT" firstAttribute="top" secondItem="VfU-Vk-7a3" secondAttribute="bottom" constant="19" id="xd1-D3-BYS"/>
-                    <constraint firstAttribute="bottom" secondItem="SpW-pD-IeE" secondAttribute="bottom" constant="16" id="zGn-Ig-3Ey"/>
+                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aMa-J2-dnk"/>
+                    <constraint firstAttribute="trailing" secondItem="LhR-Ii-Y2c" secondAttribute="trailing" id="dpW-UG-ndk"/>
+                    <constraint firstAttribute="bottom" secondItem="LhR-Ii-Y2c" secondAttribute="bottom" id="gPZ-pk-lNJ"/>
+                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hbu-io-nbC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="iconImageView" destination="VfU-Vk-7a3" id="Ped-zk-DGG"/>
-                <outlet property="movementLabel" destination="vwj-AM-GEG" id="Nea-ZN-NRL"/>
-                <outlet property="progressView" destination="SpW-pD-IeE" id="wKb-xi-tNF"/>
-                <outlet property="secondaryLabel" destination="G2u-Zk-fBT" id="AH1-Db-jf2"/>
+                <outlet property="movementProgressView" destination="LhR-Ii-Y2c" id="3Za-F0-eZ4"/>
             </connections>
             <point key="canvasLocation" x="25.190839694656489" y="-11.619718309859156"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="movement_icon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

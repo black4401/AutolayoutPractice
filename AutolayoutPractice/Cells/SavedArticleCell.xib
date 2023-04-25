@@ -10,56 +10,63 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedArticleCell" id="KGk-i7-Jjw" customClass="SavedArticleCell" customModule="AutolayoutPractice" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedArticleCell" rowHeight="364" id="KGk-i7-Jjw" customClass="SavedArticleCell" customModule="AutolayoutPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="323"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="440" height="323"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 127" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-Ku-qsA">
-                        <rect key="frame" x="16" y="0.0" width="288" height="196.66666666666666"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="196.66666666666666" id="3Vu-r7-xfY"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 30, 2020 * 4 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-Ig-obc">
-                        <rect key="frame" x="17" y="242" width="125" height="14.333333333333314"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Move more, live better: How moving your body changes your brain" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-q1-8uO">
-                        <rect key="frame" x="17" y="201.66666666666666" width="287" height="35.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWE-fB-tq6">
-                        <rect key="frame" x="147" y="242" width="90" height="16"/>
-                        <color key="backgroundColor" red="0.14835506679999999" green="0.15807771679999999" blue="0.17723390459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="90" id="Kzl-pu-V3U"/>
-                            <constraint firstAttribute="height" constant="16" id="hD2-Ux-jb7"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iQQ-dy-vbm">
+                        <rect key="frame" x="20" y="12" width="400" height="299"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-7A-uXi">
+                                <rect key="frame" x="0.0" y="0.0" width="384.66666666666669" height="275"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SavedArticle" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-Ku-qsA">
+                                        <rect key="frame" x="0.0" y="0.0" width="384.66666666666669" height="212.33333333333334"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lg6-Ku-qsA" secondAttribute="height" multiplier="67:37" id="S4Y-an-aSE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Move more, live better: How moving your body changes your brain" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-q1-8uO">
+                                        <rect key="frame" x="0.0" y="220.33333333333334" width="384.66666666666669" height="54.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="l8q-Ga-EOT">
+                                <rect key="frame" x="0.0" y="283" width="224" height="16"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 30, 2020 * 4 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-Ig-obc">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWE-fB-tq6">
+                                        <rect key="frame" x="134" y="0.0" width="90" height="16"/>
+                                        <color key="backgroundColor" red="0.14835506679999999" green="0.15807771679999999" blue="0.17723390459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="Kzl-pu-V3U"/>
+                                            <constraint firstAttribute="height" constant="16" id="hD2-Ux-jb7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="4Tw-k2-GT0"/>
-                    <constraint firstItem="aFo-q1-8uO" firstAttribute="top" secondItem="lg6-Ku-qsA" secondAttribute="bottom" constant="5" id="C0b-oR-ia7"/>
-                    <constraint firstItem="mbl-Ig-obc" firstAttribute="top" secondItem="aFo-q1-8uO" secondAttribute="bottom" constant="5" id="Evs-RS-WRF"/>
-                    <constraint firstAttribute="bottom" secondItem="fWE-fB-tq6" secondAttribute="bottom" constant="12" id="Mf2-LI-emv"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mbl-Ig-obc" secondAttribute="bottom" constant="7" id="VEq-uC-NLp"/>
-                    <constraint firstItem="aFo-q1-8uO" firstAttribute="leading" secondItem="mbl-Ig-obc" secondAttribute="leading" id="YKY-1Z-jeV"/>
-                    <constraint firstItem="fWE-fB-tq6" firstAttribute="leading" secondItem="mbl-Ig-obc" secondAttribute="trailing" constant="5" id="dLe-f3-Lqh"/>
-                    <constraint firstAttribute="trailing" secondItem="aFo-q1-8uO" secondAttribute="trailing" constant="16" id="e8t-vr-E6W"/>
-                    <constraint firstItem="lg6-Ku-qsA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jL7-G0-ibS"/>
-                    <constraint firstItem="fWE-fB-tq6" firstAttribute="top" secondItem="aFo-q1-8uO" secondAttribute="bottom" constant="5" id="kiX-7h-EFo"/>
-                    <constraint firstAttribute="trailing" secondItem="lg6-Ku-qsA" secondAttribute="trailing" constant="16" id="pR7-iw-bry"/>
-                    <constraint firstItem="lg6-Ku-qsA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="peI-9t-nD3"/>
+                    <constraint firstItem="iQQ-dy-vbm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0pY-8C-tQw"/>
+                    <constraint firstAttribute="bottom" secondItem="iQQ-dy-vbm" secondAttribute="bottom" constant="12" id="JIW-fR-IZ5"/>
+                    <constraint firstItem="iQQ-dy-vbm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ybb-p3-8kg"/>
+                    <constraint firstAttribute="trailing" secondItem="iQQ-dy-vbm" secondAttribute="trailing" constant="20" id="sk1-Gl-Pw4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -69,10 +76,10 @@
                 <outlet property="recommendedLabel" destination="fWE-fB-tq6" id="YgG-lM-cni"/>
                 <outlet property="secondaryLabel" destination="mbl-Ig-obc" id="1qg-Rs-V2b"/>
             </connections>
-            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="276.3358778625954" y="21.83098591549296"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Rectangle 127" width="335" height="185"/>
+        <image name="SavedArticle" width="335" height="185"/>
     </resources>
 </document>
