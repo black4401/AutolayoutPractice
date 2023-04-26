@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2AC4C529F92CC1005EA247 /* AutolayoutPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */; };
 		BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916B29D473970037EB8B /* MorningEntryCell.swift */; };
 		BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3E916C29D473970037EB8B /* MorningEntryCell.xib */; };
 		BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */; };
@@ -47,7 +48,6 @@
 		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
 		BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */; };
-		BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */; };
 		BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0418B29D43A9E00E39A06 /* Main.storyboard */; };
 		BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418E29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld */; };
 		BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419129D43AA000E39A06 /* Assets.xcassets */; };
@@ -77,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutPracticeViewController.swift; sourceTree = "<group>"; };
 		BB3E916B29D473970037EB8B /* MorningEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningEntryCell.swift; sourceTree = "<group>"; };
 		BB3E916C29D473970037EB8B /* MorningEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningEntryCell.xib; sourceTree = "<group>"; };
 		BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPainCell.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA0418529D43A9E00E39A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutPracticeTableViewController.swift; sourceTree = "<group>"; };
 		BBA0418C29D43A9E00E39A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBA0418F29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutolayoutPractice.xcdatamodel; sourceTree = "<group>"; };
 		BBA0419129D43AA000E39A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB2AC4C629F92CC9005EA247 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BB55F5DA29D6FF1700F2F2C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +225,7 @@
 			children = (
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
-				BBA0418929D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift */,
+				BB2AC4C629F92CC9005EA247 /* ViewControllers */,
 				BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */,
 				BBF8C89929F1360C00E6E2BC /* CellModels.swift */,
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
@@ -408,8 +416,8 @@
 			files = (
 				BBC6DAFE29F7E27B00005A83 /* HorizontalScrollView.swift in Sources */,
 				BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */,
+				BB2AC4C529F92CC1005EA247 /* AutolayoutPracticeViewController.swift in Sources */,
 				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
-				BBA0418A29D43A9E00E39A06 /* AutolayoutPracticeTableViewController.swift in Sources */,
 				BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */,
 				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,

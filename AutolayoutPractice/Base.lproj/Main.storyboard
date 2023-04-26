@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oit-ah-FXH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTX-gZ-Z6A">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Autolayout Practice Table View Controller-->
-        <scene sceneID="Gd6-js-KVW">
+        <!--Autolayout Practice View Controller-->
+        <scene sceneID="VMY-io-cpo">
             <objects>
-                <tableViewController id="oit-ah-FXH" customClass="AutolayoutPracticeTableViewController" customModule="AutolayoutPractice" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="e6I-tw-JKQ">
+                <viewController id="VTX-gZ-Z6A" customClass="AutolayoutPracticeViewController" customModule="AutolayoutPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fra-Dc-tYp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jBi-Ch-NU5">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uWG-jK-T08"/>
+                                </constraints>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="IRd-RQ-ZXW" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4F9-0K-9QL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="iUd-ch-KmE" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
-                        <connections>
-                            <outlet property="dataSource" destination="oit-ah-FXH" id="HLc-fM-0Qc"/>
-                            <outlet property="delegate" destination="oit-ah-FXH" id="Zgg-mm-tgC"/>
-                        </connections>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="trailing" secondItem="4F9-0K-9QL" secondAttribute="trailing" id="JNR-TN-Mf3"/>
+                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="bottom" secondItem="4F9-0K-9QL" secondAttribute="bottom" id="Y3c-Lx-eVp"/>
+                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="top" secondItem="4F9-0K-9QL" secondAttribute="top" id="bJQ-A8-kFs"/>
+                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="leading" secondItem="4F9-0K-9QL" secondAttribute="leading" id="hNd-2y-FFb"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <outlet property="headerHorizontalScrollView" destination="iUd-ch-KmE" id="ZHp-VM-1jU"/>
+                        <outlet property="filterHorizontalScrollView" destination="IRd-RQ-ZXW" id="zuK-8j-uIh"/>
+                        <outlet property="tableView" destination="jBi-Ch-NU5" id="YsF-fm-a2P"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FVd-5S-45y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbN-Ak-WuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="-23"/>
+            <point key="canvasLocation" x="780.91603053435108" y="-23.239436619718312"/>
         </scene>
     </scenes>
     <resources>

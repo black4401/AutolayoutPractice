@@ -11,7 +11,7 @@ class PainLocationCell: UITableViewCell {
     
     var collectionViewModels: [TagModel] = [] {
         didSet {
-            continueButton.titleLabel?.text = "Continue (\(collectionViewModels.count))"
+            continueButton.titleLabel?.text = "Continue"
             horizontalScrollView.data = collectionViewModels
         }
     }
