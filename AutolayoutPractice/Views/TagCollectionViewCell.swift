@@ -15,8 +15,8 @@ class TagCollectionViewCell: UICollectionViewCell {
     
     private var normalStateTextColor: UIColor = .greyscale100!
     private var normalStateBackgroundColor: UIColor = .brandWhite!
-    private var selectedStateTextColor: UIColor = .brandMainColor!
-    private var selectedStateBackgroundColor: UIColor = .greyscale10!
+    var selectedStateTextColor: UIColor = .brandMainColor!
+    var selectedStateBackgroundColor: UIColor = .greyscale10!
     
     private var isSelectable: Bool? {
         didSet {
@@ -26,14 +26,14 @@ class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet private weak var closeButton: ImageOnlyButton!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet private weak var stackView: UIStackView!
     
-    @IBOutlet weak var stackViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var stackViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var stackViewTrailingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var stackViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var stackViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var stackViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var stackViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var stackViewBottomConstraint: NSLayoutConstraint!
     
     weak var delegate: TagCollectionViewCellDelegate?
     

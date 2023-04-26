@@ -9,7 +9,7 @@ import UIKit
 
 class TagModel {
     
-    let labelText: String
+    var labelText: String
     let hasCloseButton: Bool
     let isSelectable: Bool
     let isTextCentered: Bool
