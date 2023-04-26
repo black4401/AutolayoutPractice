@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol HorizontalScrollViewDelegate: AnyObject {
+    func didSelectCell(at indexPath: Int)
+}
+
 class HorizontalScrollView: UIView {
     
     var data: [TagModel] = []
+    weak var delegate: HorizontalScrollViewDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -81,6 +86,10 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return data[indexPath.row].isSelectable
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectCell(at: indexPath.row)
     }
 }
 

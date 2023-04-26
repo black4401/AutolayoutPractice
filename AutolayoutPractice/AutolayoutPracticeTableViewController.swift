@@ -18,29 +18,19 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     var filterCellsData: [TagModel] = [TagModel(labelText: "All", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "First", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Second", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Third", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Forth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Fifth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Sixth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Seventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Seventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Eight", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Ninght", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Tenth", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite), TagModel(labelText: "Eleventh", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite)]
     
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35), collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
-        return collectionView
-    }()
+    let listOfCells = [HealthcareProvidersCell.self, AssociatedDoctorCell.self, MorningEntryCell.self, MorningPainCell.self, MovementProgressCell.self, SavedArticleCell.self, PainRateCell.self, PainMonitorCell.self, CustomPainCell.self, CustomProgressCell.self, BodyPainCell.self, PainLocationCell.self]
     
-    let listOfCells = [HealthcareProvidersCell.self, AssociatedDoctorCell.self, MorningEntryCell.self, MorningPainCell.self, MovementProgressCell.self, SavedArticleCell.self, PainRateCell.self, PainMonitorCell.self, CustomPainCell.self, CustomProgressCell.self, BodyPainCell.self, CustomProgressCell.self, BodyPainCell.self, PainLocationCell.self]
+    @IBOutlet weak var filterScrollView: HorizontalScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .brandMainColor
         addNotificationEnteringForeground()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        filterScrollView.delegate = self
         
-        collectionView.register(TagCollectionViewCell.self)
-        
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
-        headerView.addSubview(collectionView)
-        tableView.tableHeaderView = collectionView
+        filterScrollView.data = filterCellsData
+        tableView.tableHeaderView = filterScrollView
         
         for cell in listOfCells {
             tableView.register(cell)
@@ -74,90 +64,28 @@ class AutolayoutPracticeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.section {
-            case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.healthcareProviders, for: indexPath) as! HealthcareProvidersCell
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.associatedDoctor, for: indexPath) as! AssociatedDoctorCell
-                return cell
-            case 2:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningEntry, for: indexPath) as! MorningEntryCell
-                return cell
-            case 3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.morningPain, for: indexPath) as! MorningPainCell
-                return cell
-            case 4:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.movementProgress, for: indexPath) as! MovementProgressCell
-                return cell
-            case 5:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.savedArticle, for: indexPath) as! SavedArticleCell
-                return cell
-            case 6:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painRate, for: indexPath) as! PainRateCell
+        let identifier = listOfCells[indexPath.section].reuseIdentifier
+        
+        let cell = tableView.dequeueCell(withReuseIdentifier: identifier, for: indexPath)
+            if let cell = cell as? PainRateCell {
                 cell.collectionViewModels = painRateCellData
-                return cell
-            case 7:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painMonitorCell, for: indexPath) as! PainMonitorCell
-                return cell
-            case 8:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.customPainCell, for: indexPath) as! CustomPainCell
-                return cell
-            case 9:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.customProgressCell, for: indexPath) as! CustomProgressCell
-                return cell
-            case 10:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.bodyPainCell, for: indexPath) as! BodyPainCell
+            } else if let cell = cell as? BodyPainCell {
                 cell.collectionViewModels = bodyPainCellData
-                return cell
-            case 11:
-                let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.painLocationCell, for: indexPath) as! PainLocationCell
+            } else if let cell = cell as? PainLocationCell {
                 cell.collectionViewModels = painLocationCellData
-                return cell
-            default:
-                return UITableViewCell()
-        }
+            }
+            return cell
     }
 }
 
-extension AutolayoutPracticeTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filterCellsData.count
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            visibleSectionIndices = filterCellsData.enumerated().map { $0.offset }
-        } else {
-            visibleSectionIndices = [indexPath.item - 1]
-        }
-        tableView.reloadData()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-        
-        if indexPath.row == 0 {
-            cell.isSelected = true
-        }
-        cell.configureCell(with: filterCellsData[indexPath.row])
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let label = UILabel()
-        let model = filterCellsData[indexPath.row]
-        label.text = model.labelText
-        let size = label.sizeThatFits(CGSize(width: 200, height: 100))
-        return CGSize(width: size.width + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
+extension AutolayoutPracticeTableViewController: HorizontalScrollViewDelegate {
+    func didSelectCell(at indexPath: Int) {
+                if indexPath == 0 {
+                    visibleSectionIndices = filterCellsData.enumerated().map { $0.offset }
+                } else {
+                    visibleSectionIndices = [indexPath - 1]
+                }
+                tableView.reloadData()
     }
 }
 
@@ -168,8 +96,8 @@ private extension AutolayoutPracticeTableViewController {
     
     @objc func appWillEnterForeground() {
         tableView.setContentOffset(.zero, animated: true)
-        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
-        collectionView.setContentOffset(.zero, animated: true)
+        filterScrollView.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
+        filterScrollView.collectionView.setContentOffset(.zero, animated: true)
         visibleSectionIndices = filterCellsData.enumerated().map { $0.offset }
         tableView.reloadData()
     }

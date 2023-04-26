@@ -17,11 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="iUd-ch-KmE" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="oit-ah-FXH" id="HLc-fM-0Qc"/>
                             <outlet property="delegate" destination="oit-ah-FXH" id="Zgg-mm-tgC"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="filterScrollView" destination="iUd-ch-KmE" id="ZHp-VM-1jU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVd-5S-45y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
