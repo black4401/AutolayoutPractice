@@ -40,8 +40,10 @@
                         </constraints>
                     </view>
                     <connections>
+
                         <outlet property="filterHorizontalScrollView" destination="IRd-RQ-ZXW" id="zuK-8j-uIh"/>
                         <outlet property="tableView" destination="jBi-Ch-NU5" id="YsF-fm-a2P"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbN-Ak-WuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
