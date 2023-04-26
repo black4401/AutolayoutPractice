@@ -28,7 +28,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="filterScrollView" destination="iUd-ch-KmE" id="ZHp-VM-1jU"/>
+                        <outlet property="headerHorizontalScrollView" destination="iUd-ch-KmE" id="ZHp-VM-1jU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVd-5S-45y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

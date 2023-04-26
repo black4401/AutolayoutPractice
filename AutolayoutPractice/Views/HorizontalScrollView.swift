@@ -68,6 +68,10 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
         let model = data[indexPath.row]
         cell.configureCell(with: data[indexPath.row])
         cell.delegate = model.hasCloseButton ? self : nil
+        if indexPath.row == 0 && data[indexPath.row].isSelectable {
+            cell.backgroundColor = cell.selectedStateBackgroundColor
+            cell.textLabel.textColor = cell.selectedStateTextColor
+        }
         return cell
     }
     
