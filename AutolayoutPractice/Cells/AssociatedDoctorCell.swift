@@ -29,7 +29,7 @@ class AssociatedDoctorCell: UITableViewCell {
     private func setUpMainLabel() {
         mainLabel.text = "Associated Doctor"
         mainLabel.textColor = .brandMainColor
-        mainLabel.setFontToDMSans(with: 16)
+        mainLabel.font = .dmSansBold(ofSize: 16)
     }
     
     private func setUpSecondaryLabel() {

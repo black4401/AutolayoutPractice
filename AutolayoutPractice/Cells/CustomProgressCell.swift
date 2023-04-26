@@ -24,6 +24,7 @@ class CustomProgressCell: UITableViewCell {
         movementProgressView.setUpIconImageView(named: "movement_icon")
         movementProgressView.setUpMainLabel(text: "MOVEMENT")
         movementProgressView.setUpSecondaryLabel(text: "Didn't move much")
+        movementProgressView.updateProgressView(to: 0.5, color: .systemInfoBlue!)
         
         stressProgressView.setUpIconImageView(named: "stress")
         stressProgressView.setUpMainLabel(text: "STRESS MANAGEMENT")

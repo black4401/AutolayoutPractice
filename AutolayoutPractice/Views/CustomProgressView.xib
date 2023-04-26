@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,6 +47,7 @@
                         </label>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ljp-6z-mg0" customClass="ProgressBarView" customModule="AutolayoutPractice" customModuleProvider="target">
                             <rect key="frame" x="16" y="149" width="122" height="20"/>
+                            <color key="tintColor" name="systemInfoBlue"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="b6w-G3-6cz"/>
                             </constraints>
@@ -81,6 +83,9 @@
     </objects>
     <resources>
         <image name="movement_icon" width="24" height="24"/>
+        <namedColor name="systemInfoBlue">
+            <color red="0.10980392156862745" green="0.56470588235294117" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

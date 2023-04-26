@@ -9,13 +9,11 @@ import UIKit
 
 class CustomPainView: UIView {
     
-    private let textFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Regular", size: 12.0)! ]
-    private let numberFontAttribute = [ NSAttributedString.Key.font: UIFont(name: "DMSans-Bold", size: 22.0)! ]
-    
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,7 +31,7 @@ class CustomPainView: UIView {
     }
     
     func configure(with style: PainMonitorCellStyle) {
-        setUpAvgLabel(value: style.percentValue)
+        setUpAvgLabel()
         setSecondaryLabelText(text: style.secondaryText)
         setUpPainLabel(text: style.painText)
         setUpIconView(iconName: style.emojiName)
@@ -41,18 +39,17 @@ class CustomPainView: UIView {
 }
 
 private extension CustomPainView {
-    func createAttrString(value: String) -> NSMutableAttributedString {
-        let attrString = NSMutableAttributedString(string: "avg. ",
-                                                   attributes: textFontAttribute)
-        
-        attrString.append(NSMutableAttributedString(string: value,
-                                                    attributes: numberFontAttribute))
-        return attrString
+    
+    func setUpAvgLabel() {
+        avgLabel.text = "avg. "
+        avgLabel.font = .dmSansRegular(ofSize: 12)
+        avgLabel.textColor = .greyscale100
     }
     
-    func setUpAvgLabel(value: String) {
-        avgLabel.attributedText = createAttrString(value: value)
-        avgLabel.textColor = .greyscale100
+    func setUpNumberLabel(text: String) {
+        numberLabel.text = text
+        numberLabel.font = .dmSansBold(ofSize: 22)
+        numberLabel.textColor = .brandMainColor
     }
     
     func setSecondaryLabelText(text: String) {
@@ -73,7 +70,7 @@ private extension CustomPainView {
     
     func setUpPainLabel(text: String) {
         mainLabel.textColor = .greyscale80
-        mainLabel.font = .dmSansRegular(ofSize: 11)
+        mainLabel.font = .dmSansBold(ofSize: 11)
         mainLabel.text = text
     }
     

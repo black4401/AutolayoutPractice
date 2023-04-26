@@ -19,4 +19,5 @@ extension UIColor {
     static let yellow10 = UIColor(named: "yellow10")
     static let redCritical100 = UIColor(named: "redCritical100")
     static let brandWhite = UIColor(named: "brandWhite")
+    static let systemInfoBlue = UIColor(named: "systemInfoBlue")
 }
