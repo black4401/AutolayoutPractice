@@ -20,9 +20,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jBi-Ch-NU5">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="uWG-jK-T08"/>
-                                </constraints>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="IRd-RQ-ZXW" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,10 +37,8 @@
                         </constraints>
                     </view>
                     <connections>
-
                         <outlet property="filterHorizontalScrollView" destination="IRd-RQ-ZXW" id="zuK-8j-uIh"/>
                         <outlet property="tableView" destination="jBi-Ch-NU5" id="YsF-fm-a2P"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbN-Ak-WuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

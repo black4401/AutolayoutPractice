@@ -35,7 +35,6 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
         
         filterHorizontalScrollView.data = DataGenerator.filterData()
         tableView.tableHeaderView = filterHorizontalScrollView
-        tableView.tableHeaderView?.frame = CGRect(x: 0, y: 0, width: (tableView.tableHeaderView?.frame.width)!, height: 30)
         
         for cell in listOfCells {
             tableView.register(cell)
@@ -61,10 +60,13 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
         switch cell {
             case let cell as PainRateCell:
                 cell.collectionViewModels = DataGenerator.painRateData()
+                return UITableViewCell()
             case let cell as BodyPainCell:
                 cell.collectionViewModels = DataGenerator.bodyPainData()
+                return UITableViewCell()
             case let cell as PainLocationCell:
                 cell.collectionViewModels = DataGenerator.painLocationData()
+                return UITableViewCell()
             default:
                 break
         }

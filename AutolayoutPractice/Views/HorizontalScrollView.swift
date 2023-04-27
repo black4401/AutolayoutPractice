@@ -82,7 +82,7 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel()
         let model = data[indexPath.row]
-        let spaceForButton = model.hasCloseButton ? 10 : 0
+        let spaceForButton = model.hasCloseButton ? 20 : 0
         label.text = data[indexPath.row].labelText
         let size = label.sizeThatFits(CGSize(width: 200, height: 100))
         return CGSize(width: size.width + CGFloat(spaceForButton) + model.horizontalPadding*2, height: size.height + model.verticalPadding*2)

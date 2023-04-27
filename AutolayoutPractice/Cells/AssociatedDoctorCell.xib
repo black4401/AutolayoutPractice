@@ -24,7 +24,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor_icon" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-np-eRA">
                                 <rect key="frame" x="26" y="19" width="16" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="K3n-PE-8Xv"/>
+                                    <constraint firstAttribute="width" secondItem="HXg-np-eRA" secondAttribute="height" multiplier="4:5" id="1co-p3-36H"/>
                                     <constraint firstAttribute="width" constant="16" id="oQ8-V3-yln"/>
                                 </constraints>
                             </imageView>
