@@ -65,7 +65,7 @@ private extension CustomPainView {
     
     func setUpPainLabel(text: String) {
         mainLabel.textColor = .greyscale80
-        mainLabel.font = .dmSansBold(ofSize: 11)
+        mainLabel.font = .dmSansRegular(ofSize: 11)
         mainLabel.text = text
     }
     

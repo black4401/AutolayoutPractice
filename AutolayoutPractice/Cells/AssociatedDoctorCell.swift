@@ -29,12 +29,12 @@ class AssociatedDoctorCell: UITableViewCell {
     private func setUpMainLabel() {
         mainLabel.text = "Associated Doctor"
         mainLabel.textColor = .brandMainColor
-        mainLabel.font = .dmSansBold(ofSize: 16)
+        mainLabel.font = .dmSansMedium(ofSize: 16)
     }
     
     private func setUpSecondaryLabel() {
         secondaryLabel.text = "12345"
         secondaryLabel.textColor = .greyscale100
-        secondaryLabel.setFontToDMSans(with: 13)
+        secondaryLabel.font = .dmSansRegular(ofSize: 13)
     }
 }

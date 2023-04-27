@@ -50,19 +50,19 @@ class PainRateCell: UITableViewCell {
 private extension PainRateCell {
     func setUpPainLabel() {
         painLabel.text = "Pain rate (up to 8)"
-        painLabel.setFontToDMSans(with: 17)
+        painLabel.font = .dmSansRegular(ofSize: 17)
         painLabel.textColor = .greyscale140
     }
     
     func setUpMorningLabel() {
         morningLabel.text = "MORNING"
-        morningLabel.setFontToDMSans(with: 11)
+        morningLabel.font = .dmSansRegular(ofSize: 11)
         morningLabel.textColor = .greyscale80
     }
     
     func setUpSeverityLabel() {
         severitylabel.text = "Severe"
-        severitylabel.setFontToDMSans(with: 15)
+        severitylabel.font = .dmSansRegular(ofSize: 15)
         severitylabel.textColor = .greyscale120
     }
 }

@@ -19,15 +19,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhR-Ii-Y2c" customClass="CustomProgressView" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="167" height="185"/>
+                        <rect key="frame" x="8" y="8" width="151" height="169"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aMa-J2-dnk"/>
-                    <constraint firstAttribute="trailing" secondItem="LhR-Ii-Y2c" secondAttribute="trailing" id="dpW-UG-ndk"/>
-                    <constraint firstAttribute="bottom" secondItem="LhR-Ii-Y2c" secondAttribute="bottom" id="gPZ-pk-lNJ"/>
-                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hbu-io-nbC"/>
+                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aMa-J2-dnk"/>
+                    <constraint firstAttribute="trailing" secondItem="LhR-Ii-Y2c" secondAttribute="trailing" constant="8" id="dpW-UG-ndk"/>
+                    <constraint firstAttribute="bottom" secondItem="LhR-Ii-Y2c" secondAttribute="bottom" constant="8" id="gPZ-pk-lNJ"/>
+                    <constraint firstItem="LhR-Ii-Y2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hbu-io-nbC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

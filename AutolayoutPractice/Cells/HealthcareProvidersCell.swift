@@ -25,7 +25,7 @@ class HealthcareProvidersCell: UITableViewCell {
 
 private extension HealthcareProvidersCell {
     func setUpLabel() {
-        label.setFontToDMSans(with: 17)
+        label.font = .dmSansRegular(ofSize: 17)
         label.text = "Healthcare Providers"
         label.textColor = .brandMainColor
     }

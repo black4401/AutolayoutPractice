@@ -46,6 +46,6 @@ class SavedArticleCell: UITableViewCell {
         recommendedLabel.backgroundColor = .brandAccentTitn
         recommendedLabel.text = "RECOMMENDED"
         recommendedLabel.textColor = .greyscale140
-        recommendedLabel.setFontToSourceSansPro(with: 11)
+        recommendedLabel.font = .dmSansRegular(ofSize: 11)
     }
 }

@@ -19,15 +19,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayH-Ah-jhz" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="167" height="144"/>
+                        <rect key="frame" x="8" y="8" width="151" height="128"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ayH-Ah-jhz" firstAttribute="leading" secondItem="OFe-U1-RdU" secondAttribute="leading" id="967-yx-1cK"/>
-                    <constraint firstAttribute="trailing" secondItem="ayH-Ah-jhz" secondAttribute="trailing" id="Pua-a0-VPF"/>
-                    <constraint firstItem="ayH-Ah-jhz" firstAttribute="top" secondItem="OFe-U1-RdU" secondAttribute="top" id="hVg-nr-j8M"/>
-                    <constraint firstAttribute="bottom" secondItem="ayH-Ah-jhz" secondAttribute="bottom" id="jdj-UJ-u3g"/>
+                    <constraint firstItem="ayH-Ah-jhz" firstAttribute="leading" secondItem="OFe-U1-RdU" secondAttribute="leading" constant="8" id="967-yx-1cK"/>
+                    <constraint firstAttribute="trailing" secondItem="ayH-Ah-jhz" secondAttribute="trailing" constant="8" id="Pua-a0-VPF"/>
+                    <constraint firstItem="ayH-Ah-jhz" firstAttribute="top" secondItem="OFe-U1-RdU" secondAttribute="top" constant="8" id="hVg-nr-j8M"/>
+                    <constraint firstAttribute="bottom" secondItem="ayH-Ah-jhz" secondAttribute="bottom" constant="8" id="jdj-UJ-u3g"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ByR-7d-3tN"/>

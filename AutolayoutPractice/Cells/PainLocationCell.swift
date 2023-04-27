@@ -29,7 +29,7 @@ class PainLocationCell: UITableViewCell {
     
     private func setUpMainLabel() {
         mainLabel.text = "Where do you feel pain?"
-        mainLabel.setFontToDMSans(with: 17)
+        mainLabel.font = .dmSansRegular(ofSize: 17)
         mainLabel.textColor = .brandMainColor
     }
     

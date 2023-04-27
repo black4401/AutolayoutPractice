@@ -29,14 +29,14 @@
                 </subviews>
                 <color key="backgroundColor" red="0.95584470030000002" green="0.95584470030000002" blue="0.95584470030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="LVU-PU-SDy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7LF-v6-MsU"/>
-                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="LVU-PU-SDy" secondAttribute="trailing" constant="8" id="A2R-3m-naF"/>
-                    <constraint firstItem="LVU-PU-SDy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LYG-t7-ZGU"/>
-                    <constraint firstAttribute="trailing" secondItem="Scu-qW-evO" secondAttribute="trailing" constant="16" id="Ty4-Wb-hIY"/>
-                    <constraint firstItem="Scu-qW-evO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Uvp-n4-bUv"/>
-                    <constraint firstAttribute="bottom" secondItem="LVU-PU-SDy" secondAttribute="bottom" id="ald-eW-uWf"/>
-                    <constraint firstAttribute="bottom" secondItem="Scu-qW-evO" secondAttribute="bottom" id="bHq-Nt-MBv"/>
-                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="191" id="m3M-gb-UMe"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="191" id="20p-rV-MA8"/>
+                    <constraint firstAttribute="trailing" secondItem="Scu-qW-evO" secondAttribute="trailing" constant="16" id="Bhg-ul-5TO"/>
+                    <constraint firstAttribute="bottom" secondItem="LVU-PU-SDy" secondAttribute="bottom" id="NPK-Ee-gfU"/>
+                    <constraint firstItem="LVU-PU-SDy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OcE-Vq-EVb"/>
+                    <constraint firstItem="LVU-PU-SDy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="TQz-R9-5Og"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xj6-WI-2Sz"/>
+                    <constraint firstAttribute="bottom" secondItem="Scu-qW-evO" secondAttribute="bottom" id="c2E-Yt-8tn"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="LVU-PU-SDy" secondAttribute="trailing" constant="8" symbolic="YES" id="vU3-w3-Dtz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

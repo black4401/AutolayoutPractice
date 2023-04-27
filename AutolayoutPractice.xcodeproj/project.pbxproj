@@ -64,7 +64,6 @@
 		BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */; };
 		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
 		BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */; };
-		BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */; };
 		BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */; };
 		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
 		BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */; };
@@ -141,7 +140,6 @@
 		BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
 		BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SetFont.swift"; sourceTree = "<group>"; };
 		BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCell.swift; sourceTree = "<group>"; };
 		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
 		BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue&Register.swift"; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
-				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
 				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */,
 				BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */,
@@ -437,7 +434,6 @@
 				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
 				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
-				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
 				BB2AC4CC29FAB095005EA247 /* DataGenerator.swift in Sources */,
 				BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */,
 				BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */,
