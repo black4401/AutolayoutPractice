@@ -9,7 +9,11 @@ import UIKit
 
 class PainMonitorCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var customPainView: CustomPainView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()

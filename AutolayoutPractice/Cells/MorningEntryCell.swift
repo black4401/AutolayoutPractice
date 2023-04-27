@@ -9,9 +9,13 @@ import UIKit
 
 class MorningEntryCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var mainSwitch: UISwitch!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,9 +23,7 @@ class MorningEntryCell: UITableViewCell {
         setUpMainLabel()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    // MARK: - Private Methods
     
     private func setUpMainLabel() {
         mainLabel.text = "Morning entry"

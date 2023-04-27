@@ -9,6 +9,8 @@ import UIKit
 
 class TagModel {
     
+    // MARK: - Properties
+    
     var labelText: String
     let hasCloseButton: Bool
     let isSelectable: Bool
@@ -18,6 +20,8 @@ class TagModel {
     let font: UIFont
     let textColor: UIColor?
     let backgroundColor: UIColor?
+    
+    // MARK: - Initializers
     
     init(labelText: String, hasCloseButton: Bool, isSelectable: Bool, isTextCentered: Bool, horizontalPadding: CGFloat, verticalPadding: CGFloat, font: UIFont, textColor: UIColor?, backgroundColor: UIColor?) {
         self.labelText = labelText
@@ -29,27 +33,5 @@ class TagModel {
         self.font = font
         self.textColor = textColor
         self.backgroundColor = backgroundColor
-    }
-}
-
-class PainRateTagModel {
-    let backgroundColor: UIColor?
-    let textLabel: String
-    let hasCloseButton: Bool
-    let isTextCentered: Bool
-    
-    init(backgroundColor: UIColor, textLabel: String, hasCloseButton: Bool, isTextCentered: Bool) {
-        self.backgroundColor = backgroundColor
-        self.textLabel = textLabel
-        self.hasCloseButton = hasCloseButton
-        self.isTextCentered = isTextCentered
-    }
-}
-
-class BodyPainCellTagModel {
-    let textLabel: String
-    
-    init(textLabel: String) {
-        self.textLabel = textLabel
     }
 }

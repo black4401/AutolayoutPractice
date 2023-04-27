@@ -9,9 +9,13 @@ import UIKit
 
 class HealthcareProvidersCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var label: UILabel!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +27,7 @@ class HealthcareProvidersCell: UITableViewCell {
     }
 }
 
+// MARK: - Private Methods
 private extension HealthcareProvidersCell {
     func setUpLabel() {
         label.font = .dmSansRegular(ofSize: 17)

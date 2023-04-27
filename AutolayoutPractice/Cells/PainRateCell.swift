@@ -15,6 +15,8 @@ class PainRateCell: UITableViewCell {
         }
     }
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var emojiImageView: UIImageView!
     @IBOutlet private weak var backView: UIView!
@@ -29,6 +31,8 @@ class PainRateCell: UITableViewCell {
     
     @IBOutlet private weak var editButton: ImageOnlyButton!
     @IBOutlet private weak var horizontalScrollView: HorizontalScrollView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +51,7 @@ class PainRateCell: UITableViewCell {
     }
 }
 
+// MARK: - Private Methods
 private extension PainRateCell {
     func setUpPainLabel() {
         painLabel.text = "Pain rate (up to 8)"

@@ -13,10 +13,16 @@ protocol HorizontalScrollViewDelegate: AnyObject {
 
 class HorizontalScrollView: UIView, NibLoadableView {
     
+    // MARK: - Properties
+    
     var data: [TagModel] = []
     weak var delegate: HorizontalScrollViewDelegate?
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,9 +34,13 @@ class HorizontalScrollView: UIView, NibLoadableView {
         loadFromXib()
     }
     
+    // MARK: - Lifecycle Methods
+    
     override func awakeFromNib() {
         setUpCollectionView()
     }
+    
+    // MARK: - Private Methods
     
     private func setUpCollectionView() {
         collectionView.register(TagCollectionViewCell.self)
@@ -46,6 +56,7 @@ class HorizontalScrollView: UIView, NibLoadableView {
     }
 }
 
+// MARK: - CollectionView Methods
 extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -89,7 +100,7 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
         delegate?.didSelectCell(at: indexPath.row)
     }
 }
-
+// MARK: - TagCollectionViewCellDelegate
 extension HorizontalScrollView: TagCollectionViewCellDelegate {
     func didTapClose(on cell: TagCollectionViewCell) {
         guard let indexPath = self.collectionView.indexPath(for: cell) else {

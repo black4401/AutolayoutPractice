@@ -28,6 +28,8 @@ class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet private weak var closeButton: ImageOnlyButton!
     @IBOutlet private weak var stackView: UIStackView!
@@ -44,6 +46,8 @@ class TagCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Lifecycle Methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         closeButton.isHidden = true
@@ -51,9 +55,13 @@ class TagCollectionViewCell: UICollectionViewCell {
         setCornerRadius(to: 4)
     }
     
+    // MARK: - @IBActions
+    
     @IBAction private func didTapCloseButton(_ sender: Any) {
         delegate?.didTapClose(on: self)
     }
+    
+    // MARK: - Public Methods
     
     func configureCell(with model: TagModel) {
         textLabel.text = model.labelText
@@ -70,6 +78,7 @@ class TagCollectionViewCell: UICollectionViewCell {
     }
 }
 
+// MARK: - Private Methods
 private extension TagCollectionViewCell {
     
     func centerLabelText() {

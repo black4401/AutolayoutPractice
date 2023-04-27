@@ -9,9 +9,13 @@ import UIKit
 
 class CustomPainCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var customView1: CustomPainView!
     @IBOutlet private weak var customView2: CustomPainView!
     @IBOutlet private weak var contentVIew: UIView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()

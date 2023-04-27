@@ -9,10 +9,14 @@ import UIKit
 
 class CustomProgressView: UIView, NibLoadableView {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var progressView: ProgressBarView!
+    
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +32,9 @@ class CustomProgressView: UIView, NibLoadableView {
 }
 
 extension CustomProgressView {
+    
+    // MARK: - Public Methods
+    
     func setUpIconImageView(named text: String) {
         iconImageView.image = UIImage(named: text)
     }
@@ -47,6 +54,8 @@ extension CustomProgressView {
         progressView.progress = progress
         progressView.progressTintColor = color
     }
+    
+    // MARK: - Private Methods
     
     private func setUpProgressView() {
         CGAffineTransformScale(progressView.transform, 1, 2)

@@ -9,7 +9,11 @@ import UIKit
 
 class MorningPainCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var customPainView: CustomPainView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()

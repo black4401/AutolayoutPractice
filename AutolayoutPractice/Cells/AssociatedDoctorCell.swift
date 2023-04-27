@@ -9,11 +9,15 @@ import UIKit
 
 class AssociatedDoctorCell: UITableViewCell {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
 
+    // MARK: - Lifecycle Methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         iconImageView.image = UIImage(named: "doctor_icon")
@@ -25,6 +29,8 @@ class AssociatedDoctorCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    // MARK: - Private Methods
     
     private func setUpMainLabel() {
         mainLabel.text = "Associated Doctor"

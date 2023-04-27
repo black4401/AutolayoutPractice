@@ -9,10 +9,14 @@ import UIKit
 
 class SavedArticleCell: UITableViewCell {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var recommendedLabel: UILabel!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,10 +27,8 @@ class SavedArticleCell: UITableViewCell {
         
         iconImageView.image = UIImage(named: "Rectangle 127")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    
+    // MARK: - Private Methods
     
     private func setUpMainLabel() {
         mainLabel.font = .dmSansRegular(ofSize: 15)

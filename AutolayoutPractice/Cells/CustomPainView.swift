@@ -9,11 +9,15 @@ import UIKit
 
 class CustomPainView: UIView, NibLoadableView {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var avgLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var numberLabel: UILabel!
+    
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +29,8 @@ class CustomPainView: UIView, NibLoadableView {
         loadFromXib()
     }
     
+    // MARK: - Public Methods
+    
     func configure(with style: PainMonitorCellStyle) {
         setUpAvgLabel()
         setSecondaryLabelText(text: style.secondaryText)
@@ -33,6 +39,7 @@ class CustomPainView: UIView, NibLoadableView {
     }
 }
 
+// MARK: - Private Methods
 private extension CustomPainView {
     
     func setUpAvgLabel() {

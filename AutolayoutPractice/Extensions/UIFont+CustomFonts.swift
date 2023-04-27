@@ -9,18 +9,18 @@ import UIKit
 
 extension UIFont {
     static func dmSansRegular(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "DMSans-Regular", size: size)!
+        UIFont(name: "DMSans-Regular", size: size)!
     }
     
     static func dmSansMedium(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "DMSans-Regular", size: size)!
+        UIFont(name: "DMSans-Regular", size: size)!
     }
     
     static func dmSansBold(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "DMSans-Bold", size: size)!
+        UIFont(name: "DMSans-Bold", size: size)!
     }
     
     static func sourceSansPro(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "SourceSansPro-Regular", size: size)!
+        UIFont(name: "SourceSansPro-Regular", size: size)!
     }
 }

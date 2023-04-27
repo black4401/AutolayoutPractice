@@ -9,7 +9,11 @@ import UIKit
 
 class MovementProgressCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var movementProgressView: CustomProgressView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()

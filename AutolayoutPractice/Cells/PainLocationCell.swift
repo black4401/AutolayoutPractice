@@ -9,6 +9,8 @@ import UIKit
 
 class PainLocationCell: UITableViewCell {
     
+    // MARK: - Properties
+    
     var collectionViewModels: [TagModel] = [] {
         didSet {
             continueButton.titleLabel?.text = "Continue"
@@ -16,9 +18,13 @@ class PainLocationCell: UITableViewCell {
         }
     }
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var horizontalScrollView: HorizontalScrollView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var continueButton: UIButton!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +32,8 @@ class PainLocationCell: UITableViewCell {
         setUpMainLabel()
         setUpContinueButton()
     }
+    
+    // MARK: - Private Methods
     
     private func setUpMainLabel() {
         mainLabel.text = "Where do you feel pain?"

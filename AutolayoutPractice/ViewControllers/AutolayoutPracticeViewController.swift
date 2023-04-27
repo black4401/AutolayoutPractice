@@ -13,9 +13,12 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
     
     private let listOfCells = [HealthcareProvidersCell.self, AssociatedDoctorCell.self, MorningEntryCell.self, MorningPainCell.self, MovementProgressCell.self, SavedArticleCell.self, PainRateCell.self, PainMonitorCell.self, CustomPainCell.self, CustomProgressCell.self, BodyPainCell.self, PainLocationCell.self]
     
+    // MARK: - IBOutlets
+    
     @IBOutlet private weak var filterHorizontalScrollView: HorizontalScrollView!
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +83,7 @@ extension AutolayoutPracticeViewController: HorizontalScrollViewDelegate {
     }
 }
 
+// MARK: - Private Methods
 private extension AutolayoutPracticeViewController {
     func addNotificationEnteringForeground() {
         NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
