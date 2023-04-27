@@ -8,7 +8,6 @@
 import UIKit
 
 extension UICollectionView {
-    
     func dequeueCell<T: UICollectionViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? T else {
             

@@ -8,7 +8,6 @@
 import UIKit
 
 class ProgressBarView: UIProgressView {
-
     override func layoutSubviews() {
         super.layoutSubviews()
 

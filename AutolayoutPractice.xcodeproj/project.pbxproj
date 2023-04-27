@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB2AC4C529F92CC1005EA247 /* AutolayoutPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */; };
+		BB2AC4C829FAA164005EA247 /* UIView+WrapInsideParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */; };
+		BB2AC4CA29FAA671005EA247 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */; };
+		BB2AC4CC29FAB095005EA247 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */; };
 		BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916B29D473970037EB8B /* MorningEntryCell.swift */; };
 		BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3E916C29D473970037EB8B /* MorningEntryCell.xib */; };
 		BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */; };
@@ -78,6 +81,9 @@
 
 /* Begin PBXFileReference section */
 		BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutPracticeViewController.swift; sourceTree = "<group>"; };
+		BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+WrapInsideParent.swift"; sourceTree = "<group>"; };
+		BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		BB3E916B29D473970037EB8B /* MorningEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningEntryCell.swift; sourceTree = "<group>"; };
 		BB3E916C29D473970037EB8B /* MorningEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningEntryCell.xib; sourceTree = "<group>"; };
 		BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPainCell.swift; sourceTree = "<group>"; };
@@ -178,9 +184,10 @@
 				BB6CA16629DF27D1004B39BA /* CustomPainView.xib */,
 				BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */,
 				BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */,
-				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
 				BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */,
 				BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */,
+				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
+				BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,10 +235,11 @@
 				BB2AC4C629F92CC9005EA247 /* ViewControllers */,
 				BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */,
 				BBF8C89929F1360C00E6E2BC /* CellModels.swift */,
+				BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */,
 				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
+				BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */,
 				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
-				BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */,
 				BB55F5DA29D6FF1700F2F2C1 /* Views */,
 				BBA041A029D4497F00E39A06 /* Cells */,
 				BBC6DAF829F2AB5200005A83 /* Extensions */,
@@ -304,6 +312,7 @@
 				BBA4CDA729DC7FD7008E23C1 /* UILabel+SetFont.swift */,
 				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
 				BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */,
+				BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */,
 				BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */,
 				BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */,
 			);
@@ -429,6 +438,7 @@
 				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
 				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
 				BBA4CDA829DC7FD7008E23C1 /* UILabel+SetFont.swift in Sources */,
+				BB2AC4CC29FAB095005EA247 /* DataGenerator.swift in Sources */,
 				BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */,
 				BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
@@ -441,7 +451,9 @@
 				BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */,
 				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
 				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
+				BB2AC4CA29FAA671005EA247 /* NibLoadableView.swift in Sources */,
 				BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */,
+				BB2AC4C829FAA164005EA247 /* UIView+WrapInsideParent.swift in Sources */,
 				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
 				BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */,
 				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,

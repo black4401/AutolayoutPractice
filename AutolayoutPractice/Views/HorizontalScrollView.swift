@@ -11,7 +11,7 @@ protocol HorizontalScrollViewDelegate: AnyObject {
     func didSelectCell(at indexPath: Int)
 }
 
-class HorizontalScrollView: UIView {
+class HorizontalScrollView: UIView, NibLoadableView {
     
     var data: [TagModel] = []
     weak var delegate: HorizontalScrollViewDelegate?
@@ -20,14 +20,12 @@ class HorizontalScrollView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        loadNib()
+        loadFromXib()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-        loadNib()
+        loadFromXib()
     }
     
     override func awakeFromNib() {
@@ -46,16 +44,6 @@ class HorizontalScrollView: UIView {
         
         collectionView.collectionViewLayout =  layout
     }
-    
-    
-    private func loadNib() {
-        let nib = UINib(nibName: "HorizontalScrollView", bundle: nil)
-        guard let contentView = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            fatalError("Failed to load HorizontalScrollView XIB")
-        }
-        
-        addSubview(contentView)
-    }
 }
 
 extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -64,7 +52,12 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
+        let cell = collectionView.dequeueCell(withReuseIdentifier: CellIdentifiers.tagCellIdentifier, for: indexPath)
+        
+        guard let cell = cell as? TagCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
         let model = data[indexPath.row]
         cell.configureCell(with: data[indexPath.row])
         cell.delegate = model.hasCloseButton ? self : nil
@@ -99,11 +92,13 @@ extension HorizontalScrollView: UICollectionViewDataSource, UICollectionViewDele
 
 extension HorizontalScrollView: TagCollectionViewCellDelegate {
     func didTapClose(on cell: TagCollectionViewCell) {
-        if let indexPath = self.collectionView.indexPath(for: cell) {
-            self.collectionView.performBatchUpdates {
-                data.remove(at: indexPath.item)
-                self.collectionView.deleteItems(at: [indexPath])
-            }
+        guard let indexPath = self.collectionView.indexPath(for: cell) else {
+            return
         }
+        self.collectionView.performBatchUpdates {
+            data.remove(at: indexPath.item)
+            self.collectionView.deleteItems(at: [indexPath])
+        }
+        
     }
 }

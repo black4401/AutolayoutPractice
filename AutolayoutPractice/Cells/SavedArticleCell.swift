@@ -9,10 +9,10 @@ import UIKit
 
 class SavedArticleCell: UITableViewCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var recommendedLabel: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var secondaryLabel: UILabel!
+    @IBOutlet private weak var recommendedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

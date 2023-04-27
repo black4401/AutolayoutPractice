@@ -9,9 +9,9 @@ import UIKit
 
 class MorningEntryCell: UITableViewCell {
     
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var mainSwitch: UISwitch!
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var mainSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()

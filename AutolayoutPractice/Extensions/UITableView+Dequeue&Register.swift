@@ -8,7 +8,6 @@
 import UIKit
 
 extension UITableView {
-    
     func dequeueCell<T: UITableViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? T else {
             fatalError("Wrong cell class")

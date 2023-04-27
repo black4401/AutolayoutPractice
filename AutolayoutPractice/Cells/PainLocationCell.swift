@@ -16,9 +16,9 @@ class PainLocationCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var horizontalScrollView: HorizontalScrollView!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet private weak var horizontalScrollView: HorizontalScrollView!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var continueButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,13 +27,13 @@ class PainLocationCell: UITableViewCell {
         setUpContinueButton()
     }
     
-    func setUpMainLabel() {
+    private func setUpMainLabel() {
         mainLabel.text = "Where do you feel pain?"
         mainLabel.setFontToDMSans(with: 17)
         mainLabel.textColor = .brandMainColor
     }
     
-    func setUpContinueButton() {
+    private func setUpContinueButton() {
         continueButton.titleLabel?.text = "Continue (\(collectionViewModels.count))"
         continueButton.backgroundColor = .brandMainColor
         continueButton.titleLabel?.textColor = .brandWhite

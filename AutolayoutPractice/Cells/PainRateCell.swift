@@ -15,20 +15,20 @@ class PainRateCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var emojiImageView: UIImageView!
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var circleView: UIView!
-    @IBOutlet weak var innerImageView: UIImageView!
-    @IBOutlet weak var lineImageView: UIImageView!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var emojiImageView: UIImageView!
+    @IBOutlet private weak var backView: UIView!
+    @IBOutlet private weak var circleView: UIView!
+    @IBOutlet private weak var innerImageView: UIImageView!
+    @IBOutlet private weak var lineImageView: UIImageView!
     
-    @IBOutlet weak var morningLabel: UILabel!
-    @IBOutlet weak var painLabel: UILabel!
-    @IBOutlet weak var severitylabel: UILabel!
-    @IBOutlet weak var painLocationLabel: UILabel!
+    @IBOutlet private weak var morningLabel: UILabel!
+    @IBOutlet private weak var painLabel: UILabel!
+    @IBOutlet private weak var severitylabel: UILabel!
+    @IBOutlet private weak var painLocationLabel: UILabel!
     
-    @IBOutlet weak var editButton: ImageOnlyButton!
-    @IBOutlet weak var horizontalScrollView: HorizontalScrollView!
+    @IBOutlet private weak var editButton: ImageOnlyButton!
+    @IBOutlet private weak var horizontalScrollView: HorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

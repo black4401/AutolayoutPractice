@@ -9,15 +9,13 @@ import UIKit
 
 class PainMonitorCell: UITableViewCell {
     
-    let style = PainMonitorCellStyle.evening
-
-    @IBOutlet weak var customPainView: CustomPainView!
+    @IBOutlet private weak var customPainView: CustomPainView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         customPainView.layer.cornerRadius = 6
         customPainView.clipsToBounds = true
         
-        customPainView.configure(with: style)
+        customPainView.configure(with: .evening)
     }
 }

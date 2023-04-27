@@ -13,10 +13,12 @@ protocol TagCollectionViewCellDelegate: AnyObject {
 
 class TagCollectionViewCell: UICollectionViewCell {
     
-    private var normalStateTextColor: UIColor = .greyscale100!
-    private var normalStateBackgroundColor: UIColor = .brandWhite!
+    weak var delegate: TagCollectionViewCellDelegate?
+    
     var selectedStateTextColor: UIColor = .brandMainColor!
     var selectedStateBackgroundColor: UIColor = .greyscale10!
+    private var normalStateTextColor: UIColor = .greyscale100!
+    private var normalStateBackgroundColor: UIColor = .brandWhite!
     
     private var isSelectable: Bool? {
         didSet {
@@ -35,8 +37,6 @@ class TagCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var stackViewTrailingConstraint: NSLayoutConstraint!
     @IBOutlet private weak var stackViewBottomConstraint: NSLayoutConstraint!
     
-    weak var delegate: TagCollectionViewCellDelegate?
-    
     override var isSelected: Bool {
         didSet {
             self.backgroundColor = isSelected ? selectedStateBackgroundColor : normalStateBackgroundColor
@@ -51,7 +51,7 @@ class TagCollectionViewCell: UICollectionViewCell {
         setCornerRadius(to: 4)
     }
     
-    @IBAction func didTapCloseButton(_ sender: Any) {
+    @IBAction private func didTapCloseButton(_ sender: Any) {
         delegate?.didTapClose(on: self)
     }
     

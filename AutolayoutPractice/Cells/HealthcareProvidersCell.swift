@@ -9,9 +9,9 @@ import UIKit
 
 class HealthcareProvidersCell: UITableViewCell {
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var label: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,10 +20,6 @@ class HealthcareProvidersCell: UITableViewCell {
 
         setUpAccessory()
         setUpLabel()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }
 

@@ -9,12 +9,9 @@ import UIKit
 
 class CustomPainCell: UITableViewCell {
     
-    let styleMorning = PainMonitorCellStyle.morning
-    let styleEvening = PainMonitorCellStyle.evening
-    
-    @IBOutlet weak var customView1: CustomPainView!
-    @IBOutlet weak var customView2: CustomPainView!
-    @IBOutlet weak var contentVIew: UIView!
+    @IBOutlet private weak var customView1: CustomPainView!
+    @IBOutlet private weak var customView2: CustomPainView!
+    @IBOutlet private weak var contentVIew: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +21,8 @@ class CustomPainCell: UITableViewCell {
         customView2.layer.cornerRadius = 6
         customView2.clipsToBounds = true
         
-        customView1.configure(with: styleMorning)
+        customView1.configure(with: .morning)
         
-        customView2.configure(with: styleEvening)
+        customView2.configure(with: .evening)
     }
 }

@@ -7,35 +7,24 @@
 
 import UIKit
 
-class CustomProgressView: UIView {
+class CustomProgressView: UIView, NibLoadableView {
 
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var progressView: ProgressBarView!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var secondaryLabel: UILabel!
+    @IBOutlet private weak var progressView: ProgressBarView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        convenienceInit()
+        loadFromXib()
+        setUpProgressView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        convenienceInit()
-    }
-    
-    func convenienceInit() {
-        let view = Bundle.main.loadNibNamed("CustomProgressView", owner: self, options: nil)![0] as! UIView
-        addSubview(view)
-        
+        loadFromXib()
         setUpProgressView()
     }
-    
-    func updateProgressView(to progress: Float, color: UIColor) {
-        progressView.progress = progress
-        progressView.progressTintColor = color
-    }
-
 }
 
 extension CustomProgressView {
@@ -54,7 +43,12 @@ extension CustomProgressView {
         mainLabel.textColor = .greyscale80
     }
     
-    func setUpProgressView() {
+    func updateProgressView(to progress: Float, color: UIColor) {
+        progressView.progress = progress
+        progressView.progressTintColor = color
+    }
+    
+    private func setUpProgressView() {
         CGAffineTransformScale(progressView.transform, 1, 2)
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true

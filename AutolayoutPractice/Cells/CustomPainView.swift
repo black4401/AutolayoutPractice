@@ -7,27 +7,22 @@
 
 import UIKit
 
-class CustomPainView: UIView {
+class CustomPainView: UIView, NibLoadableView {
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var avgLabel: UILabel!
-    @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var avgLabel: UILabel!
+    @IBOutlet private weak var secondaryLabel: UILabel!
+    @IBOutlet private weak var numberLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        convenienceInit()
+        loadFromXib()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        convenienceInit()
-    }
-    
-    func convenienceInit() {
-        let view = Bundle.main.loadNibNamed("CustomPainView", owner: self, options: nil)![0] as! UIView
-        addSubview(view)
+        loadFromXib()
     }
     
     func configure(with style: PainMonitorCellStyle) {

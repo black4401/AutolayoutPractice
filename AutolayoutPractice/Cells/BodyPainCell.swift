@@ -15,12 +15,11 @@ class BodyPainCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var morningLabel: UILabel!
-    @IBOutlet weak var eveningLabel: UILabel!
-    
-    @IBOutlet weak var horizontalScrollView: HorizontalScrollView!
+    @IBOutlet private weak var headerLabel: UILabel!
+    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var morningLabel: UILabel!
+    @IBOutlet private weak var eveningLabel: UILabel!
+    @IBOutlet private weak var horizontalScrollView: HorizontalScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
