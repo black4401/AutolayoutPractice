@@ -60,13 +60,13 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
         switch cell {
             case let cell as PainRateCell:
                 cell.collectionViewModels = DataGenerator.painRateData()
-                return UITableViewCell()
+                return cell
             case let cell as BodyPainCell:
                 cell.collectionViewModels = DataGenerator.bodyPainData()
-                return UITableViewCell()
+                return cell
             case let cell as PainLocationCell:
                 cell.collectionViewModels = DataGenerator.painLocationData()
-                return UITableViewCell()
+                return cell
             default:
                 break
         }

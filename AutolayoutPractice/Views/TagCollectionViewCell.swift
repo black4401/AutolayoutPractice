@@ -51,7 +51,6 @@ class TagCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         closeButton.isHidden = true
-        setCloseButtonSize(width: 12, height: 14)
         setCornerRadius(to: 4)
     }
     
@@ -132,11 +131,5 @@ private extension TagCollectionViewCell {
         self.normalStateBackgroundColor = normalStateBackgroundColor
         self.selectedStateTextColor = selectedStateTextColor
         self.selectedStateBackgroundColor = selectedStateBackgroundColor
-    }
-    
-    func setCloseButtonSize(width: CGFloat, height: CGFloat) {
-        closeButton.imageView?.contentMode = .center
-        closeButton.imageView?.widthAnchor.constraint(equalToConstant: 12).isActive = true
-        closeButton.imageView?.heightAnchor.constraint(equalToConstant: 12).isActive = true
     }
 }

@@ -37,7 +37,7 @@
                     <constraint firstItem="TBi-wt-R3b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="kEM-xQ-CbD"/>
                     <constraint firstAttribute="bottom" secondItem="9Cq-98-AIl" secondAttribute="bottom" constant="16" id="vTO-Vv-M6d"/>
                     <constraint firstItem="TBi-wt-R3b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="wfS-Tc-OeU"/>
-                    <constraint firstAttribute="bottom" secondItem="TBi-wt-R3b" secondAttribute="bottom" constant="19" id="zbE-YR-fHi"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TBi-wt-R3b" secondAttribute="bottom" constant="16" id="zbE-YR-fHi"/>
                     <constraint firstItem="9Cq-98-AIl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="zdg-9r-GYQ"/>
                 </constraints>
             </tableViewCellContentView>

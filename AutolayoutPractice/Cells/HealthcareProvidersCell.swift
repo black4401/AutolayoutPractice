@@ -37,7 +37,7 @@ private extension HealthcareProvidersCell {
     
     func setUpAccessory() {
        let image = UIImage(named: "healthcareProvidersAccessory")
-       let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
+       let accessory  = UIImageView(frame:CGRect(x:0, y:0, width: 7, height: 14))
        accessory.image = image
 
        accessoryView = accessory

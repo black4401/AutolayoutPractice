@@ -17,11 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
                         <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
-                                <rect key="frame" x="0.0" y="0.0" width="178" height="28"/>
+                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,19 +44,19 @@
             <viewLayoutGuide key="safeArea" id="pNZ-zb-oK1"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="NSi-sz-GFv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4gO-jF-6yp"/>
-                <constraint firstAttribute="trailing" secondItem="NSi-sz-GFv" secondAttribute="trailing" id="TOt-lr-bir"/>
-                <constraint firstItem="NSi-sz-GFv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oW2-FP-29f"/>
-                <constraint firstAttribute="bottom" secondItem="NSi-sz-GFv" secondAttribute="bottom" id="zYl-dM-SZM"/>
+                <constraint firstAttribute="trailing" secondItem="NSi-sz-GFv" secondAttribute="trailing" id="50X-9s-Rpw"/>
+                <constraint firstAttribute="bottom" secondItem="NSi-sz-GFv" secondAttribute="bottom" id="G0B-UO-7cd"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Z6F-iM-Wfg"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dDt-A3-2GA"/>
             </constraints>
             <size key="customSize" width="206" height="28"/>
             <connections>
                 <outlet property="closeButton" destination="T3M-mW-IZf" id="jkL-nu-NB0"/>
                 <outlet property="stackView" destination="NSi-sz-GFv" id="R1v-dA-z3Z"/>
-                <outlet property="stackViewBottomConstraint" destination="zYl-dM-SZM" id="Xmf-qh-oC3"/>
-                <outlet property="stackViewLeadingConstraint" destination="4gO-jF-6yp" id="5Ju-Qz-3bt"/>
-                <outlet property="stackViewTopConstraint" destination="oW2-FP-29f" id="Fww-hh-lht"/>
-                <outlet property="stackViewTrailingConstraint" destination="TOt-lr-bir" id="JZn-kw-o9t"/>
+                <outlet property="stackViewBottomConstraint" destination="G0B-UO-7cd" id="mMG-Mx-xUf"/>
+                <outlet property="stackViewLeadingConstraint" destination="dDt-A3-2GA" id="uBk-AS-J2C"/>
+                <outlet property="stackViewTopConstraint" destination="Z6F-iM-Wfg" id="RXZ-8f-Yqr"/>
+                <outlet property="stackViewTrailingConstraint" destination="50X-9s-Rpw" id="AfH-6F-CdE"/>
                 <outlet property="textLabel" destination="NG1-u0-4TN" id="a1b-2I-9KJ"/>
             </connections>
             <point key="canvasLocation" x="-76.33587786259541" y="-11.267605633802818"/>
