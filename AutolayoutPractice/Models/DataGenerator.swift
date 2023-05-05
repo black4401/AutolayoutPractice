@@ -39,8 +39,8 @@ class DataGenerator {
     
     static func filterData() -> [TagModel] {
         var data: [TagModel] = []
-        for index in 0...11 {
-            data.append(TagModel(labelText: "Cell \(index)", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 2, verticalPadding: 2, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite))
+        for index in 0...12 {
+            data.append(TagModel(labelText: "Cell \(index)", hasCloseButton: false, isSelectable: true, isTextCentered: true, horizontalPadding: 15, verticalPadding: 10, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale100, backgroundColor: .brandWhite))
             data[0].labelText = "All"
         }
         return data

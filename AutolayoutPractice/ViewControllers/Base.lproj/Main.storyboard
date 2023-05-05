@@ -18,26 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jBi-Ch-NU5">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="IRd-RQ-ZXW" customClass="HorizontalScrollView" customModule="AutolayoutPractice" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="709" id="JkZ-MD-feQ"/>
+                                </constraints>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-CS-Ctr" customClass="HeaderView" customModule="AutolayoutPractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4F9-0K-9QL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jBi-Ch-NU5" firstAttribute="trailing" secondItem="4F9-0K-9QL" secondAttribute="trailing" id="JNR-TN-Mf3"/>
+                            <constraint firstItem="p7Y-CS-Ctr" firstAttribute="top" secondItem="4F9-0K-9QL" secondAttribute="top" id="LKD-CT-7fa"/>
+                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="top" secondItem="p7Y-CS-Ctr" secondAttribute="bottom" constant="2" id="U3V-Gb-3TD"/>
                             <constraint firstItem="jBi-Ch-NU5" firstAttribute="bottom" secondItem="4F9-0K-9QL" secondAttribute="bottom" id="Y3c-Lx-eVp"/>
-                            <constraint firstItem="jBi-Ch-NU5" firstAttribute="top" secondItem="4F9-0K-9QL" secondAttribute="top" id="bJQ-A8-kFs"/>
+                            <constraint firstItem="p7Y-CS-Ctr" firstAttribute="leading" secondItem="4F9-0K-9QL" secondAttribute="leading" id="Yis-PN-EtH"/>
                             <constraint firstItem="jBi-Ch-NU5" firstAttribute="leading" secondItem="4F9-0K-9QL" secondAttribute="leading" id="hNd-2y-FFb"/>
+                            <constraint firstItem="4F9-0K-9QL" firstAttribute="trailing" secondItem="p7Y-CS-Ctr" secondAttribute="trailing" id="oLz-0a-t2t"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="filterHorizontalScrollView" destination="IRd-RQ-ZXW" id="zuK-8j-uIh"/>
+                        <outlet property="headerView" destination="p7Y-CS-Ctr" id="utK-mu-FAp"/>
                         <outlet property="tableView" destination="jBi-Ch-NU5" id="YsF-fm-a2P"/>
                     </connections>
                 </viewController>

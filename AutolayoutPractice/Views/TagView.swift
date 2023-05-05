@@ -78,8 +78,8 @@ class TagView: UIView, NibLoadableView {
         if model.isTextCentered {
             centerLabelText()
         }
-        configureHorizontalPadding(padding: 15)
-        configureVerticalPadding(padding: 10)
+        configureHorizontalPadding(padding: model.horizontalPadding)
+        configureVerticalPadding(padding: model.verticalPadding)
         setLabelFont(to: model.font)
         setLabelTextColor(color: model.textColor)
         setBackGroundColor(to: model.backgroundColor)
