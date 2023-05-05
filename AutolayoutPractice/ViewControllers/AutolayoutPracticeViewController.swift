@@ -9,14 +9,13 @@ import UIKit
 
 class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var visibleSectionIndices = DataGenerator.filterData().enumerated().map { $0.offset }
-    
-    private let listOfCells = [HealthcareProvidersCell.self, AssociatedDoctorCell.self, MorningEntryCell.self, MorningPainCell.self, MovementProgressCell.self, SavedArticleCell.self, PainRateCell.self, PainMonitorCell.self, CustomPainCell.self, CustomProgressCell.self, BodyPainCell.self, PainLocationCell.self]
+    private var visibleSectionIndices = CellType.allCases
+    private var filterData = DataGenerator.filterData()
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var filterHorizontalScrollView: HorizontalScrollView!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var headerView: HeaderView!
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -31,31 +30,31 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
         tableView.backgroundColor = .brandMainColor
         addNotificationEnteringForeground()
         
-        filterHorizontalScrollView.delegate = self
+        headerView.configure(with: filterData)
+        headerView.horizontalScrollView.delegate = self
         
-        filterHorizontalScrollView.data = DataGenerator.filterData()
-        tableView.tableHeaderView = filterHorizontalScrollView
-        
-        for cell in listOfCells {
-            tableView.register(cell)
+        CellType.allCases.forEach {
+            tableView.register($0.cellType)
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 12
+        return visibleSectionIndices.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if visibleSectionIndices.contains(section) {
-            return 1
-        } else {
-            return 0
-        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = listOfCells[indexPath.section].reuseIdentifier
-        let cell = tableView.dequeueCell(withReuseIdentifier: identifier, for: indexPath)
+        let identifier = CellType.allCases[indexPath.section].cellType.self.reuseIdentifier
+        var cell = UITableViewCell()
+        
+        if visibleSectionIndices.count == 1 {
+            cell = tableView.dequeueReusableCell(withIdentifier: visibleSectionIndices.first!.cellType.self.reuseIdentifier, for: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
         
         switch cell {
             case let cell as PainRateCell:
@@ -74,12 +73,33 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
     }
 }
 
-extension AutolayoutPracticeViewController: HorizontalScrollViewDelegate {
-    func didSelectCell(at indexPath: Int) {
-        if indexPath == 0 {
-            visibleSectionIndices = DataGenerator.filterData().enumerated().map { $0.offset }
+extension AutolayoutPracticeViewController: CustomHorizontalScrollViewDelegate {
+    func didSelectView(with identifier: String) {
+        guard let model = filterData.first(where: {$0.labelText == identifier}) else {
+            return
+        }
+        guard let index = filterData.firstIndex(of: model) else {
+            return
+        }
+        if index == 0 {
+            visibleSectionIndices = CellType.allCases
         } else {
-            visibleSectionIndices = [indexPath]
+            visibleSectionIndices = [CellType.allCases[index - 1]]
+        }
+        tableView.reloadData()
+    }
+}
+
+extension AutolayoutPracticeViewController: HorizontalScrollViewDelegate, TableViewSectionFilter {
+    func didSelectCell(at indexPath: Int) {
+       showSection(tableView: tableView, index: indexPath)
+    }
+    
+    func showSection(tableView: UITableView, index: Int) {
+        if index == 0 {
+            visibleSectionIndices = CellType.allCases
+        } else if index <= CellType.allCases.count  {
+            visibleSectionIndices = [CellType.allCases[index - 1]]
         }
         tableView.reloadData()
     }
@@ -93,9 +113,11 @@ private extension AutolayoutPracticeViewController {
     
     @objc func appWillEnterForeground() {
         tableView.setContentOffset(.zero, animated: true)
-        filterHorizontalScrollView.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
-        filterHorizontalScrollView.collectionView.setContentOffset(.zero, animated: true)
-        visibleSectionIndices = DataGenerator.filterData().enumerated().map { $0.offset }
+        visibleSectionIndices = CellType.allCases
         tableView.reloadData()
+        
+        if let title = filterData.first?.labelText {
+            headerView.horizontalScrollView.selectView(with: title)
+        }
     }
 }
