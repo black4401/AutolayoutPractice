@@ -15,8 +15,8 @@ class TagCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: TagCollectionViewCellDelegate?
     
-    var selectedStateTextColor: UIColor = .brandMainColor!
-    var selectedStateBackgroundColor: UIColor = .greyscale10!
+    private var selectedStateTextColor: UIColor = .brandMainColor!
+    private var selectedStateBackgroundColor: UIColor = .greyscale10!
     private var normalStateTextColor: UIColor = .greyscale100!
     private var normalStateBackgroundColor: UIColor = .brandWhite!
     
