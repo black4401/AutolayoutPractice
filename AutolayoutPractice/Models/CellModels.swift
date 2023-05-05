@@ -8,7 +8,6 @@
 import UIKit
 
 class TagModel {
-    
     // MARK: - Properties
     
     var labelText: String
@@ -33,5 +32,11 @@ class TagModel {
         self.font = font
         self.textColor = textColor
         self.backgroundColor = backgroundColor
+    }
+}
+
+extension TagModel: Equatable {
+    static func == (lhs: TagModel, rhs: TagModel) -> Bool {
+        return lhs.labelText == rhs.labelText
     }
 }

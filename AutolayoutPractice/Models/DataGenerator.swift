@@ -11,7 +11,7 @@ import UIKit
 class DataGenerator {
     
     static func painLocationData() -> [TagModel] {
-        let titles = ["Left big toe", "Right big toe" , "Left big toe"]
+        let titles = ["Left big toe", "Right big toe" , "Left hand"]
         var data: [TagModel] = []
         for index in 0..<titles.count {
             data.append(TagModel(labelText: titles[index], hasCloseButton: true, isSelectable: false, isTextCentered: true, horizontalPadding: 4, verticalPadding: 4, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .greyscale05))
@@ -20,7 +20,7 @@ class DataGenerator {
     }
     
     static func painRateData() -> [TagModel] {
-        let titles = ["Back of left knee (2)", "Back of right knee (2)" , "Back of left knee (2)"]
+        let titles = ["Back of left knee (2)", "Back of right knee (2)" , "Back of foot (2)"]
         var data: [TagModel] = []
         for index in 0..<titles.count {
             data.append(TagModel(labelText: titles[index], hasCloseButton: false, isSelectable: false, isTextCentered: true, horizontalPadding: 3, verticalPadding: 3, font: UIFont.dmSansRegular(ofSize: 15), textColor: .greyscale140, backgroundColor: .yellow10))
