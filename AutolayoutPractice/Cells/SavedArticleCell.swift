@@ -46,8 +46,8 @@ class SavedArticleCell: UITableViewCell {
         recommendedLabel.layer.cornerRadius = 4
         recommendedLabel.clipsToBounds = true
         recommendedLabel.backgroundColor = .brandAccentTitn
-        recommendedLabel.text = "RECOMMENDED"
+        recommendedLabel.text = " RECOMMENDED  "
         recommendedLabel.textColor = .greyscale140
-        recommendedLabel.font = .dmSansRegular(ofSize: 11)
+        recommendedLabel.font = .sourceSansPro(ofSize: 11)
     }
 }

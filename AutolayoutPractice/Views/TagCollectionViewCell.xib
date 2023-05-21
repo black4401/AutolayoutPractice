@@ -17,18 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
                         <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
-                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="28"/>
+                                <rect key="frame" x="0.0" y="5" width="139.33333333333334" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
-                                <rect key="frame" x="178" y="0.0" width="28" height="28"/>
+                                <rect key="frame" x="194" y="8" width="12" height="12"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="dMP-5o-lS2"/>
                                     <constraint firstAttribute="width" secondItem="T3M-mW-IZf" secondAttribute="height" multiplier="1:1" id="p8d-ac-Uv6"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>

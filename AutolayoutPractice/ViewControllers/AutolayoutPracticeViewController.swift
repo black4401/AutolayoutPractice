@@ -75,10 +75,7 @@ class AutolayoutPracticeViewController: UIViewController, UITableViewDelegate, U
 
 extension AutolayoutPracticeViewController: CustomHorizontalScrollViewDelegate {
     func didSelectView(with identifier: String) {
-        guard let model = filterData.first(where: {$0.labelText == identifier}) else {
-            return
-        }
-        guard let index = filterData.firstIndex(of: model) else {
+        guard let index = filterData.firstIndex(where: {$0.labelText == identifier}) else {
             return
         }
         if index == 0 {
