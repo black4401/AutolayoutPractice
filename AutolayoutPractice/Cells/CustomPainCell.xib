@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomPainCell" id="KGk-i7-Jjw" customClass="CustomPainCell" customModule="AutolayoutPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVU-PU-SDy" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="167" height="144"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scu-qW-evO" customClass="CustomPainView" customModule="AutolayoutPractice" customModuleProvider="target">
+                        <rect key="frame" x="191" y="0.0" width="167" height="144"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95584470030000002" green="0.95584470030000002" blue="0.95584470030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="191" id="20p-rV-MA8"/>
+                    <constraint firstAttribute="trailing" secondItem="Scu-qW-evO" secondAttribute="trailing" constant="16" id="Bhg-ul-5TO"/>
+                    <constraint firstAttribute="bottom" secondItem="LVU-PU-SDy" secondAttribute="bottom" id="NPK-Ee-gfU"/>
+                    <constraint firstItem="LVU-PU-SDy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OcE-Vq-EVb"/>
+                    <constraint firstItem="LVU-PU-SDy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="TQz-R9-5Og"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xj6-WI-2Sz"/>
+                    <constraint firstAttribute="bottom" secondItem="Scu-qW-evO" secondAttribute="bottom" id="c2E-Yt-8tn"/>
+                    <constraint firstItem="Scu-qW-evO" firstAttribute="leading" secondItem="LVU-PU-SDy" secondAttribute="trailing" constant="8" symbolic="YES" id="vU3-w3-Dtz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentVIew" destination="H2p-sc-9uM" id="wVA-bZ-xws"/>
+                <outlet property="customView1" destination="LVU-PU-SDy" id="V55-Qj-NyX"/>
+                <outlet property="customView2" destination="Scu-qW-evO" id="fhW-he-srH"/>
+            </connections>
+            <point key="canvasLocation" x="-177.86259541984731" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

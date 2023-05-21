@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1867B3AE-08F9-435E-ACC4-A5ECDD73A39D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AE40083-DE3E-4236-B1E5-CFDFE894CF98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Cells/CustomProgressCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7C2DE19-CBF6-475A-91BF-7CAB315949C6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Cells/CustomPainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "convenienceInit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BED47772-792F-4DEB-B755-40163FB2226B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "sceneWillEnterForeground(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A247D185-2F9D-4F35-A772-9BDFD4F6EE94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Views/TagCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "didTapCloseButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32F1DD4B-1EA8-4388-AE74-CCDD67F17C2D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Views/TagCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "isSelected"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "32F1DD4B-1EA8-4388-AE74-CCDD67F17C2D - 4d350f35091635cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.TagCollectionViewCell.isSelected.getter : Swift.Bool"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/Views/TagCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "32F1DD4B-1EA8-4388-AE74-CCDD67F17C2D - d7c51fc32c8fd3db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.TagCollectionViewCell.isSelected.setter : Swift.Bool"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/Views/TagCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8447D1BE-30DD-48B5-9F75-D1864F51DEBC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Views/HorizontalScrollView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "setUpCollectionView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DCD215D-0122-4062-AB0B-6D5C31C0AB40"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "8DCD215D-0122-4062-AB0B-6D5C31C0AB40 - 1361109ec6cce9ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  uuid = "8DCD215D-0122-4062-AB0B-6D5C31C0AB40 - 1361109ec6cce9ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1068">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0D8F97E-8604-4B85-8FBA-51B0974BDD8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "F0D8F97E-8604-4B85-8FBA-51B0974BDD8C - 1361109ec6cce92a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "796">
+               </Location>
+               <Location
+                  uuid = "F0D8F97E-8604-4B85-8FBA-51B0974BDD8C - 1361109ec6cce92a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "808">
+               </Location>
+               <Location
+                  uuid = "F0D8F97E-8604-4B85-8FBA-51B0974BDD8C - 1361109ec6cce92a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeTableViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/AutolayoutPracticeTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "968">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D5BC868-4C9D-44FC-8E81-6775BC7BE124"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/ViewControllers/AutolayoutPracticeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82CEF3AC-24D3-48DB-B825-5C9CC460C8C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/ViewControllers/AutolayoutPracticeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82CEF3AC-24D3-48DB-B825-5C9CC460C8C3 - 447c3832bb715e21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/ViewControllers/AutolayoutPracticeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "82CEF3AC-24D3-48DB-B825-5C9CC460C8C3 - 447c3832bb715e00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.AutolayoutPracticeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/ViewControllers/AutolayoutPracticeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF71134C-D853-49E5-AFEC-BCD322C51AA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Cells/PainLocationCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "collectionViewModels"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AF71134C-D853-49E5-AFEC-BCD322C51AA1 - 80103f6a0b2879f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.PainLocationCell.collectionViewModels.didset : Swift.Array&lt;AutolayoutPractice.TagModel&gt;"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/Cells/PainLocationCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "AF71134C-D853-49E5-AFEC-BCD322C51AA1 - 80103f6a0b2879f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.PainLocationCell.collectionViewModels.didset : Swift.Array&lt;AutolayoutPractice.TagModel&gt;"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/Cells/PainLocationCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "AF71134C-D853-49E5-AFEC-BCD322C51AA1 - 80103f6a0b2879f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutolayoutPractice.PainLocationCell.collectionViewModels.didset : Swift.Array&lt;AutolayoutPractice.TagModel&gt;"
+                  moduleName = "AutolayoutPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexander.angelov/Developer/AutolayoutPractice/AutolayoutPractice/Cells/PainLocationCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E031CDF4-8DE4-41A6-942F-A136882A2EAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutolayoutPractice/Cells/PainLocationCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

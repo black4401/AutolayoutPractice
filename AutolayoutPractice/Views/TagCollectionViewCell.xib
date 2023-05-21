@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCollectionViewCell" id="gTV-IL-0wX" customClass="TagCollectionViewCell" customModule="AutolayoutPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-sz-GFv">
+                        <rect key="frame" x="0.0" y="0.0" width="206" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back of left knee (4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-u0-4TN">
+                                <rect key="frame" x="0.0" y="5" width="139.33333333333334" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-mW-IZf" customClass="ImageOnlyButton" customModule="AutolayoutPractice" customModuleProvider="target">
+                                <rect key="frame" x="194" y="8" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="dMP-5o-lS2"/>
+                                    <constraint firstAttribute="width" secondItem="T3M-mW-IZf" secondAttribute="height" multiplier="1:1" id="p8d-ac-Uv6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Vector"/>
+                                <connections>
+                                    <action selector="didTapCloseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0it-P9-7Hx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="pNZ-zb-oK1"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NSi-sz-GFv" secondAttribute="trailing" id="50X-9s-Rpw"/>
+                <constraint firstAttribute="bottom" secondItem="NSi-sz-GFv" secondAttribute="bottom" id="G0B-UO-7cd"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Z6F-iM-Wfg"/>
+                <constraint firstItem="NSi-sz-GFv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dDt-A3-2GA"/>
+            </constraints>
+            <size key="customSize" width="206" height="28"/>
+            <connections>
+                <outlet property="closeButton" destination="T3M-mW-IZf" id="jkL-nu-NB0"/>
+                <outlet property="stackView" destination="NSi-sz-GFv" id="R1v-dA-z3Z"/>
+                <outlet property="stackViewBottomConstraint" destination="G0B-UO-7cd" id="mMG-Mx-xUf"/>
+                <outlet property="stackViewLeadingConstraint" destination="dDt-A3-2GA" id="uBk-AS-J2C"/>
+                <outlet property="stackViewTopConstraint" destination="Z6F-iM-Wfg" id="RXZ-8f-Yqr"/>
+                <outlet property="stackViewTrailingConstraint" destination="50X-9s-Rpw" id="AfH-6F-CdE"/>
+                <outlet property="textLabel" destination="NG1-u0-4TN" id="a1b-2I-9KJ"/>
+            </connections>
+            <point key="canvasLocation" x="-76.33587786259541" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Vector" width="14" height="14"/>
+    </resources>
+</document>

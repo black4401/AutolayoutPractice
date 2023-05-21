@@ -7,25 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2AC4C529F92CC1005EA247 /* AutolayoutPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */; };
+		BB2AC4C829FAA164005EA247 /* UIView+WrapInsideParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */; };
+		BB2AC4CA29FAA671005EA247 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */; };
+		BB2AC4CC29FAB095005EA247 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */; };
+		BB2AC4CE29FBCEBB005EA247 /* CustomHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4CD29FBCEBB005EA247 /* CustomHorizontalScrollView.swift */; };
+		BB2AC4D029FBD881005EA247 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4CF29FBD881005EA247 /* TagView.swift */; };
+		BB2AC4D229FC0CFF005EA247 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2AC4D129FC0CFF005EA247 /* TagView.xib */; };
+		BB2AC4D42A023805005EA247 /* TableViewSectionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4D32A023805005EA247 /* TableViewSectionFilter.swift */; };
+		BB2AC4D82A03E4D3005EA247 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4D72A03E4D3005EA247 /* HeaderView.swift */; };
+		BB2AC4DA2A03E4DF005EA247 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2AC4D92A03E4DF005EA247 /* HeaderView.xib */; };
+		BB2AC4DC2A03E658005EA247 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2AC4DB2A03E658005EA247 /* CellType.swift */; };
+		BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E916B29D473970037EB8B /* MorningEntryCell.swift */; };
+		BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3E916C29D473970037EB8B /* MorningEntryCell.xib */; };
+		BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */; };
+		BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */; };
+		BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */; };
+		BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */; };
+		BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */; };
+		BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */; };
+		BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */; };
+		BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */; };
+		BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */; };
+		BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */; };
+		BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */; };
+		BB642E4B29E6CDE000E2B258 /* BodyPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */; };
+		BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */; };
+		BB6CA15029DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */; };
+		BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */; };
+		BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */; };
+		BB6CA15329DEDB92004B39BA /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */; };
+		BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */; };
+		BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */; };
+		BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */; };
+		BB6CA15829DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */; };
+		BB6CA15929DEDB92004B39BA /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */; };
+		BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */; };
+		BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */; };
+		BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */; };
+		BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA16029DF16D6004B39BA /* CustomPainCell.swift */; };
+		BB6CA16329DF16D6004B39BA /* CustomPainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */; };
+		BB6CA16729DF27D1004B39BA /* CustomPainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16629DF27D1004B39BA /* CustomPainView.xib */; };
+		BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */; };
+		BB6CA16F29E03636004B39BA /* CustomProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */; };
+		BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */; };
+		BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */; };
+		BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */; };
+		BB73E8C029E6AC03005D6717 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */; };
+		BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */; };
+		BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */; };
 		BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418529D43A9E00E39A06 /* AppDelegate.swift */; };
 		BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */; };
-		BBA0418A29D43A9E00E39A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418929D43A9E00E39A06 /* ViewController.swift */; };
 		BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0418B29D43A9E00E39A06 /* Main.storyboard */; };
 		BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBA0418E29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld */; };
 		BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419129D43AA000E39A06 /* Assets.xcassets */; };
 		BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */; };
+		BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */; };
+		BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */; };
+		BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */; };
+		BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */; };
+		BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */; };
+		BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */; };
+		BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */; };
+		BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CD9C29DC545E008E23C1 /* OFL.txt */; };
+		BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */; };
+		BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */; };
+		BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */; };
+		BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */; };
+		BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */; };
+		BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */; };
+		BBC6DAFC29F2B4E100005A83 /* PainMonitorCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */; };
+		BBC6DAFE29F7E27B00005A83 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */; };
+		BBC6DB0029F7ED8500005A83 /* HorizontalScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */; };
+		BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */; };
+		BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */; };
+		BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */; };
+		BBF8C89A29F1360C00E6E2BC /* CellModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8C89929F1360C00E6E2BC /* CellModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutPracticeViewController.swift; sourceTree = "<group>"; };
+		BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+WrapInsideParent.swift"; sourceTree = "<group>"; };
+		BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
+		BB2AC4CD29FBCEBB005EA247 /* CustomHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHorizontalScrollView.swift; sourceTree = "<group>"; };
+		BB2AC4CF29FBD881005EA247 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		BB2AC4D129FC0CFF005EA247 /* TagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
+		BB2AC4D32A023805005EA247 /* TableViewSectionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionFilter.swift; sourceTree = "<group>"; };
+		BB2AC4D72A03E4D3005EA247 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BB2AC4D92A03E4DF005EA247 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		BB2AC4DB2A03E658005EA247 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		BB3E916B29D473970037EB8B /* MorningEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningEntryCell.swift; sourceTree = "<group>"; };
+		BB3E916C29D473970037EB8B /* MorningEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningEntryCell.xib; sourceTree = "<group>"; };
+		BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPainCell.swift; sourceTree = "<group>"; };
+		BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorningPainCell.xib; sourceTree = "<group>"; };
+		BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementProgressCell.swift; sourceTree = "<group>"; };
+		BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementProgressCell.xib; sourceTree = "<group>"; };
+		BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticleCell.swift; sourceTree = "<group>"; };
+		BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedArticleCell.xib; sourceTree = "<group>"; };
+		BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainRateCell.swift; sourceTree = "<group>"; };
+		BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainRateCell.xib; sourceTree = "<group>"; };
+		BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPainCell.swift; sourceTree = "<group>"; };
+		BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyPainCell.xib; sourceTree = "<group>"; };
+		BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPainView.swift; path = AutolayoutPractice/Cells/CustomPainView.swift; sourceTree = SOURCE_ROOT; };
+		BB6CA16029DF16D6004B39BA /* CustomPainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPainCell.swift; sourceTree = "<group>"; };
+		BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPainCell.xib; sourceTree = "<group>"; };
+		BB6CA16629DF27D1004B39BA /* CustomPainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPainView.xib; sourceTree = "<group>"; };
+		BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressCell.swift; sourceTree = "<group>"; };
+		BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressCell.xib; sourceTree = "<group>"; };
+		BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProgressView.xib; sourceTree = "<group>"; };
+		BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedDoctorCell.swift; sourceTree = "<group>"; };
+		BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssociatedDoctorCell.xib; sourceTree = "<group>"; };
 		BBA0418229D43A9E00E39A06 /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA0418529D43A9E00E39A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBA0418929D43A9E00E39A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BBA0418C29D43A9E00E39A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBA0418F29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutolayoutPractice.xcdatamodel; sourceTree = "<group>"; };
 		BBA0419129D43AA000E39A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBA0419429D43AA000E39A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBA0419629D43AA000E39A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareProvidersCell.swift; sourceTree = "<group>"; };
+		BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthcareProvidersCell.xib; sourceTree = "<group>"; };
+		BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
+		BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BBA4CD9C29DC545E008E23C1 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCell.swift; sourceTree = "<group>"; };
+		BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainMonitorCell.xib; sourceTree = "<group>"; };
+		BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue&Register.swift"; sourceTree = "<group>"; };
+		BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue&Register.swift"; sourceTree = "<group>"; };
+		BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainMonitorCellStyle.swift; sourceTree = "<group>"; };
+		BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalScrollView.xib; sourceTree = "<group>"; };
+		BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLocationCell.swift; sourceTree = "<group>"; };
+		BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PainLocationCell.xib; sourceTree = "<group>"; };
+		BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOnlyButton.swift; sourceTree = "<group>"; };
+		BBF8C89929F1360C00E6E2BC /* CellModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +179,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB2AC4C629F92CC9005EA247 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB2AC4C429F92CC1005EA247 /* AutolayoutPracticeViewController.swift */,
+				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB2AC4D52A02384C005EA247 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BB2AC4C929FAA671005EA247 /* NibLoadableView.swift */,
+				BB2AC4D32A023805005EA247 /* TableViewSectionFilter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BB2AC4D62A023C66005EA247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBC6DAFB29F2B4E100005A83 /* PainMonitorCellStyle.swift */,
+				BBF8C89929F1360C00E6E2BC /* CellModels.swift */,
+				BB2AC4CB29FAB095005EA247 /* DataGenerator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB55F5DA29D6FF1700F2F2C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBC6DAFD29F7E27B00005A83 /* HorizontalScrollView.swift */,
+				BBC6DAFF29F7ED8500005A83 /* HorizontalScrollView.xib */,
+				BB6CA15C29DEE63F004B39BA /* CustomPainView.swift */,
+				BB6CA16629DF27D1004B39BA /* CustomPainView.xib */,
+				BB6CA17029E03CAE004B39BA /* CustomProgressView.swift */,
+				BB6CA17229E03CB8004B39BA /* CustomProgressView.xib */,
+				BB73E8BD29E6AC03005D6717 /* TagCollectionViewCell.swift */,
+				BB73E8BE29E6AC03005D6717 /* TagCollectionViewCell.xib */,
+				BB55F5CE29D58D6600F2F2C1 /* ProgressBarView.swift */,
+				BBF8C89729F05BFF00E6E2BC /* ImageOnlyButton.swift */,
+				BB2AC4CD29FBCEBB005EA247 /* CustomHorizontalScrollView.swift */,
+				BB2AC4CF29FBD881005EA247 /* TagView.swift */,
+				BB2AC4D129FC0CFF005EA247 /* TagView.xib */,
+				BB2AC4D72A03E4D3005EA247 /* HeaderView.swift */,
+				BB2AC4D92A03E4DF005EA247 /* HeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB6CA14129DEDB92004B39BA /* Source_Sans_Pro */ = {
+			isa = PBXGroup;
+			children = (
+				BB6CA14229DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf */,
+				BB6CA14329DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf */,
+				BB6CA14429DEDB92004B39BA /* SourceSansPro-Regular.ttf */,
+				BB6CA14529DEDB92004B39BA /* SourceSansPro-Bold.ttf */,
+				BB6CA14629DEDB92004B39BA /* SourceSansPro-LightItalic.ttf */,
+				BB6CA14729DEDB92004B39BA /* SourceSansPro-Light.ttf */,
+				BB6CA14829DEDB92004B39BA /* SourceSansPro-Black.ttf */,
+				BB6CA14A29DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf */,
+				BB6CA14B29DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf */,
+				BB6CA14C29DEDB92004B39BA /* SourceSansPro-SemiBold.ttf */,
+				BB6CA14D29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf */,
+				BB6CA14E29DEDB92004B39BA /* SourceSansPro-Italic.ttf */,
+			);
+			path = Source_Sans_Pro;
+			sourceTree = "<group>";
+		};
 		BBA0417929D43A9E00E39A06 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +269,88 @@
 			children = (
 				BBA0418529D43A9E00E39A06 /* AppDelegate.swift */,
 				BBA0418729D43A9E00E39A06 /* SceneDelegate.swift */,
-				BBA0418929D43A9E00E39A06 /* ViewController.swift */,
-				BBA0418B29D43A9E00E39A06 /* Main.storyboard */,
+				BB2AC4DB2A03E658005EA247 /* CellType.swift */,
+				BB2AC4C629F92CC9005EA247 /* ViewControllers */,
+				BB2AC4D62A023C66005EA247 /* Models */,
+				BB55F5DB29DAB85D00F2F2C1 /* CellIdentifiers.swift */,
 				BBA0419129D43AA000E39A06 /* Assets.xcassets */,
+				BB2AC4D52A02384C005EA247 /* Protocols */,
+				BB55F5DA29D6FF1700F2F2C1 /* Views */,
+				BBA041A029D4497F00E39A06 /* Cells */,
+				BBC6DAF829F2AB5200005A83 /* Extensions */,
 				BBA0419329D43AA000E39A06 /* LaunchScreen.storyboard */,
 				BBA0419629D43AA000E39A06 /* Info.plist */,
 				BBA0418E29D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld */,
+				BBA4CDA429DC5855008E23C1 /* CustomFonts */,
 			);
 			path = AutolayoutPractice;
+			sourceTree = "<group>";
+		};
+		BBA041A029D4497F00E39A06 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBA0419C29D4497700E39A06 /* HealthcareProvidersCell.swift */,
+				BBA0419D29D4497700E39A06 /* HealthcareProvidersCell.xib */,
+				BB91CECB29D46AD200B7032C /* AssociatedDoctorCell.swift */,
+				BB91CECC29D46AD200B7032C /* AssociatedDoctorCell.xib */,
+				BB3E916B29D473970037EB8B /* MorningEntryCell.swift */,
+				BB3E916C29D473970037EB8B /* MorningEntryCell.xib */,
+				BB55F5C629D5701100F2F2C1 /* MorningPainCell.swift */,
+				BB55F5C729D5701100F2F2C1 /* MorningPainCell.xib */,
+				BB55F5CA29D5860900F2F2C1 /* MovementProgressCell.swift */,
+				BB55F5CB29D5860900F2F2C1 /* MovementProgressCell.xib */,
+				BB55F5D029D5950C00F2F2C1 /* SavedArticleCell.swift */,
+				BB55F5D129D5950C00F2F2C1 /* SavedArticleCell.xib */,
+				BB55F5D429D5C04500F2F2C1 /* PainRateCell.swift */,
+				BB55F5D529D5C04500F2F2C1 /* PainRateCell.xib */,
+				BBA4CDAB29DD9743008E23C1 /* PainMonitorCell.swift */,
+				BBA4CDAC29DD9743008E23C1 /* PainMonitorCell.xib */,
+				BB6CA16029DF16D6004B39BA /* CustomPainCell.swift */,
+				BB6CA16129DF16D6004B39BA /* CustomPainCell.xib */,
+				BB6CA16C29E03636004B39BA /* CustomProgressCell.swift */,
+				BB6CA16D29E03636004B39BA /* CustomProgressCell.xib */,
+				BB642E4829E6CDE000E2B258 /* BodyPainCell.swift */,
+				BB642E4929E6CDE000E2B258 /* BodyPainCell.xib */,
+				BBF8C89329E7FC5300E6E2BC /* PainLocationCell.swift */,
+				BBF8C89429E7FC5300E6E2BC /* PainLocationCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BBA4CD9729DC545E008E23C1 /* DM_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4CD9A29DC545E008E23C1 /* DMSans-Bold.ttf */,
+				BBA4CD9829DC545E008E23C1 /* DMSans-Regular.ttf */,
+				BBA4CD9929DC545E008E23C1 /* DMSans-Medium.ttf */,
+				BBA4CD9B29DC545E008E23C1 /* DMSans-BoldItalic.ttf */,
+				BBA4CD9C29DC545E008E23C1 /* OFL.txt */,
+				BBA4CD9D29DC545E008E23C1 /* DMSans-MediumItalic.ttf */,
+				BBA4CD9E29DC545E008E23C1 /* DMSans-Italic.ttf */,
+			);
+			path = DM_Sans;
+			sourceTree = "<group>";
+		};
+		BBA4CDA429DC5855008E23C1 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB6CA14129DEDB92004B39BA /* Source_Sans_Pro */,
+				BBA4CD9729DC545E008E23C1 /* DM_Sans */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		BBC6DAF829F2AB5200005A83 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4CD9329DC4FA5008E23C1 /* UIFont+CustomFonts.swift */,
+				BBA4CDA529DC6A82008E23C1 /* UIColor+Extension.swift */,
+				BBC6DAF629F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift */,
+				BB2AC4C729FAA164005EA247 /* UIView+WrapInsideParent.swift */,
+				BBC6DAF929F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift */,
+				BBC6DAF429F2A91100005A83 /* UITableView+Dequeue&Register.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +411,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6CA15029DEDB92004B39BA /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				BB6CA15829DEDB92004B39BA /* SourceSansPro-BoldItalic.ttf in Resources */,
+				BB6CA14F29DEDB92004B39BA /* SourceSansPro-BlackItalic.ttf in Resources */,
+				BBA4CDA329DC5839008E23C1 /* OFL.txt in Resources */,
+				BB6CA15B29DEDB92004B39BA /* SourceSansPro-Italic.ttf in Resources */,
+				BBC6DB0029F7ED8500005A83 /* HorizontalScrollView.xib in Resources */,
+				BB642E4B29E6CDE000E2B258 /* BodyPainCell.xib in Resources */,
+				BB6CA15529DEDB92004B39BA /* SourceSansPro-Black.ttf in Resources */,
 				BBA0419529D43AA000E39A06 /* LaunchScreen.storyboard in Resources */,
+				BB6CA15229DEDB92004B39BA /* SourceSansPro-Bold.ttf in Resources */,
+				BBA0419F29D4497700E39A06 /* HealthcareProvidersCell.xib in Resources */,
+				BB2AC4DA2A03E4DF005EA247 /* HeaderView.xib in Resources */,
+				BB6CA15729DEDB92004B39BA /* SourceSansPro-ExtraLight.ttf in Resources */,
+				BB6CA15429DEDB92004B39BA /* SourceSansPro-Light.ttf in Resources */,
+				BBF8C89629E7FC5300E6E2BC /* PainLocationCell.xib in Resources */,
+				BB55F5C929D5701100F2F2C1 /* MorningPainCell.xib in Resources */,
+				BBA4CDAE29DD9743008E23C1 /* PainMonitorCell.xib in Resources */,
+				BB6CA15929DEDB92004B39BA /* SourceSansPro-SemiBold.ttf in Resources */,
+				BBA4CDA029DC5830008E23C1 /* DMSans-Regular.ttf in Resources */,
+				BB55F5D329D5950C00F2F2C1 /* SavedArticleCell.xib in Resources */,
 				BBA0419229D43AA000E39A06 /* Assets.xcassets in Resources */,
+				BB2AC4D229FC0CFF005EA247 /* TagView.xib in Resources */,
+				BB6CA15A29DEDB92004B39BA /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				BB3E916E29D473970037EB8B /* MorningEntryCell.xib in Resources */,
+				BB6CA17329E03CB8004B39BA /* CustomProgressView.xib in Resources */,
+				BB73E8C029E6AC03005D6717 /* TagCollectionViewCell.xib in Resources */,
 				BBA0418D29D43A9E00E39A06 /* Main.storyboard in Resources */,
+				BB55F5CD29D5860900F2F2C1 /* MovementProgressCell.xib in Resources */,
+				BB6CA16329DF16D6004B39BA /* CustomPainCell.xib in Resources */,
+				BB6CA16729DF27D1004B39BA /* CustomPainView.xib in Resources */,
+				BBA4CDA229DC5835008E23C1 /* DMSans-BoldItalic.ttf in Resources */,
+				BB6CA15129DEDB92004B39BA /* SourceSansPro-Regular.ttf in Resources */,
+				BB6CA15329DEDB92004B39BA /* SourceSansPro-LightItalic.ttf in Resources */,
+				BB91CECE29D46AD200B7032C /* AssociatedDoctorCell.xib in Resources */,
+				BB55F5D729D5C04500F2F2C1 /* PainRateCell.xib in Resources */,
+				BB6CA16F29E03636004B39BA /* CustomProgressCell.xib in Resources */,
+				BBA4CD9F29DC57C8008E23C1 /* DMSans-Bold.ttf in Resources */,
+				BBA4CDA129DC5833008E23C1 /* DMSans-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +459,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA0418A29D43A9E00E39A06 /* ViewController.swift in Sources */,
+				BBC6DAFE29F7E27B00005A83 /* HorizontalScrollView.swift in Sources */,
+				BBF8C89529E7FC5300E6E2BC /* PainLocationCell.swift in Sources */,
+				BB2AC4C529F92CC1005EA247 /* AutolayoutPracticeViewController.swift in Sources */,
+				BBA0419E29D4497700E39A06 /* HealthcareProvidersCell.swift in Sources */,
+				BB73E8BF29E6AC03005D6717 /* TagCollectionViewCell.swift in Sources */,
+				BB2AC4D82A03E4D3005EA247 /* HeaderView.swift in Sources */,
+				BB55F5D229D5950C00F2F2C1 /* SavedArticleCell.swift in Sources */,
 				BBA0419029D43A9E00E39A06 /* AutolayoutPractice.xcdatamodeld in Sources */,
+				BBF8C89A29F1360C00E6E2BC /* CellModels.swift in Sources */,
+				BBF8C89829F05BFF00E6E2BC /* ImageOnlyButton.swift in Sources */,
+				BB55F5CF29D58D6600F2F2C1 /* ProgressBarView.swift in Sources */,
+				BBC6DAFC29F2B4E100005A83 /* PainMonitorCellStyle.swift in Sources */,
+				BB2AC4D029FBD881005EA247 /* TagView.swift in Sources */,
+				BB55F5CC29D5860900F2F2C1 /* MovementProgressCell.swift in Sources */,
+				BB6CA15D29DEE63F004B39BA /* CustomPainView.swift in Sources */,
+				BBA4CD9429DC4FA5008E23C1 /* UIFont+CustomFonts.swift in Sources */,
+				BB2AC4CC29FAB095005EA247 /* DataGenerator.swift in Sources */,
+				BB6CA16E29E03636004B39BA /* CustomProgressCell.swift in Sources */,
+				BB6CA16229DF16D6004B39BA /* CustomPainCell.swift in Sources */,
 				BBA0418629D43A9E00E39A06 /* AppDelegate.swift in Sources */,
+				BB2AC4CE29FBCEBB005EA247 /* CustomHorizontalScrollView.swift in Sources */,
 				BBA0418829D43A9E00E39A06 /* SceneDelegate.swift in Sources */,
+				BB6CA17129E03CAE004B39BA /* CustomProgressView.swift in Sources */,
+				BBC6DAFA29F2AD8200005A83 /* UICollectionView+Dequeue&Register.swift in Sources */,
+				BBA4CDAD29DD9743008E23C1 /* PainMonitorCell.swift in Sources */,
+				BBA4CDA629DC6A82008E23C1 /* UIColor+Extension.swift in Sources */,
+				BB55F5D629D5C04500F2F2C1 /* PainRateCell.swift in Sources */,
+				BB2AC4DC2A03E658005EA247 /* CellType.swift in Sources */,
+				BBC6DAF729F2AB3300005A83 /* UIVIew+ReuseIdentifier.swift in Sources */,
+				BB91CECD29D46AD200B7032C /* AssociatedDoctorCell.swift in Sources */,
+				BB55F5DC29DAB85D00F2F2C1 /* CellIdentifiers.swift in Sources */,
+				BB2AC4D42A023805005EA247 /* TableViewSectionFilter.swift in Sources */,
+				BB2AC4CA29FAA671005EA247 /* NibLoadableView.swift in Sources */,
+				BB642E4A29E6CDE000E2B258 /* BodyPainCell.swift in Sources */,
+				BB2AC4C829FAA164005EA247 /* UIView+WrapInsideParent.swift in Sources */,
+				BB55F5C829D5701100F2F2C1 /* MorningPainCell.swift in Sources */,
+				BBC6DAF529F2A91100005A83 /* UITableView+Dequeue&Register.swift in Sources */,
+				BB3E916D29D473970037EB8B /* MorningEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +651,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +680,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
