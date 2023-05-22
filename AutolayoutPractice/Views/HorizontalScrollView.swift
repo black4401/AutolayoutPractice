@@ -103,6 +103,7 @@ extension HorizontalScrollView: TagCollectionViewCellDelegate {
             return
         }
         self.collectionView.performBatchUpdates {
+//implement the date.remove with delegate patern
             data.remove(at: indexPath.item)
             self.collectionView.deleteItems(at: [indexPath])
         }
